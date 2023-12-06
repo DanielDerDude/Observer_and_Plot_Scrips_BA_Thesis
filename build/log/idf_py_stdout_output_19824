@@ -1,0 +1,357 @@
+���}����� At�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09da8h ( 40360) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019dd0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf30 vaddr=40080000 size=040e8h ( 16616) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14e48h ( 85576) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034e70 vaddr=400840e8 size=0837ch ( 33660) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081114[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (240) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  042cab11d1d513f7...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C464 len 00013B9C (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (4710) display_task : avg moving offset: 2967444 us[0m
+[0;32mI (4810) display_task : avg moving offset: 4483816 us[0m
+[0;32mI (5810) display_task : avg moving offset: 3008948 us[0m
+[0;32mI (5910) display_task : avg moving offset: 1557895 us[0m
+[0;32mI (11610) display_task : avg moving offset: 43349 us[0m
+[0;32mI (11710) display_task : avg moving offset: 72096 us[0m
+[0;32mI (12710) display_task : avg moving offset: 38297 us[0m
+[0;32mI (12810) display_task : avg moving offset: 71130 us[0m
+[0;32mI (18410) display_task : avg moving offset: 51477 us[0m
+[0;32mI (18510) display_task : avg moving offset: 83420 us[0m
+[0;32mI (19510) display_task : avg moving offset: 63756 us[0m
+[0;32mI (19610) display_task : avg moving offset: 82492 us[0m
+[0;32mI (25210) display_task : avg moving offset: 50894 us[0m
+[0;32mI (25310) display_task : avg moving offset: 68717 us[0m
+[0;32mI (26310) display_task : avg moving offset: 37127 us[0m
+[0;32mI (26410) display_task : avg moving offset: 67770 us[0m
+[0;32mI (32110) display_task : avg moving offset: 72915 us[0m
+[0;32mI (33210) display_task : avg moving offset: 70011 us[0m
+[0;32mI (38910) display_task : avg moving offset: 42582 us[0m
+[0;32mI (39010) display_task : avg moving offset: 66179 us[0m
+[0;32mI (40010) display_task : avg moving offset: 38730 us[0m
+[0;32mI (40110) display_task : avg moving offset: 70146 us[0m
+[0;32mI (45810) display_task : avg moving offset: 99888 us[0m
+[0;32mI (46910) display_task : avg moving offset: 102632 us[0m
+[0;32mI (52610) display_task : avg moving offset: 92123 us[0m
+[0;32mI (53710) display_task : avg moving offset: 89156 us[0m
+[0;32mI (59310) display_task : avg moving offset: 73939 us[0m
+[0;32mI (59410) display_task : avg moving offset: 81672 us[0m
+[0;32mI (60410) display_task : avg moving offset: 66396 us[0m
+[0;32mI (60510) display_task : avg moving offset: 77711 us[0m
+[0;32mI (66110) display_task : avg moving offset: 74708 us[0m
+[0;32mI (67210) display_task : avg moving offset: 75116 us[0m
+[0;32mI (72810) display_task : avg moving offset: 63458 us[0m
+[0;32mI (72910) display_task : avg moving offset: 78519 us[0m
+[0;32mI (73910) display_task : avg moving offset: 66857 us[0m
+[0;32mI (74010) display_task : avg moving offset: 78447 us[0m
+[0;32mI (79610) display_task : avg moving offset: 85042 us[0m
+[0;32mI (80710) display_task : avg moving offset: 88500 us[0m
+[0;32mI (86410) display_task : avg moving offset: 84671 us[0m
+[0;32mI (87510) display_task : avg moving offset: 84426 us[0m
+[0;32mI (93110) display_task : avg moving offset: 64583 us[0m
+[0;32mI (94210) display_task : avg moving offset: 54434 us[0m
+[0;32mI (99910) display_task : avg moving offset: 62148 us[0m
+[0;32mI (101010) display_task : avg moving offset: 62746 us[0m
+[0;32mI (106610) display_task : avg moving offset: 47275 us[0m
+[0;32mI (106710) display_task : avg moving offset: 51734 us[0m
+[0;32mI (107710) display_task : avg moving offset: 36247 us[0m
+[0;32mI (107810) display_task : avg moving offset: 47934 us[0m
+[0;32mI (113410) display_task : avg moving offset: 48505 us[0m
+[0;32mI (114510) display_task : avg moving offset: 48559 us[0m
+[0;32mI (120110) display_task : avg moving offset: 48354 us[0m
+[0;32mI (121210) display_task : avg moving offset: 48225 us[0m
+[0;32mI (126910) display_task : avg moving offset: 33816 us[0m
+[0;32mI (128010) display_task : avg moving offset: 23439 us[0m
+[0;32mI (133610) display_task : avg moving offset: 18830 us[0m
+[0;32mI (134710) display_task : avg moving offset: 17232 us[0m
+[0;32mI (140410) display_task : avg moving offset: 23684 us[0m
+[0;32mI (141510) display_task : avg moving offset: 26982 us[0m
+[0;32mI (147110) display_task : avg moving offset: 17037 us[0m
+[0;32mI (147210) display_task : avg moving offset: 23784 us[0m
+[0;32mI (148210) display_task : avg moving offset: 13843 us[0m
+[0;32mI (148310) display_task : avg moving offset: 23916 us[0m
+[0;32mI (153910) display_task : avg moving offset: 34103 us[0m
+[0;32mI (155010) display_task : avg moving offset: 40872 us[0m
+[0;32mI (160710) display_task : avg moving offset: 57985 us[0m
+[0;32mI (161810) display_task : avg moving offset: 64819 us[0m
+[0;32mI (167410) display_task : avg moving offset: 48038 us[0m
+[0;32mI (167510) display_task : avg moving offset: 61570 us[0m
+[0;32mI (168510) display_task : avg moving offset: 44785 us[0m
+[0;32mI (168610) display_task : avg moving offset: 65166 us[0m
+[0;32mI (174210) display_task : avg moving offset: 74712 us[0m
+[0;32mI (175310) display_task : avg moving offset: 77605 us[0m
+[0;32mI (181010) display_task : avg moving offset: 61158 us[0m
+[0;32mI (182110) display_task : avg moving offset: 61311 us[0m
+[0;32mI (187710) display_task : avg moving offset: 66976 us[0m
+[0;32mI (188810) display_task : avg moving offset: 85385 us[0m
+[0;32mI (194410) display_task : avg moving offset: 88829 us[0m
+[0;32mI (195510) display_task : avg moving offset: 88896 us[0m
+[0;32mI (201210) display_task : avg moving offset: 85392 us[0m
+[0;32mI (202310) display_task : avg moving offset: 82009 us[0m
+[0;32mI (207910) display_task : avg moving offset: 60580 us[0m
+[0;32mI (208010) display_task : avg moving offset: 69183 us[0m
+[0;32mI (209010) display_task : avg moving offset: 47758 us[0m
+[0;32mI (209110) display_task : avg moving offset: 69659 us[0m
+[0;32mI (214710) display_task : avg moving offset: 72598 us[0m
+[0;32mI (215810) display_task : avg moving offset: 75692 us[0m
+[0;32mI (221410) display_task : avg moving offset: 44092 us[0m
+[0;32mI (221510) display_task : avg moving offset: 69134 us[0m
+[0;32mI (222510) display_task : avg moving offset: 37525 us[0m
+[0;32mI (222610) display_task : avg moving offset: 69037 us[0m
+[0;32mI (228210) display_task : avg moving offset: 37154 us[0m
+[0;32mI (228310) display_task : avg moving offset: 70249 us[0m
+[0;32mI (229310) display_task : avg moving offset: 38352 us[0m
+[0;32mI (229410) display_task : avg moving offset: 71801 us[0m
+[0;32mI (235010) display_task : avg moving offset: 37869 us[0m
+[0;32mI (235110) display_task : avg moving offset: 70971 us[0m
+[0;32mI (236110) display_task : avg moving offset: 37053 us[0m
+[0;32mI (236210) display_task : avg moving offset: 70625 us[0m
+[0;32mI (241810) display_task : avg moving offset: 68822 us[0m
+[0;32mI (242910) display_task : avg moving offset: 66547 us[0m
+[0;32mI (248510) display_task : avg moving offset: 36313 us[0m
+[0;32mI (248610) display_task : avg moving offset: 68479 us[0m
+[0;32mI (249610) display_task : avg moving offset: 38219 us[0m
+[0;32mI (249710) display_task : avg moving offset: 69866 us[0m
+[0;32mI (255310) display_task : avg moving offset: 37230 us[0m
+[0;32mI (255410) display_task : avg moving offset: 70121 us[0m
+[0;32mI (256410) display_task : avg moving offset: 37491 us[0m
+[0;32mI (256510) display_task : avg moving offset: 71368 us[0m
+[0;32mI (262010) display_task : avg moving offset: 40995 us[0m
+[0;32mI (262110) display_task : avg moving offset: 74642 us[0m
+[0;32mI (263110) display_task : avg moving offset: 44255 us[0m
+[0;32mI (263210) display_task : avg moving offset: 74396 us[0m
+[0;32mI (268810) display_task : avg moving offset: 44773 us[0m
+[0;32mI (268910) display_task : avg moving offset: 75327 us[0m
+[0;32mI (269910) display_task : avg moving offset: 45729 us[0m
+[0;32mI (270010) display_task : avg moving offset: 75757 us[0m
+[0;32mI (275610) display_task : avg moving offset: 44924 us[0m
+[0;32mI (275710) display_task : avg moving offset: 74228 us[0m
+[0;32mI (276710) display_task : avg moving offset: 43382 us[0m
+[0;32mI (276810) display_task : avg moving offset: 73507 us[0m
+[0;32mI (282310) display_task : avg moving offset: 43502 us[0m
+[0;32mI (282410) display_task : avg moving offset: 73692 us[0m
+[0;32mI (283410) display_task : avg moving offset: 43680 us[0m
+[0;32mI (283510) display_task : avg moving offset: 73726 us[0m
+[0;32mI (289110) display_task : avg moving offset: 40316 us[0m
+[0;32mI (289210) display_task : avg moving offset: 70691 us[0m
+[0;32mI (290210) display_task : avg moving offset: 37298 us[0m
+[0;32mI (290310) display_task : avg moving offset: 71005 us[0m
+[0;32mI (295910) display_task : avg moving offset: 37638 us[0m
+[0;32mI (296010) display_task : avg moving offset: 71267 us[0m
+[0;32mI (297010) display_task : avg moving offset: 37889 us[0m
+[0;32mI (297110) display_task : avg moving offset: 71169 us[0m
+[0;32mI (302610) display_task : avg moving offset: 41011 us[0m
+[0;32mI (302710) display_task : avg moving offset: 73937 us[0m
+[0;32mI (303710) display_task : avg moving offset: 43805 us[0m
+[0;32mI (303810) display_task : avg moving offset: 73597 us[0m
+[0;32mI (309410) display_task : avg moving offset: 43578 us[0m
+[0;32mI (309510) display_task : avg moving offset: 73305 us[0m
+[0;32mI (310510) display_task : avg moving offset: 43292 us[0m
+[0;32mI (310610) display_task : avg moving offset: 73277 us[0m
+[0;32mI (316110) display_task : avg moving offset: 43765 us[0m
+[0;32mI (316210) display_task : avg moving offset: 70953 us[0m
+[0;32mI (317210) display_task : avg moving offset: 41431 us[0m
+[0;32mI (317310) display_task : avg moving offset: 68175 us[0m
+[0;32mI (322910) display_task : avg moving offset: 55228 us[0m
+[0;32mI (323010) display_task : avg moving offset: 85163 us[0m
+[0;32mI (324010) display_task : avg moving offset: 72208 us[0m
+[0;32mI (324110) display_task : avg moving offset: 88351 us[0m
+[0;32mI (329710) display_task : avg moving offset: 90515 us[0m
+[0;32mI (330810) display_task : avg moving offset: 90101 us[0m
+[0;32mI (336410) display_task : avg moving offset: 76994 us[0m
+[0;32mI (336510) display_task : avg moving offset: 90425 us[0m
+[0;32mI (337510) display_task : avg moving offset: 77312 us[0m
+[0;32mI (337610) display_task : avg moving offset: 90717 us[0m
+[0;32mI (343210) display_task : avg moving offset: 81316 us[0m
+[0;32mI (344310) display_task : avg moving offset: 81810 us[0m
+[0;32mI (349910) display_task : avg moving offset: 54484 us[0m
+[0;32mI (350010) display_task : avg moving offset: 77865 us[0m
+[0;32mI (351010) display_task : avg moving offset: 50534 us[0m
+[0;32mI (351110) display_task : avg moving offset: 77447 us[0m
+[0;32mI (356710) display_task : avg moving offset: 50413 us[0m
+[0;32mI (356810) display_task : avg moving offset: 77007 us[0m
+[0;32mI (357810) display_task : avg moving offset: 49969 us[0m
+[0;32mI (357910) display_task : avg moving offset: 76685 us[0m
+[0;32mI (363410) display_task : avg moving offset: 53540 us[0m
+[0;32mI (363510) display_task : avg moving offset: 80467 us[0m
+[0;32mI (364510) display_task : avg moving offset: 57333 us[0m
+[0;32mI (364610) display_task : avg moving offset: 80687 us[0m
+[0;32mI (370210) display_task : avg moving offset: 50642 us[0m
+[0;32mI (370310) display_task : avg moving offset: 71289 us[0m
+[0;32mI (371310) display_task : avg moving offset: 41245 us[0m
+[0;32mI (371410) display_task : avg moving offset: 68585 us[0m
+[0;32mI (376910) display_task : avg moving offset: 41238 us[0m
+[0;32mI (377010) display_task : avg moving offset: 68047 us[0m
+[0;32mI (378010) display_task : avg moving offset: 40713 us[0m
+[0;32mI (378110) display_task : avg moving offset: 67519 us[0m
+[0;32mI (383710) display_task : avg moving offset: 37448 us[0m
+[0;32mI (383810) display_task : avg moving offset: 64440 us[0m
+[0;32mI (384810) display_task : avg moving offset: 34374 us[0m
+[0;32mI (384910) display_task : avg moving offset: 64632 us[0m
+[0;32mI (390510) display_task : avg moving offset: 78120 us[0m
+[0;32mI (391610) display_task : avg moving offset: 81389 us[0m
+[0;32mI (397210) display_task : avg moving offset: 57645 us[0m
+[0;32mI (397310) display_task : avg moving offset: 80594 us[0m
+[0;32mI (398310) display_task : avg moving offset: 56826 us[0m
+[0;32mI (398410) display_task : avg moving offset: 80232 us[0m
+[0;32mI (404010) display_task : avg moving offset: 47019 us[0m
+[0;32mI (404110) display_task : avg moving offset: 67731 us[0m
+[0;32mI (405110) display_task : avg moving offset: 34551 us[0m
+[0;32mI (405210) display_task : avg moving offset: 65053 us[0m
+[0;32mI (410710) display_task : avg moving offset: 34487 us[0m
+[0;32mI (410810) display_task : avg moving offset: 67865 us[0m
+[0;32mI (411810) display_task : avg moving offset: 37292 us[0m
+[0;32mI (411910) display_task : avg moving offset: 70773 us[0m
+[0;32mI (417510) display_task : avg moving offset: 37112 us[0m
+[0;32mI (417610) display_task : avg moving offset: 70558 us[0m
+[0;32mI (418610) display_task : avg moving offset: 36904 us[0m
+[0;32mI (418710) display_task : avg moving offset: 70550 us[0m
+[0;32mI (424310) display_task : avg moving offset: 37058 us[0m
+[0;32mI (424410) display_task : avg moving offset: 70751 us[0m
+[0;32mI (425410) display_task : avg moving offset: 37259 us[0m
+[0;32mI (425510) display_task : avg moving offset: 70832 us[0m
+[0;32mI (431010) display_task : avg moving offset: 37132 us[0m
+[0;32mI (431110) display_task : avg moving offset: 70375 us[0m
+[0;32mI (432110) display_task : avg moving offset: 36671 us[0m
+[0;32mI (432210) display_task : avg moving offset: 70060 us[0m
+[0;32mI (437810) display_task : avg moving offset: 36882 us[0m
+[0;32mI (437910) display_task : avg moving offset: 70560 us[0m
+[0;32mI (438910) display_task : avg moving offset: 37388 us[0m
+[0;32mI (439010) display_task : avg moving offset: 70870 us[0m
+[0;32mI (444510) display_task : avg moving offset: 37620 us[0m
+[0;32mI (444610) display_task : avg moving offset: 71415 us[0m
+[0;32mI (445610) display_task : avg moving offset: 38141 us[0m
+[0;32mI (445710) display_task : avg moving offset: 71698 us[0m
+[0;32mI (451310) display_task : avg moving offset: 38071 us[0m
+[0;32mI (451410) display_task : avg moving offset: 71617 us[0m
+[0;32mI (452410) display_task : avg moving offset: 38011 us[0m
+[0;32mI (452510) display_task : avg moving offset: 71592 us[0m
+[0;32mI (458110) display_task : avg moving offset: 37649 us[0m
+[0;32mI (458210) display_task : avg moving offset: 70726 us[0m
+[0;32mI (459210) display_task : avg moving offset: 36776 us[0m
+[0;32mI (459310) display_task : avg moving offset: 70218 us[0m
+[0;32mI (464810) display_task : avg moving offset: 36908 us[0m
+[0;32mI (464910) display_task : avg moving offset: 67464 us[0m
+[0;32mI (465910) display_task : avg moving offset: 34145 us[0m
+[0;32mI (466010) display_task : avg moving offset: 64566 us[0m
+[0;32mI (471610) display_task : avg moving offset: 35017 us[0m
+[0;32mI (471710) display_task : avg moving offset: 63841 us[0m
+[0;32mI (472710) display_task : avg moving offset: 34275 us[0m
+[0;32mI (472810) display_task : avg moving offset: 62219 us[0m
+[0;32mI (478310) display_task : avg moving offset: 34287 us[0m
+[0;32mI (478410) display_task : avg moving offset: 62109 us[0m
+[0;32mI (479410) display_task : avg moving offset: 34184 us[0m
+[0;32mI (479510) display_task : avg moving offset: 61978 us[0m
+[0;32mI (485110) display_task : avg moving offset: 33895 us[0m
+[0;32mI (485210) display_task : avg moving offset: 63741 us[0m
+[0;32mI (486210) display_task : avg moving offset: 35650 us[0m
+[0;32mI (486310) display_task : avg moving offset: 65790 us[0m
+[0;32mI (491810) display_task : avg moving offset: 35027 us[0m
+[0;32mI (491910) display_task : avg moving offset: 64554 us[0m
+[0;32mI (492910) display_task : avg moving offset: 33801 us[0m
+[0;32mI (493010) display_task : avg moving offset: 63953 us[0m
+[0;32mI (498610) display_task : avg moving offset: 33689 us[0m
+[0;32mI (498710) display_task : avg moving offset: 64043 us[0m
+[0;32mI (499710) display_task : avg moving offset: 33760 us[0m
+[0;32mI (499810) display_task : avg moving offset: 64241 us[0m
+[0;32mI (505410) display_task : avg moving offset: 34104 us[0m
+[0;32mI (505510) display_task : avg moving offset: 66748 us[0m
+[0;32mI (506510) display_task : avg moving offset: 36613 us[0m
+[0;32mI (506610) display_task : avg moving offset: 68910 us[0m
+[0;32mI (512210) display_task : avg moving offset: 36443 us[0m
+[0;32mI (512310) display_task : avg moving offset: 70606 us[0m
+[0;32mI (513310) display_task : avg moving offset: 38135 us[0m
+[0;32mI (513410) display_task : avg moving offset: 72487 us[0m
+[0;32mI (518910) display_task : avg moving offset: 38093 us[0m
+[0;32mI (519010) display_task : avg moving offset: 71497 us[0m
+[0;32mI (520010) display_task : avg moving offset: 37093 us[0m
+[0;32mI (520110) display_task : avg moving offset: 70558 us[0m
+[0;32mI (525710) display_task : avg moving offset: 37143 us[0m
+[0;32mI (525810) display_task : avg moving offset: 70735 us[0m
+[0;32mI (526810) display_task : avg moving offset: 37343 us[0m
+[0;32mI (526910) display_task : avg moving offset: 70906 us[0m
+[0;32mI (532510) display_task : avg moving offset: 40730 us[0m
+[0;32mI (532610) display_task : avg moving offset: 74239 us[0m
+[0;32mI (533610) display_task : avg moving offset: 44047 us[0m
+[0;32mI (533710) display_task : avg moving offset: 74216 us[0m
+[0;32mI (539310) display_task : avg moving offset: 40548 us[0m
+[0;32mI (539410) display_task : avg moving offset: 69536 us[0m
+[0;32mI (540410) display_task : avg moving offset: 35845 us[0m
+[0;32mI (540510) display_task : avg moving offset: 68339 us[0m
+[0;32mI (546010) display_task : avg moving offset: 36184 us[0m
+[0;32mI (546110) display_task : avg moving offset: 69830 us[0m
+[0;32mI (547110) display_task : avg moving offset: 37668 us[0m
+[0;32mI (547210) display_task : avg moving offset: 70964 us[0m
+[0;32mI (552810) display_task : avg moving offset: 37609 us[0m
+[0;32mI (552910) display_task : avg moving offset: 71145 us[0m
+[0;32mI (553910) display_task : avg moving offset: 37790 us[0m
+[0;32mI (554010) display_task : avg moving offset: 71386 us[0m
+[0;32mI (559510) display_task : avg moving offset: 37796 us[0m
+[0;32mI (559610) display_task : avg moving offset: 71297 us[0m
+[0;32mI (560610) display_task : avg moving offset: 37706 us[0m
+[0;32mI (560710) display_task : avg moving offset: 71206 us[0m
+[0;32mI (566310) display_task : avg moving offset: 37493 us[0m
+[0;32mI (566410) display_task : avg moving offset: 67393 us[0m
+[0;32mI (567410) display_task : avg moving offset: 33694 us[0m
+[0;32mI (567510) display_task : avg moving offset: 63803 us[0m
+[0;32mI (573110) display_task : avg moving offset: 33931 us[0m
+[0;32mI (573210) display_task : avg moving offset: 67557 us[0m

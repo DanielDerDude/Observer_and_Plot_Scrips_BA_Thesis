@@ -1,0 +1,317 @@
+[0I��J��}������ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09da0h ( 40352) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019dc8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf28 vaddr=40080000 size=040f0h ( 16624) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14ce4h ( 85220) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034d0c vaddr=400840f0 size=0833ch ( 33596) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  9601125cc3f10bd1...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (580) observer_task: PIN22 | RISING EDGE  | 349275 us[0m
+[0;32mI (620) observer_task: PIN19 | RISING EDGE  | 394968 us[0m
+[0;32mI (680) observer_task: PIN18 | RISING EDGE  | 450090 us[0m
+[0;32mI (1590) observer_task: PIN22 | FALLING EDGE | 1356495 us[0m
+[0;32mI (1630) observer_task: PIN19 | FALLING EDGE | 1402268 us[0m
+[0;32mI (1690) observer_task: PIN18 | FALLING EDGE | 1457387 us[0m
+[0;32mI (5850) observer_task: PIN22 | RISING EDGE  | 5618993 us[0m
+[0;32mI (5870) observer_task: PIN19 | RISING EDGE  | 5644811 us[0m
+[0;32mI (5950) observer_task: PIN18 | RISING EDGE  | 5719344 us[0m
+[0;32mI (6860) observer_task: PIN22 | FALLING EDGE | 6626304 us[0m
+[0;32mI (6880) observer_task: PIN19 | FALLING EDGE | 6652115 us[0m
+[0;32mI (6960) observer_task: PIN18 | FALLING EDGE | 6726637 us[0m
+[0;32mI (11120) observer_task: PIN22 | RISING EDGE  | 10890995 us[0m
+[0;32mI (11140) observer_task: PIN19 | RISING EDGE  | 10914598 us[0m
+[0;32mI (11210) observer_task: PIN18 | RISING EDGE  | 10981460 us[0m
+[0;32mI (12130) observer_task: PIN22 | FALLING EDGE | 11898297 us[0m
+[0;32mI (12150) observer_task: PIN19 | FALLING EDGE | 11921901 us[0m
+[0;32mI (12220) observer_task: PIN18 | FALLING EDGE | 11988743 us[0m
+[0;32mI (16380) observer_task: PIN22 | RISING EDGE  | 16148343 us[0m
+[0;32mI (16390) observer_task: PIN19 | RISING EDGE  | 16164432 us[0m
+[0;32mI (16480) observer_task: PIN18 | RISING EDGE  | 16248208 us[0m
+[0;32mI (17390) observer_task: PIN22 | FALLING EDGE | 17155633 us[0m
+[0;32mI (17400) observer_task: PIN19 | FALLING EDGE | 17171745 us[0m
+[0;32mI (17490) observer_task: PIN18 | FALLING EDGE | 17255509 us[0m
+[0;32mI (21640) observer_task: PIN22 | RISING EDGE  | 21409154 us[0m
+[0;32mI (21640) observer_task: PIN19 | RISING EDGE  | 21414357 us[0m
+[0;32mI (21730) observer_task: PIN18 | RISING EDGE  | 21497993 us[0m
+[0;32mI (22650) observer_task: PIN22 | FALLING EDGE | 22416673 us[0m
+[0;32mI (22650) observer_task: PIN19 | FALLING EDGE | 22421687 us[0m
+[0;32mI (22740) observer_task: PIN18 | FALLING EDGE | 22505286 us[0m
+[0;32mI (26890) observer_task: PIN19 | RISING EDGE  | 26664215 us[0m
+[0;32mI (26910) observer_task: PIN22 | RISING EDGE  | 26679602 us[0m
+[0;32mI (26990) observer_task: PIN18 | RISING EDGE  | 26758303 us[0m
+[0;32mI (27900) observer_task: PIN19 | FALLING EDGE | 27671546 us[0m
+[0;32mI (27920) observer_task: PIN22 | FALLING EDGE | 27686914 us[0m
+[0;32mI (28000) observer_task: PIN18 | FALLING EDGE | 27765600 us[0m
+[0;32mI (32150) observer_task: PIN19 | RISING EDGE  | 31923992 us[0m
+[0;32mI (32170) observer_task: PIN22 | RISING EDGE  | 31937402 us[0m
+[0;32mI (32250) observer_task: PIN18 | RISING EDGE  | 32019250 us[0m
+[0;32mI (33160) observer_task: PIN19 | FALLING EDGE | 32931310 us[0m
+[0;32mI (33170) observer_task: PIN22 | FALLING EDGE | 32944713 us[0m
+[0;32mI (33260) observer_task: PIN18 | FALLING EDGE | 33026536 us[0m
+[0;32mI (37410) observer_task: PIN19 | RISING EDGE  | 37183836 us[0m
+[0;32mI (37420) observer_task: PIN22 | RISING EDGE  | 37187632 us[0m
+[0;32mI (37520) observer_task: PIN18 | RISING EDGE  | 37289901 us[0m
+[0;32mI (38420) observer_task: PIN19 | FALLING EDGE | 38191150 us[0m
+[0;32mI (38420) observer_task: PIN22 | FALLING EDGE | 38194958 us[0m
+[0;32mI (38530) observer_task: PIN18 | FALLING EDGE | 38297195 us[0m
+[0;32mI (42670) observer_task: PIN19 | RISING EDGE  | 42443424 us[0m
+[0;32mI (42680) observer_task: PIN22 | RISING EDGE  | 42447355 us[0m
+[0;32mI (42780) observer_task: PIN18 | RISING EDGE  | 42547286 us[0m
+[0;32mI (43680) observer_task: PIN19 | FALLING EDGE | 43450731 us[0m
+[0;32mI (43680) observer_task: PIN22 | FALLING EDGE | 43454646 us[0m
+[0;32mI (43780) observer_task: PIN18 | FALLING EDGE | 43554595 us[0m
+[0;32mI (47930) observer_task: PIN19 | RISING EDGE  | 47703225 us[0m
+[0;32mI (47940) observer_task: PIN22 | RISING EDGE  | 47706818 us[0m
+[0;32mI (48040) observer_task: PIN18 | RISING EDGE  | 47807047 us[0m
+[0;32mI (48940) observer_task: PIN19 | FALLING EDGE | 48710534 us[0m
+[0;32mI (48940) observer_task: PIN22 | FALLING EDGE | 48714107 us[0m
+[0;32mI (49040) observer_task: PIN18 | FALLING EDGE | 48814377 us[0m
+[0;32mI (53180) observer_task: PIN19 | RISING EDGE  | 52953116 us[0m
+[0;32mI (53190) observer_task: PIN22 | RISING EDGE  | 52956522 us[0m
+[0;32mI (53290) observer_task: PIN18 | RISING EDGE  | 53057015 us[0m
+[0;32mI (54190) observer_task: PIN19 | FALLING EDGE | 53960527 us[0m
+[0;32mI (54190) observer_task: PIN22 | FALLING EDGE | 53963834 us[0m
+[0;32mI (54290) observer_task: PIN18 | FALLING EDGE | 54064417 us[0m
+[0;32mI (58430) observer_task: PIN19 | RISING EDGE  | 58203098 us[0m
+[0;32mI (58440) observer_task: PIN22 | RISING EDGE  | 58207076 us[0m
+[0;32mI (58540) observer_task: PIN18 | RISING EDGE  | 58306551 us[0m
+[0;32mI (59440) observer_task: PIN19 | FALLING EDGE | 59210470 us[0m
+[0;32mI (59440) observer_task: PIN22 | FALLING EDGE | 59214452 us[0m
+[0;32mI (59540) observer_task: PIN18 | FALLING EDGE | 59313897 us[0m
+[0;32mI (63690) observer_task: PIN19 | RISING EDGE  | 63463002 us[0m
+[0;32mI (63720) observer_task: PIN22 | RISING EDGE  | 63488098 us[0m
+[0;32mI (63790) observer_task: PIN18 | RISING EDGE  | 63556728 us[0m
+[0;32mI (64700) observer_task: PIN19 | FALLING EDGE | 64470551 us[0m
+[0;32mI (64730) observer_task: PIN22 | FALLING EDGE | 64495420 us[0m
+[0;32mI (64790) observer_task: PIN18 | FALLING EDGE | 64564019 us[0m
+[0;32mI (68970) observer_task: PIN22 | RISING EDGE  | 68737098 us[0m
+[0;32mI (68970) observer_task: PIN19 | RISING EDGE  | 68742809 us[0m
+[0;32mI (69070) observer_task: PIN18 | RISING EDGE  | 68839072 us[0m
+[0;32mI (69970) observer_task: PIN22 | FALLING EDGE | 69744341 us[0m
+[0;32mI (69980) observer_task: PIN19 | FALLING EDGE | 69750171 us[0m
+[0;32mI (70080) observer_task: PIN18 | FALLING EDGE | 69846404 us[0m
+[0;32mI (74220) observer_task: PIN22 | RISING EDGE  | 73986320 us[0m
+[0;32mI (74220) observer_task: PIN19 | RISING EDGE  | 73992727 us[0m
+[0;32mI (74330) observer_task: PIN18 | RISING EDGE  | 74095990 us[0m
+[0;32mI (75220) observer_task: PIN22 | FALLING EDGE | 74993626 us[0m
+[0;32mI (75230) observer_task: PIN19 | FALLING EDGE | 75000042 us[0m
+[0;32mI (75330) observer_task: PIN18 | FALLING EDGE | 75103284 us[0m
+[0;32mI (79490) observer_task: PIN22 | RISING EDGE  | 79258579 us[0m
+[0;32mI (79490) observer_task: PIN19 | RISING EDGE  | 79262719 us[0m
+[0;32mI (79580) observer_task: PIN18 | RISING EDGE  | 79347249 us[0m
+[0;32mI (80500) observer_task: PIN22 | FALLING EDGE | 80265973 us[0m
+[0;32mI (80500) observer_task: PIN19 | FALLING EDGE | 80270131 us[0m
+[0;32mI (80580) observer_task: PIN18 | FALLING EDGE | 80354538 us[0m
+[0;32mI (84740) observer_task: PIN19 | RISING EDGE  | 84512584 us[0m
+[0;32mI (84750) observer_task: PIN22 | RISING EDGE  | 84516802 us[0m
+[0;32mI (84830) observer_task: PIN18 | RISING EDGE  | 84596116 us[0m
+[0;32mI (85750) observer_task: PIN19 | FALLING EDGE | 85519934 us[0m
+[0;32mI (85750) observer_task: PIN22 | FALLING EDGE | 85524148 us[0m
+[0;32mI (85830) observer_task: PIN18 | FALLING EDGE | 85603451 us[0m
+[0;32mI (89990) observer_task: PIN19 | RISING EDGE  | 89762374 us[0m
+[0;32mI (90000) observer_task: PIN22 | RISING EDGE  | 89766938 us[0m
+[0;32mI (90080) observer_task: PIN18 | RISING EDGE  | 89846687 us[0m
+[0;32mI (91000) observer_task: PIN19 | FALLING EDGE | 90769689 us[0m
+[0;32mI (91000) observer_task: PIN22 | FALLING EDGE | 90774236 us[0m
+[0;32mI (91080) observer_task: PIN18 | FALLING EDGE | 90853992 us[0m
+[0;32mI (95240) observer_task: PIN19 | RISING EDGE  | 95012202 us[0m
+[0;32mI (95250) observer_task: PIN22 | RISING EDGE  | 95015888 us[0m
+[0;32mI (95330) observer_task: PIN18 | RISING EDGE  | 95096090 us[0m
+[0;32mI (96250) observer_task: PIN19 | FALLING EDGE | 96019509 us[0m
+[0;32mI (96250) observer_task: PIN22 | FALLING EDGE | 96023187 us[0m
+[0;32mI (96330) observer_task: PIN18 | FALLING EDGE | 96103396 us[0m
+[0;32mI (100500) observer_task: PIN19 | RISING EDGE  | 100272048 us[0m
+[0;32mI (100510) observer_task: PIN22 | RISING EDGE  | 100275994 us[0m
+[0;32mI (100580) observer_task: PIN18 | RISING EDGE  | 100346007 us[0m
+[0;32mI (101510) observer_task: PIN19 | FALLING EDGE | 101279400 us[0m
+[0;32mI (101510) observer_task: PIN22 | FALLING EDGE | 101283282 us[0m
+[0;32mI (101580) observer_task: PIN18 | FALLING EDGE | 101353294 us[0m
+[0;32mI (105750) observer_task: PIN19 | RISING EDGE  | 105522028 us[0m
+[0;32mI (105750) observer_task: PIN22 | RISING EDGE  | 105525189 us[0m
+[0;32mI (105830) observer_task: PIN18 | RISING EDGE  | 105595712 us[0m
+[0;32mI (106760) observer_task: PIN19 | FALLING EDGE | 106529330 us[0m
+[0;32mI (106760) observer_task: PIN22 | FALLING EDGE | 106532511 us[0m
+[0;32mI (106830) observer_task: PIN18 | FALLING EDGE | 106603062 us[0m
+[0;32mI (111000) observer_task: PIN19 | RISING EDGE  | 110771814 us[0m
+[0;32mI (111010) observer_task: PIN22 | RISING EDGE  | 110775341 us[0m
+[0;32mI (111080) observer_task: PIN18 | RISING EDGE  | 110846692 us[0m
+[0;32mI (112010) observer_task: PIN19 | FALLING EDGE | 111779124 us[0m
+[0;32mI (112010) observer_task: PIN22 | FALLING EDGE | 111782641 us[0m
+[0;32mI (112080) observer_task: PIN18 | FALLING EDGE | 111853930 us[0m
+[0;32mI (116250) observer_task: PIN19 | RISING EDGE  | 116021652 us[0m
+[0;32mI (116260) observer_task: PIN22 | RISING EDGE  | 116025801 us[0m
+[0;32mI (116340) observer_task: PIN18 | RISING EDGE  | 116105902 us[0m
+[0;32mI (117260) observer_task: PIN19 | FALLING EDGE | 117028968 us[0m
+[0;32mI (117260) observer_task: PIN22 | FALLING EDGE | 117033047 us[0m
+[0;32mI (117340) observer_task: PIN18 | FALLING EDGE | 117113222 us[0m
+[0;32mI (121510) observer_task: PIN19 | RISING EDGE  | 121281557 us[0m
+[0;32mI (121600) observer_task: PIN18 | RISING EDGE  | 121365669 us[0m
+[0;32mI (122520) observer_task: PIN19 | FALLING EDGE | 122288884 us[0m
+[0;32mI (122600) observer_task: PIN18 | FALLING EDGE | 122372976 us[0m
+[0;32mI (126760) observer_task: PIN22 | RISING EDGE  | 126525090 us[0m
+[0;32mI (126760) observer_task: PIN19 | RISING EDGE  | 126531443 us[0m
+[0;32mI (126860) observer_task: PIN18 | RISING EDGE  | 126625603 us[0m
+[0;32mI (127760) observer_task: PIN22 | FALLING EDGE | 127532404 us[0m
+[0;32mI (127770) observer_task: PIN19 | FALLING EDGE | 127538745 us[0m
+[0;32mI (127860) observer_task: PIN18 | FALLING EDGE | 127632940 us[0m
+[0;32mI (132020) observer_task: PIN22 | RISING EDGE  | 131785864 us[0m
+[0;32mI (132020) observer_task: PIN19 | RISING EDGE  | 131791311 us[0m
+[0;32mI (132120) observer_task: PIN18 | RISING EDGE  | 131885528 us[0m
+[0;32mI (133020) observer_task: PIN22 | FALLING EDGE | 132793157 us[0m
+[0;32mI (133030) observer_task: PIN19 | FALLING EDGE | 132798624 us[0m
+[0;32mI (133120) observer_task: PIN18 | FALLING EDGE | 132892833 us[0m
+[0;32mI (137270) observer_task: PIN22 | RISING EDGE  | 137035606 us[0m
+[0;32mI (137270) observer_task: PIN19 | RISING EDGE  | 137041097 us[0m
+[0;32mI (137370) observer_task: PIN18 | RISING EDGE  | 137135481 us[0m
+[0;32mI (138270) observer_task: PIN22 | FALLING EDGE | 138042923 us[0m
+[0;32mI (138280) observer_task: PIN19 | FALLING EDGE | 138048412 us[0m
+[0;32mI (138370) observer_task: PIN18 | FALLING EDGE | 138142768 us[0m
+[0;32mI (142520) observer_task: PIN19 | RISING EDGE  | 142290964 us[0m
+[0;32mI (142550) observer_task: PIN22 | RISING EDGE  | 142316222 us[0m
+[0;32mI (142620) observer_task: PIN18 | RISING EDGE  | 142394831 us[0m
+[0;32mI (143530) observer_task: PIN19 | FALLING EDGE | 143298286 us[0m
+[0;32mI (143550) observer_task: PIN22 | FALLING EDGE | 143323525 us[0m
+[0;32mI (143630) observer_task: PIN18 | FALLING EDGE | 143402109 us[0m
+[0;32mI (147780) observer_task: PIN19 | RISING EDGE  | 147550868 us[0m
+[0;32mI (147790) observer_task: PIN22 | RISING EDGE  | 147564909 us[0m
+[0;32mI (147880) observer_task: PIN18 | RISING EDGE  | 147654508 us[0m
+[0;32mI (148790) observer_task: PIN19 | FALLING EDGE | 148558263 us[0m
+[0;32mI (148800) observer_task: PIN22 | FALLING EDGE | 148572285 us[0m
+[0;32mI (148890) observer_task: PIN18 | FALLING EDGE | 148661846 us[0m
+[0;32mI (153030) observer_task: PIN19 | RISING EDGE  | 152800713 us[0m
+[0;32mI (153040) observer_task: PIN22 | RISING EDGE  | 152814442 us[0m
+[0;32mI (153130) observer_task: PIN18 | RISING EDGE  | 152904063 us[0m
+[0;32mI (154040) observer_task: PIN19 | FALLING EDGE | 153808018 us[0m
+[0;32mI (154050) observer_task: PIN22 | FALLING EDGE | 153821738 us[0m
+[0;32mI (154140) observer_task: PIN18 | FALLING EDGE | 153911373 us[0m
+[0;32mI (158280) observer_task: PIN19 | RISING EDGE  | 158050530 us[0m
+[0;32mI (158290) observer_task: PIN22 | RISING EDGE  | 158063954 us[0m
+[0;32mI (158380) observer_task: PIN18 | RISING EDGE  | 158154080 us[0m
+[0;32mI (159290) observer_task: PIN19 | FALLING EDGE | 159057844 us[0m
+[0;32mI (159300) observer_task: PIN22 | FALLING EDGE | 159071246 us[0m
+[0;32mI (159390) observer_task: PIN18 | FALLING EDGE | 159161378 us[0m
+[0;32mI (163550) observer_task: PIN22 | RISING EDGE  | 163324719 us[0m
+[0;32mI (163630) observer_task: PIN18 | RISING EDGE  | 163403458 us[0m
+[0;32mI (164560) observer_task: PIN22 | FALLING EDGE | 164332046 us[0m
+[0;32mI (164640) observer_task: PIN18 | FALLING EDGE | 164410788 us[0m
+[0;32mI (168790) observer_task: PIN19 | RISING EDGE  | 168555905 us[0m
+[0;32mI (168810) observer_task: PIN22 | RISING EDGE  | 168575347 us[0m
+[0;32mI (168890) observer_task: PIN18 | RISING EDGE  | 168661198 us[0m
+[0;32mI (169790) observer_task: PIN19 | FALLING EDGE | 169563240 us[0m
+[0;32mI (169810) observer_task: PIN22 | FALLING EDGE | 169582687 us[0m
+[0;32mI (169900) observer_task: PIN18 | FALLING EDGE | 169668502 us[0m
+[0;32mI (174030) observer_task: PIN19 | RISING EDGE  | 173804780 us[0m
+[0;32mI (174070) observer_task: PIN22 | RISING EDGE  | 173835517 us[0m
+[0;32mI (174140) observer_task: PIN18 | RISING EDGE  | 173911159 us[0m
+[0;32mI (175040) observer_task: PIN19 | FALLING EDGE | 174812141 us[0m
+[0;32mI (175070) observer_task: PIN22 | FALLING EDGE | 174842817 us[0m
+[0;32mI (175150) observer_task: PIN18 | FALLING EDGE | 174918469 us[0m
+[0;32mI (179280) observer_task: PIN19 | RISING EDGE  | 179054657 us[0m
+[0;32mI (179310) observer_task: PIN22 | RISING EDGE  | 179084824 us[0m
+[0;32mI (179390) observer_task: PIN18 | RISING EDGE  | 179161141 us[0m
+[0;32mI (180290) observer_task: PIN19 | FALLING EDGE | 180061993 us[0m
+[0;32mI (180320) observer_task: PIN22 | FALLING EDGE | 180092157 us[0m
+[0;32mI (180400) observer_task: PIN18 | FALLING EDGE | 180168426 us[0m
+[0;32mI (184530) observer_task: PIN19 | RISING EDGE  | 184304600 us[0m
+[0;32mI (184580) observer_task: PIN22 | RISING EDGE  | 184345441 us[0m
+[0;32mI (184640) observer_task: PIN18 | RISING EDGE  | 184411141 us[0m
+[0;32mI (185540) observer_task: PIN19 | FALLING EDGE | 185311939 us[0m
+[0;32mI (185580) observer_task: PIN22 | FALLING EDGE | 185352766 us[0m
+[0;32mI (185650) observer_task: PIN18 | FALLING EDGE | 185418432 us[0m
+[0;32mI (189800) observer_task: PIN19 | RISING EDGE  | 189565474 us[0m
+[0;32mI (189830) observer_task: PIN22 | RISING EDGE  | 189595174 us[0m
+[0;32mI (189900) observer_task: PIN18 | RISING EDGE  | 189671209 us[0m
+[0;32mI (190800) observer_task: PIN19 | FALLING EDGE | 190572973 us[0m
+[0;32mI (190830) observer_task: PIN22 | FALLING EDGE | 190602481 us[0m
+[0;32mI (190910) observer_task: PIN18 | FALLING EDGE | 190678511 us[0m
+[0;32mI (195040) observer_task: PIN19 | RISING EDGE  | 194814481 us[0m
+[0;32mI (195070) observer_task: PIN22 | RISING EDGE  | 194844515 us[0m
+[0;32mI (195150) observer_task: PIN18 | RISING EDGE  | 194921152 us[0m
+[0;32mI (196050) observer_task: PIN19 | FALLING EDGE | 195821808 us[0m
+[0;32mI (196080) observer_task: PIN22 | FALLING EDGE | 195851825 us[0m
+[0;32mI (196160) observer_task: PIN18 | FALLING EDGE | 195928505 us[0m
+[0;32mI (200300) observer_task: PIN19 | RISING EDGE  | 200075064 us[0m
+[0;32mI (200330) observer_task: PIN22 | RISING EDGE  | 200095168 us[0m
+[0;32mI (200400) observer_task: PIN18 | RISING EDGE  | 200171205 us[0m
+[0;32mI (201310) observer_task: PIN19 | FALLING EDGE | 201082422 us[0m
+[0;32mI (201330) observer_task: PIN22 | FALLING EDGE | 201102477 us[0m
+[0;32mI (201410) observer_task: PIN18 | FALLING EDGE | 201178516 us[0m
+[0;32mI (205560) observer_task: PIN19 | RISING EDGE  | 205325126 us[0m
+[0;32mI (205590) observer_task: PIN22 | RISING EDGE  | 205355344 us[0m
+[0;32mI (205660) observer_task: PIN18 | RISING EDGE  | 205431140 us[0m
+[0;32mI (206560) observer_task: PIN19 | FALLING EDGE | 206332427 us[0m
+[0;32mI (206590) observer_task: PIN22 | FALLING EDGE | 206362846 us[0m
+[0;32mI (206670) observer_task: PIN18 | FALLING EDGE | 206438431 us[0m
+[0;32mI (210800) observer_task: PIN19 | RISING EDGE  | 210574929 us[0m
+[0;32mI (210830) observer_task: PIN22 | RISING EDGE  | 210604297 us[0m
+[0;32mI (210910) observer_task: PIN18 | RISING EDGE  | 210681133 us[0m
+[0;32mI (211810) observer_task: PIN19 | FALLING EDGE | 211582249 us[0m
+[0;32mI (211840) observer_task: PIN22 | FALLING EDGE | 211611598 us[0m
+[0;32mI (211920) observer_task: PIN18 | FALLING EDGE | 211688369 us[0m
+[0;32mI (216060) observer_task: PIN19 | RISING EDGE  | 215825326 us[0m
+[0;32mI (216100) observer_task: PIN22 | RISING EDGE  | 215865213 us[0m
+[0;32mI (216160) observer_task: PIN18 | RISING EDGE  | 215931122 us[0m
+[0;32mI (217060) observer_task: PIN19 | FALLING EDGE | 216832645 us[0m
+[0;32mI (217100) observer_task: PIN22 | FALLING EDGE | 216872511 us[0m
+[0;32mI (217170) observer_task: PIN18 | FALLING EDGE | 216938356 us[0m

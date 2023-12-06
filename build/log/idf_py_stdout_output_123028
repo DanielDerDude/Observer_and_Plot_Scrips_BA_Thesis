@@ -1,0 +1,227 @@
+0;32mI (2315х��� Chip r�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09da0h ( 40352) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019dc8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf28 vaddr=40080000 size=040f0h ( 16624) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d14h ( 85268) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034d3c vaddr=400840f0 size=0833ch ( 33596) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  c9badf3ff3c88601...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (3960) observer_task: deviation = 880 us (rising)[0m
+[0;32mI (4050) observer_task: deviation = 85777 us (rising)[0m
+[0;32mI (8200) observer_task: deviation = 4241955 us (falling)[0m
+[0;32mI (9210) observer_task: deviation = 377 us (rising)[0m
+[0;32mI (9300) observer_task: deviation = 86274 us (rising)[0m
+[0;32mI (13450) observer_task: deviation = 4242227 us (falling)[0m
+[0;32mI (14460) observer_task: deviation = 276 us (rising)[0m
+[0;32mI (14550) observer_task: deviation = 86539 us (rising)[0m
+[0;32mI (18710) observer_task: deviation = 4253243 us (falling)[0m
+[0;32mI (19720) observer_task: deviation = 86 us (rising)[0m
+[0;32mI (19800) observer_task: deviation = 75817 us (rising)[0m
+[0;32mI (23960) observer_task: deviation = 4242396 us (falling)[0m
+[0;32mI (24990) observer_task: deviation = 20778 us (rising)[0m
+[0;32mI (25050) observer_task: deviation = 75917 us (rising)[0m
+[0;32mI (29210) observer_task: deviation = 4241973 us (falling)[0m
+[0;32mI (30240) observer_task: deviation = 20341 us (rising)[0m
+[0;32mI (30300) observer_task: deviation = 76533 us (rising)[0m
+[0;32mI (34460) observer_task: deviation = 4242202 us (falling)[0m
+[0;32mI (35490) observer_task: deviation = 20303 us (rising)[0m
+[0;32mI (35550) observer_task: deviation = 76941 us (rising)[0m
+[0;32mI (39710) observer_task: deviation = 4242654 us (falling)[0m
+[0;32mI (40740) observer_task: deviation = 20613 us (rising)[0m
+[0;32mI (40800) observer_task: deviation = 76855 us (rising)[0m
+[0;32mI (44960) observer_task: deviation = 4243140 us (falling)[0m
+[0;32mI (46000) observer_task: deviation = 31019 us (rising)[0m
+[0;32mI (50220) observer_task: deviation = 4248524 us (falling)[0m
+[0;32mI (51270) observer_task: deviation = 43429 us (rising)[0m
+[0;32mI (55470) observer_task: deviation = 4242560 us (falling)[0m
+[0;32mI (56540) observer_task: deviation = 65083 us (rising)[0m
+[0;32mI (60690) observer_task: deviation = 4217732 us (falling)[0m
+[0;32mI (61750) observer_task: deviation = 44927 us (rising)[0m
+[0;32mI (61800) observer_task: deviation = 101244 us (rising)[0m
+[0;32mI (65960) observer_task: deviation = 4260981 us (falling)[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09da0h ( 40352) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019dc8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf28 vaddr=40080000 size=040f0h ( 16624) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d14h ( 85268) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034d3c vaddr=400840f0 size=0833ch ( 33596) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  c9badf3ff3c88601...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (490) observer_task: deviation = 26266 us (rising)[0m
+[0;32mI (560) observer_task: deviation = 100243 us (rising)[0m
+[0;32mI (4710) observer_task: deviation = 4252515 us (falling)[0m
+[0;32mI (5740) observer_task: deviation = 16361 us (rising)[0m
+[0;32mI (5820) observer_task: deviation = 100580 us (rising)[0m
+[0;32mI (9960) observer_task: deviation = 4242809 us (falling)[0m
+[0;32mI (10990) observer_task: deviation = 16123 us (rising)[0m
+[0;32mI (11070) observer_task: deviation = 100462 us (rising)[0m
+[0;32mI (15220) observer_task: deviation = 4252492 us (falling)[0m
+[0;32mI (16250) observer_task: deviation = 16137 us (rising)[0m
+[0;32mI (16330) observer_task: deviation = 100372 us (rising)[0m
+[0;32mI (20470) observer_task: deviation = 4242374 us (falling)[0m
+[0;32mI (21500) observer_task: deviation = 16264 us (rising)[0m
+[0;32mI (21580) observer_task: deviation = 100206 us (rising)[0m
+[0;32mI (25740) observer_task: deviation = 4258745 us (falling)[0m
+[0;32mI (26750) observer_task: deviation = 3660 us (rising)[0m
+[0;32mI (26850) observer_task: deviation = 104399 us (rising)[0m
+[0;32mI (30990) observer_task: deviation = 4246427 us (falling)[0m
+[0;32mI (32030) observer_task: deviation = 26169 us (rising)[0m
+[0;32mI (32100) observer_task: deviation = 100412 us (rising)[0m
+[0;32mI (36280) observer_task: deviation = 4278694 us (falling)[0m
+[0;32mI (37290) observer_task: deviation = 3997 us (rising)[0m
+[0;32mI (37390) observer_task: deviation = 105770 us (rising)[0m
+[0;32mI (41530) observer_task: deviation = 4242451 us (falling)[0m
+[0;32mI (42540) observer_task: deviation = 3671 us (rising)[0m
+[0;32mI (42650) observer_task: deviation = 113693 us (rising)[0m
+[0;32mI (46790) observer_task: deviation = 4252644 us (falling)[0m
+[0;32mI (47800) observer_task: deviation = 3631 us (rising)[0m
+[0;32mI (47900) observer_task: deviation = 103288 us (rising)[0m
+[0;32mI (52040) observer_task: deviation = 4242547 us (falling)[0m
+[0;32mI (53060) observer_task: deviation = 13320 us (rising)[0m
+[0;32mI (53150) observer_task: deviation = 103016 us (rising)[0m
+[0;32mI (57300) observer_task: deviation = 4252581 us (falling)[0m
+[0;32mI (58310) observer_task: deviation = 3961 us (rising)[0m
+[0;32mI (58410) observer_task: deviation = 103545 us (rising)[0m
+[0;32mI (62550) observer_task: deviation = 4246150 us (falling)[0m
+[0;32mI (63560) observer_task: deviation = 6378 us (rising)[0m
+[0;32mI (63660) observer_task: deviation = 99688 us (rising)[0m
+[0;32mI (67810) observer_task: deviation = 4248654 us (falling)[0m
+[0;32mI (68820) observer_task: deviation = 3286 us (rising)[0m
+[0;32mI (68920) observer_task: deviation = 103307 us (rising)[0m
+[0;32mI (73060) observer_task: deviation = 4246212 us (falling)[0m
+[0;32mI (74070) observer_task: deviation = 6352 us (rising)[0m
+[0;32mI (74170) observer_task: deviation = 100361 us (rising)[0m
+[0;32mI (78310) observer_task: deviation = 4242960 us (falling)[0m
+[0;32mI (79320) observer_task: deviation = 6041 us (rising)[0m
+[0;32mI (79420) observer_task: deviation = 99977 us (rising)[0m
+[0;32mI (83580) observer_task: deviation = 4258567 us (falling)[0m
+[0;32mI (84610) observer_task: deviation = 24819 us (rising)[0m
+[0;32mI (84680) observer_task: deviation = 94320 us (rising)[0m
+[0;32mI (88850) observer_task: deviation = 4262326 us (falling)[0m
+[0;32mI (89860) observer_task: deviation = 4966 us (rising)[0m
+[0;32mI (89930) observer_task: deviation = 75353 us (rising)[0m
+[0;32mI (94100) observer_task: deviation = 4242441 us (falling)[0m
+[0;32mI (95110) observer_task: deviation = 3786 us (rising)[0m
+[0;32mI (95190) observer_task: deviation = 84084 us (rising)[0m

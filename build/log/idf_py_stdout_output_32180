@@ -1,0 +1,213 @@
+�IJB���}�����ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09d80h ( 40320) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019da8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf08 vaddr=40080000 size=04110h ( 16656) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14e20h ( 85536) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034e48 vaddr=40084110 size=0831ch ( 33564) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  9c11699cfc543931...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (2770) display_task : avg moving offset: -422557[0m
+[0;32mI (2830) display_task : avg moving offset: -855896[0m
+[0;32mI (2870) display_task : avg moving offset: -1296019[0m
+[0;32mI (9530) display_task : avg moving offset: -2223125[0m
+[0;32mI (9580) display_task : avg moving offset: -3157684[0m
+[0;32mI (9640) display_task : avg moving offset: -4102474[0m
+[0;32mI (16290) display_task : avg moving offset: -4605217[0m
+[0;32mI (16330) display_task : avg moving offset: -5102832[0m
+[0;32mI (16400) display_task : avg moving offset: -5605394[0m
+[0;32mI (23100) display_task : avg moving offset: -5611511[0m
+[0;32mI (23100) display_task : avg moving offset: -5610919[0m
+[0;32mI (23200) display_task : avg moving offset: -5616360[0m
+[0;32mI (29870) display_task : avg moving offset: -5618686[0m
+[0;32mI (29870) display_task : avg moving offset: -5616077[0m
+[0;32mI (29970) display_task : avg moving offset: -5617602[0m
+[0;32mI (36610) display_task : avg moving offset: -5608724[0m
+[0;32mI (36620) display_task : avg moving offset: -5600231[0m
+[0;32mI (36710) display_task : avg moving offset: -5591122[0m
+[0;32mI (43370) display_task : avg moving offset: -5589209[0m
+[0;32mI (43370) display_task : avg moving offset: -5587263[0m
+[0;32mI (43470) display_task : avg moving offset: -5586048[0m
+[0;32mI (50130) display_task : avg moving offset: -5587392[0m
+[0;32mI (50130) display_task : avg moving offset: -5588234[0m
+[0;32mI (50230) display_task : avg moving offset: -5590120[0m
+[0;32mI (56900) display_task : avg moving offset: -5591799[0m
+[0;32mI (56900) display_task : avg moving offset: -5593591[0m
+[0;32mI (56990) display_task : avg moving offset: -5593889[0m
+[0;32mI (63650) display_task : avg moving offset: -5593596[0m
+[0;32mI (63650) display_task : avg moving offset: -5593294[0m
+[0;32mI (63740) display_task : avg moving offset: -5591340[0m
+[0;32mI (70400) display_task : avg moving offset: -5589585[0m
+[0;32mI (70430) display_task : avg moving offset: -5592840[0m
+[0;32mI (70500) display_task : avg moving offset: -5592550[0m
+[0;32mI (77150) display_task : avg moving offset: -5592756[0m
+[0;32mI (77180) display_task : avg moving offset: -5596391[0m
+[0;32mI (77250) display_task : avg moving offset: -5596655[0m
+[0;32mI (83900) display_task : avg moving offset: -5596644[0m
+[0;32mI (83940) display_task : avg moving offset: -5596474[0m
+[0;32mI (84000) display_task : avg moving offset: -5594938[0m
+[0;32mI (90700) display_task : avg moving offset: -5603163[0m
+[0;32mI (90710) display_task : avg moving offset: -5607984[0m
+[0;32mI (90810) display_task : avg moving offset: -5618129[0m
+[0;32mI (97450) display_task : avg moving offset: -5616219[0m
+[0;32mI (97480) display_task : avg moving offset: -5612827[0m
+[0;32mI (97550) display_task : avg moving offset: -5612349[0m
+[0;32mI (104200) display_task : avg moving offset: -5602541[0m
+[0;32mI (104220) display_task : avg moving offset: -5595959[0m
+[0;32mI (104300) display_task : avg moving offset: -5585693[0m
+[0;32mI (110950) display_task : avg moving offset: -5586163[0m
+[0;32mI (110970) display_task : avg moving offset: -5586335[0m
+[0;32mI (111050) display_task : avg moving offset: -5586810[0m
+[0;32mI (117710) display_task : avg moving offset: -5588449[0m
+[0;32mI (117740) display_task : avg moving offset: -5592095[0m
+[0;32mI (117810) display_task : avg moving offset: -5593951[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09d80h ( 40320) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019da8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf08 vaddr=40080000 size=04110h ( 16656) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14e20h ( 85536) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034e48 vaddr=40084110 size=0831ch ( 33564) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  9c11699cfc543931...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (4900) display_task : avg moving offset: -777946[0m
+[0;32mI (4910) display_task : avg moving offset: -1558154[0m
+[0;32mI (5000) display_task : avg moving offset: -2353438[0m
+[0;32mI (11660) display_task : avg moving offset: -3279026[0m
+[0;32mI (11660) display_task : avg moving offset: -4205170[0m
+[0;32mI (11760) display_task : avg moving offset: -5148003[0m
+[0;32mI (18420) display_task : avg moving offset: -5295809[0m
+[0;32mI (18420) display_task : avg moving offset: -5442078[0m
+[0;32mI (18520) display_task : avg moving offset: -5589980[0m
+[0;32mI (25170) display_task : avg moving offset: -5589916[0m
+[0;32mI (25190) display_task : avg moving offset: -5591703[0m
+[0;32mI (25280) display_task : avg moving offset: -5591685[0m
+[0;32mI (31920) display_task : avg moving offset: -5589956[0m
+[0;32mI (31940) display_task : avg moving offset: -5589681[0m
+[0;32mI (32030) display_task : avg moving offset: -5587769[0m
+[0;32mI (38680) display_task : avg moving offset: -5587991[0m
+[0;32mI (38700) display_task : avg moving offset: -5588024[0m
+[0;32mI (38780) display_task : avg moving offset: -5586649[0m
+[0;32mI (45430) display_task : avg moving offset: -5588237[0m
+[0;32mI (45440) display_task : avg moving offset: -5589940[0m
+[0;32mI (45530) display_task : avg moving offset: -5591627[0m

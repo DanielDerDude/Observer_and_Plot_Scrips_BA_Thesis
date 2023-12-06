@@ -1,0 +1,701 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09d78h ( 40312) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00019da0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf00 vaddr=40080000 size=04118h ( 16664) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d10h ( 85264) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00034d38 vaddr=40084118 size=08314h ( 33556) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (240) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  c548b2011404fdcb...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (271) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (276) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (289) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (308) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (319) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (341) app_start: Starting scheduler on CPU1[0m
+[0;32mI (341) main_task: Started on CPU0[0m
+[0;32mI (351) main_task: Calling app_main()[0m
+[0;32mI (351) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (361) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (371) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (381) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (391) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (401) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (411) main_task: Returned from app_main()[0m
+[0;32mI (1551) observer_task: deviation: 321723[0m
+[0;32mI (1551) observer_task:  [0m
+[0;32mI (2761) observer_task: deviation:   7583[0m
+[0;32mI (2761) observer_task:  [0m
+[0;32mI (3771) observer_task: deviation:  17404[0m
+[0;32mI (3771) observer_task:  [0m
+[0;32mI (4981) observer_task: deviation:  17371[0m
+[0;32mI (4981) observer_task:  [0m
+[0;32mI (5991) observer_task: deviation:   4240[0m
+[0;32mI (5991) observer_task:  [0m
+[0;32mI (7201) observer_task: deviation:   4204[0m
+[0;32mI (7201) observer_task:  [0m
+[0;32mI (8211) observer_task: deviation:   9813[0m
+[0;32mI (8211) observer_task:  [0m
+[0;32mI (9481) observer_task: deviation:   9797[0m
+[0;32mI (9481) observer_task:  [0m
+[0;32mI (10491) observer_task: deviation:   6981[0m
+[0;32mI (10491) observer_task:  [0m
+[0;32mI (11711) observer_task: deviation:   6972[0m
+[0;32mI (11711) observer_task:  [0m
+[0;32mI (12721) observer_task: deviation:   4746[0m
+[0;32mI (12721) observer_task:  [0m
+[0;32mI (13921) observer_task: deviation:   4732[0m
+[0;32mI (13921) observer_task:  [0m
+[0;32mI (14931) observer_task: deviation:  21570[0m
+[0;32mI (14931) observer_task:  [0m
+[0;32mI (16151) observer_task: deviation:  21552[0m
+[0;32mI (16151) observer_task:  [0m
+[0;32mI (17161) observer_task: deviation:  18770[0m
+[0;32mI (17161) observer_task:  [0m
+[0;32mI (18371) observer_task: deviation:  18785[0m
+[0;32mI (18371) observer_task:  [0m
+[0;32mI (19381) observer_task: deviation:  18274[0m
+[0;32mI (19381) observer_task:  [0m
+[0;32mI (20591) observer_task: deviation:  18268[0m
+[0;32mI (20591) observer_task:  [0m
+[0;32mI (21281) observer_task: deviation:  16146[0m
+[0;32mI (21281) observer_task:  [0m
+[0;32mI (22811) observer_task: deviation: 319991[0m
+[0;32mI (22811) observer_task:  [0m
+[0;32mI (22901) observer_task: deviation:      0[0m
+[0;32mI (22901) observer_task:  [0m
+[0;32mI (37491) observer_task: deviation:      0[0m
+[0;32mI (37491) observer_task:  [0m
+[0;32mI (38501) observer_task: deviation:      0[0m
+[0;32mI (38501) observer_task:  [0m
+[0;32mI (39341) observer_task: deviation:      0[0m
+[0;32mI (39341) observer_task:  [0m
+[0;32mI (40351) observer_task: deviation:   3548[0m
+[0;32mI (40351) observer_task:  [0m
+[0;32mI (41541) observer_task: deviation:   3590[0m
+[0;32mI (41541) observer_task:  [0m
+[0;32mI (42231) observer_task: deviation:  13915[0m
+[0;32mI (42231) observer_task:  [0m
+[0;32mI (44511) observer_task: deviation:   8638[0m
+[0;32mI (44511) observer_task:  [0m
+[0;32mI (45521) observer_task: deviation:  19340[0m
+[0;32mI (45521) observer_task:  [0m
+[0;32mI (46731) observer_task: deviation:  19335[0m
+[0;32mI (46731) observer_task:  [0m
+[0;32mI (47731) observer_task: deviation:  19123[0m
+[0;32mI (47731) observer_task:  [0m
+[0;32mI (48941) observer_task: deviation:  19098[0m
+[0;32mI (48941) observer_task:  [0m
+[0;32mI (49951) observer_task: deviation:  19265[0m
+[0;32mI (49951) observer_task:  [0m
+[0;32mI (51171) observer_task: deviation:  19241[0m
+[0;32mI (51171) observer_task:  [0m
+[0;32mI (52171) observer_task: deviation:    590[0m
+[0;32mI (52171) observer_task:  [0m
+[0;32mI (53381) observer_task: deviation:    579[0m
+[0;32mI (53381) observer_task:  [0m
+[0;32mI (54391) observer_task: deviation:    649[0m
+[0;32mI (54391) observer_task:  [0m
+[0;32mI (55601) observer_task: deviation:    624[0m
+[0;32mI (55601) observer_task:  [0m
+[0;32mI (56601) observer_task: deviation:    559[0m
+[0;32mI (56601) observer_task:  [0m
+[0;32mI (57841) observer_task: deviation:    543[0m
+[0;32mI (57841) observer_task:  [0m
+[0;32mI (58851) observer_task: deviation:  10376[0m
+[0;32mI (58851) observer_task:  [0m
+[0;32mI (60071) observer_task: deviation:  10329[0m
+[0;32mI (60071) observer_task:  [0m
+[0;32mI (61081) observer_task: deviation:  10075[0m
+[0;32mI (61081) observer_task:  [0m
+[0;32mI (62291) observer_task: deviation:  10057[0m
+[0;32mI (62291) observer_task:  [0m
+[0;32mI (63301) observer_task: deviation:  10136[0m
+[0;32mI (63301) observer_task:  [0m
+[0;32mI (64521) observer_task: deviation:  10144[0m
+[0;32mI (64521) observer_task:  [0m
+[0;32mI (65531) observer_task: deviation:  10309[0m
+[0;32mI (65531) observer_task:  [0m
+[0;32mI (66741) observer_task: deviation:  10302[0m
+[0;32mI (66741) observer_task:  [0m
+[0;32mI (67751) observer_task: deviation:  10588[0m
+[0;32mI (67751) observer_task:  [0m
+[0;32mI (69021) observer_task: deviation:  10612[0m
+[0;32mI (69021) observer_task:  [0m
+[0;32mI (70031) observer_task: deviation:    934[0m
+[0;32mI (70031) observer_task:  [0m
+[0;32mI (71241) observer_task: deviation:    972[0m
+[0;32mI (71241) observer_task:  [0m
+[0;32mI (72241) observer_task: deviation:  10891[0m
+[0;32mI (72241) observer_task:  [0m
+[0;32mI (73451) observer_task: deviation:  10876[0m
+[0;32mI (73451) observer_task:  [0m
+[0;32mI (74461) observer_task: deviation:  10674[0m
+[0;32mI (74461) observer_task:  [0m
+[0;32mI (75671) observer_task: deviation:  10662[0m
+[0;32mI (75671) observer_task:  [0m
+[0;32mI (76671) observer_task: deviation:    961[0m
+[0;32mI (76671) observer_task:  [0m
+[0;32mI (77891) observer_task: deviation:    956[0m
+[0;32mI (77891) observer_task:  [0m
+[0;32mI (78901) observer_task: deviation:   1032[0m
+[0;32mI (78901) observer_task:  [0m
+[0;32mI (80111) observer_task: deviation:   1022[0m
+[0;32mI (80111) observer_task:  [0m
+[0;32mI (81121) observer_task: deviation:    685[0m
+[0;32mI (81121) observer_task:  [0m
+[0;32mI (82321) observer_task: deviation:    668[0m
+[0;32mI (82321) observer_task:  [0m
+[0;32mI (83331) observer_task: deviation:  10860[0m
+[0;32mI (83331) observer_task:  [0m
+[0;32mI (84541) observer_task: deviation:  10851[0m
+[0;32mI (84541) observer_task:  [0m
+[0;32mI (85551) observer_task: deviation:    705[0m
+[0;32mI (85551) observer_task:  [0m
+[0;32mI (86751) observer_task: deviation:    721[0m
+[0;32mI (86751) observer_task:  [0m
+[0;32mI (87761) observer_task: deviation:    895[0m
+[0;32mI (87761) observer_task:  [0m
+[0;32mI (88981) observer_task: deviation:    885[0m
+[0;32mI (88981) observer_task:  [0m
+[0;32mI (89991) observer_task: deviation:      0[0m
+[0;32mI (89991) observer_task:  [0m
+[0;32mI (91201) observer_task: deviation:      0[0m
+[0;32mI (91201) observer_task:  [0m
+[0;32mI (92061) observer_task: deviation:      0[0m
+[0;32mI (92061) observer_task:  [0m
+[0;32mI (92411) observer_task: deviation:      0[0m
+[0;32mI (92411) observer_task:  [0m
+[0;32mI (93421) observer_task: deviation:      0[0m
+[0;32mI (93421) observer_task:  [0m
+[0;32mI (94631) observer_task: deviation:      0[0m
+[0;32mI (94631) observer_task:  [0m
+[0;32mI (95631) observer_task: deviation:      0[0m
+[0;32mI (95631) observer_task:  [0m
+[0;32mI (96831) observer_task: deviation:      0[0m
+[0;32mI (96831) observer_task:  [0m
+[0;32mI (97841) observer_task: deviation:  16644[0m
+[0;32mI (97841) observer_task:  [0m
+[0;32mI (99051) observer_task: deviation:  16661[0m
+[0;32mI (99051) observer_task:  [0m
+[0;32mI (100051) observer_task: deviation:  27053[0m
+[0;32mI (100051) observer_task:  [0m
+[0;32mI (101251) observer_task: deviation:  27069[0m
+[0;32mI (101251) observer_task:  [0m
+[0;32mI (102261) observer_task: deviation:  27298[0m
+[0;32mI (102261) observer_task:  [0m
+[0;32mI (103461) observer_task: deviation:  27314[0m
+[0;32mI (103461) observer_task:  [0m
+[0;32mI (104461) observer_task: deviation:  17651[0m
+[0;32mI (104461) observer_task:  [0m
+[0;32mI (105751) observer_task: deviation:  17622[0m
+[0;32mI (105751) observer_task:  [0m
+[0;32mI (106761) observer_task: deviation:  27845[0m
+[0;32mI (106761) observer_task:  [0m
+[0;32mI (107961) observer_task: deviation:  27891[0m
+[0;32mI (107961) observer_task:  [0m
+[0;32mI (108971) observer_task: deviation:  17955[0m
+[0;32mI (108971) observer_task:  [0m
+[0;32mI (110161) observer_task: deviation:  17962[0m
+[0;32mI (110161) observer_task:  [0m
+[0;32mI (111171) observer_task: deviation:  18313[0m
+[0;32mI (111171) observer_task:  [0m
+[0;32mI (112371) observer_task: deviation:  18333[0m
+[0;32mI (112371) observer_task:  [0m
+[0;32mI (113381) observer_task: deviation:  28620[0m
+[0;32mI (113381) observer_task:  [0m
+[0;32mI (114581) observer_task: deviation:  28618[0m
+[0;32mI (114581) observer_task:  [0m
+[0;32mI (115591) observer_task: deviation:  28890[0m
+[0;32mI (115591) observer_task:  [0m
+[0;32mI (116791) observer_task: deviation:  28872[0m
+[0;32mI (116791) observer_task:  [0m
+[0;32mI (117801) observer_task: deviation:  18785[0m
+[0;32mI (117801) observer_task:  [0m
+[0;32mI (119001) observer_task: deviation:  18791[0m
+[0;32mI (119001) observer_task:  [0m
+[0;32mI (120001) observer_task: deviation:  28932[0m
+[0;32mI (120001) observer_task:  [0m
+[0;32mI (121201) observer_task: deviation:  28945[0m
+[0;32mI (121201) observer_task:  [0m
+[0;32mI (122211) observer_task: deviation:  28930[0m
+[0;32mI (122211) observer_task:  [0m
+[0;32mI (123421) observer_task: deviation:  28941[0m
+[0;32mI (123421) observer_task:  [0m
+[0;32mI (124421) observer_task: deviation:  29330[0m
+[0;32mI (124421) observer_task:  [0m
+[0;32mI (125701) observer_task: deviation:  29346[0m
+[0;32mI (125701) observer_task:  [0m
+[0;32mI (126711) observer_task: deviation:   9774[0m
+[0;32mI (126711) observer_task:  [0m
+[0;32mI (127971) observer_task: deviation:   9817[0m
+[0;32mI (127971) observer_task:  [0m
+[0;32mI (128971) observer_task: deviation:      0[0m
+[0;32mI (128971) observer_task:  [0m
+[0;32mI (129321) observer_task: deviation:      0[0m
+[0;32mI (129321) observer_task:  [0m
+[0;32mI (130331) observer_task: deviation:   8816[0m
+[0;32mI (130331) observer_task:  [0m
+[0;32mI (131541) observer_task: deviation:   8790[0m
+[0;32mI (131541) observer_task:  [0m
+[0;32mI (132551) observer_task: deviation:  18888[0m
+[0;32mI (132551) observer_task:  [0m
+[0;32mI (133741) observer_task: deviation:  18865[0m
+[0;32mI (133741) observer_task:  [0m
+[0;32mI (134751) observer_task: deviation:  28718[0m
+[0;32mI (134751) observer_task:  [0m
+[0;32mI (135971) observer_task: deviation:  28679[0m
+[0;32mI (135971) observer_task:  [0m
+[0;32mI (136981) observer_task: deviation:  18785[0m
+[0;32mI (136981) observer_task:  [0m
+[0;32mI (138181) observer_task: deviation:  18761[0m
+[0;32mI (138181) observer_task:  [0m
+[0;32mI (139181) observer_task: deviation:  29091[0m
+[0;32mI (139181) observer_task:  [0m
+[0;32mI (140411) observer_task: deviation:  29088[0m
+[0;32mI (140411) observer_task:  [0m
+[0;32mI (141421) observer_task: deviation:   8969[0m
+[0;32mI (141421) observer_task:  [0m
+[0;32mI (142621) observer_task: deviation:   8949[0m
+[0;32mI (142621) observer_task:  [0m
+[0;32mI (143621) observer_task: deviation:  18907[0m
+[0;32mI (143621) observer_task:  [0m
+[0;32mI (144831) observer_task: deviation:  18917[0m
+[0;32mI (144831) observer_task:  [0m
+[0;32mI (145841) observer_task: deviation:  29109[0m
+[0;32mI (145841) observer_task:  [0m
+[0;32mI (147051) observer_task: deviation:  29121[0m
+[0;32mI (147051) observer_task:  [0m
+[0;32mI (148051) observer_task: deviation:  19138[0m
+[0;32mI (148051) observer_task:  [0m
+[0;32mI (149251) observer_task: deviation:  19158[0m
+[0;32mI (149251) observer_task:  [0m
+[0;32mI (150261) observer_task: deviation:  19298[0m
+[0;32mI (150261) observer_task:  [0m
+[0;32mI (151471) observer_task: deviation:  19269[0m
+[0;32mI (151471) observer_task:  [0m
+[0;32mI (152481) observer_task: deviation:  19285[0m
+[0;32mI (152481) observer_task:  [0m
+[0;32mI (153681) observer_task: deviation:  19279[0m
+[0;32mI (153681) observer_task:  [0m
+[0;32mI (154691) observer_task: deviation:      0[0m
+[0;32mI (154691) observer_task:  [0m
+[0;32mI (155911) observer_task: deviation:      0[0m
+[0;32mI (155911) observer_task:  [0m
+[0;32mI (156441) observer_task: deviation:      0[0m
+[0;32mI (156441) observer_task:  [0m
+[0;32mI (170231) observer_task: deviation:      0[0m
+[0;32mI (170231) observer_task:  [0m
+[0;32mI (171241) observer_task: deviation:      0[0m
+[0;32mI (171241) observer_task:  [0m
+[0;32mI (172461) observer_task: deviation:      0[0m
+[0;32mI (172461) observer_task:  [0m
+[0;32mI (173461) observer_task: deviation:  28275[0m
+[0;32mI (173461) observer_task:  [0m
+[0;32mI (174661) observer_task: deviation:  28274[0m
+[0;32mI (174661) observer_task:  [0m
+[0;32mI (175671) observer_task: deviation:  18457[0m
+[0;32mI (175671) observer_task:  [0m
+[0;32mI (176891) observer_task: deviation:  18448[0m
+[0;32mI (176891) observer_task:  [0m
+[0;32mI (177891) observer_task: deviation:  18525[0m
+[0;32mI (177891) observer_task:  [0m
+[0;32mI (179101) observer_task: deviation:  18522[0m
+[0;32mI (179101) observer_task:  [0m
+[0;32mI (180111) observer_task: deviation:  28556[0m
+[0;32mI (180111) observer_task:  [0m
+[0;32mI (181331) observer_task: deviation:  28562[0m
+[0;32mI (181331) observer_task:  [0m
+[0;32mI (182331) observer_task: deviation:  18888[0m
+[0;32mI (182331) observer_task:  [0m
+[0;32mI (183571) observer_task: deviation:  18909[0m
+[0;32mI (183571) observer_task:  [0m
+[0;32mI (184581) observer_task: deviation:  19262[0m
+[0;32mI (184581) observer_task:  [0m
+[0;32mI (185821) observer_task: deviation:  19261[0m
+[0;32mI (185821) observer_task:  [0m
+[0;32mI (186831) observer_task: deviation:   9370[0m
+[0;32mI (186831) observer_task:  [0m
+[0;32mI (188051) observer_task: deviation:   9338[0m
+[0;32mI (188051) observer_task:  [0m
+[0;32mI (189061) observer_task: deviation:  19508[0m
+[0;32mI (189061) observer_task:  [0m
+[0;32mI (190271) observer_task: deviation:  19523[0m
+[0;32mI (190271) observer_task:  [0m
+[0;32mI (191281) observer_task: deviation:  29663[0m
+[0;32mI (191281) observer_task:  [0m
+[0;32mI (192471) observer_task: deviation:  29647[0m
+[0;32mI (192471) observer_task:  [0m
+[0;32mI (193481) observer_task: deviation:  19984[0m
+[0;32mI (193481) observer_task:  [0m
+[0;32mI (194691) observer_task: deviation:  19961[0m
+[0;32mI (194691) observer_task:  [0m
+[0;32mI (195701) observer_task: deviation:  30348[0m
+[0;32mI (195701) observer_task:  [0m
+[0;32mI (196931) observer_task: deviation:  30343[0m
+[0;32mI (196931) observer_task:  [0m
+[0;32mI (197931) observer_task: deviation:  10266[0m
+[0;32mI (197931) observer_task:  [0m
+[0;32mI (199181) observer_task: deviation:  10260[0m
+[0;32mI (199181) observer_task:  [0m
+[0;32mI (200191) observer_task: deviation:    603[0m
+[0;32mI (200191) observer_task:  [0m
+[0;32mI (201451) observer_task: deviation:    576[0m
+[0;32mI (201451) observer_task:  [0m
+[0;32mI (202451) observer_task: deviation:   9327[0m
+[0;32mI (202451) observer_task:  [0m
+[0;32mI (203671) observer_task: deviation:   9324[0m
+[0;32mI (203671) observer_task:  [0m
+[0;32mI (204681) observer_task: deviation:    918[0m
+[0;32mI (204681) observer_task:  [0m
+[0;32mI (205921) observer_task: deviation:    919[0m
+[0;32mI (205921) observer_task:  [0m
+[0;32mI (206921) observer_task: deviation:  31307[0m
+[0;32mI (206921) observer_task:  [0m
+[0;32mI (208171) observer_task: deviation:  31297[0m
+[0;32mI (208171) observer_task:  [0m
+[0;32mI (209181) observer_task: deviation:  61768[0m
+[0;32mI (209181) observer_task:  [0m
+[0;32mI (210391) observer_task: deviation:  61760[0m
+[0;32mI (210391) observer_task:  [0m
+[0;32mI (211391) observer_task: deviation:  92239[0m
+[0;32mI (211391) observer_task:  [0m
+[0;32mI (212591) observer_task: deviation:  92247[0m
+[0;32mI (212591) observer_task:  [0m
+[0;32mI (213601) observer_task: deviation:  12459[0m
+[0;32mI (213601) observer_task:  [0m
+[0;32mI (214811) observer_task: deviation:  12450[0m
+[0;32mI (214811) observer_task:  [0m
+[0;32mI (215821) observer_task: deviation:  22557[0m
+[0;32mI (215821) observer_task:  [0m
+[0;32mI (217021) observer_task: deviation:  22539[0m
+[0;32mI (217021) observer_task:  [0m
+[0;32mI (218031) observer_task: deviation:  12903[0m
+[0;32mI (218031) observer_task:  [0m
+[0;32mI (219241) observer_task: deviation:  12901[0m
+[0;32mI (219241) observer_task:  [0m
+[0;32mI (220251) observer_task: deviation:  23071[0m
+[0;32mI (220251) observer_task:  [0m
+[0;32mI (221481) observer_task: deviation:  23090[0m
+[0;32mI (221481) observer_task:  [0m
+[0;32mI (222491) observer_task: deviation:  23506[0m
+[0;32mI (222491) observer_task:  [0m
+[0;32mI (223711) observer_task: deviation:  23505[0m
+[0;32mI (223711) observer_task:  [0m
+[0;32mI (224721) observer_task: deviation:  24069[0m
+[0;32mI (224721) observer_task:  [0m
+[0;32mI (225951) observer_task: deviation:  24079[0m
+[0;32mI (225951) observer_task:  [0m
+[0;32mI (226951) observer_task: deviation:  24524[0m
+[0;32mI (226951) observer_task:  [0m
+[0;32mI (228161) observer_task: deviation:  24499[0m
+[0;32mI (228161) observer_task:  [0m
+[0;32mI (229171) observer_task: deviation:  14728[0m
+[0;32mI (229171) observer_task:  [0m
+[0;32mI (230371) observer_task: deviation:  14739[0m
+[0;32mI (230371) observer_task:  [0m
+[0;32mI (231371) observer_task: deviation:  14949[0m
+[0;32mI (231371) observer_task:  [0m
+[0;32mI (232591) observer_task: deviation:  14931[0m
+[0;32mI (232591) observer_task:  [0m
+[0;32mI (233601) observer_task: deviation:  15364[0m
+[0;32mI (233601) observer_task:  [0m
+[0;32mI (234831) observer_task: deviation:  15344[0m
+[0;32mI (234831) observer_task:  [0m
+[0;32mI (235831) observer_task: deviation:   5070[0m
+[0;32mI (235831) observer_task:  [0m
+[0;32mI (237061) observer_task: deviation:   5075[0m
+[0;32mI (237061) observer_task:  [0m
+[0;32mI (238071) observer_task: deviation:   4778[0m
+[0;32mI (238071) observer_task:  [0m
+[0;32mI (239311) observer_task: deviation:   4774[0m
+[0;32mI (239311) observer_task:  [0m
+[0;32mI (240321) observer_task: deviation:  15507[0m
+[0;32mI (240321) observer_task:  [0m
+[0;32mI (241521) observer_task: deviation:  15515[0m
+[0;32mI (241521) observer_task:  [0m
+[0;32mI (242531) observer_task: deviation:  25286[0m
+[0;32mI (242531) observer_task:  [0m
+[0;32mI (243751) observer_task: deviation:  25269[0m
+[0;32mI (243751) observer_task:  [0m
+[0;32mI (244761) observer_task: deviation:  24949[0m
+[0;32mI (244761) observer_task:  [0m
+[0;32mI (246001) observer_task: deviation:  24926[0m
+[0;32mI (246001) observer_task:  [0m
+[0;32mI (247001) observer_task: deviation:  15374[0m
+[0;32mI (247001) observer_task:  [0m
+[0;32mI (248231) observer_task: deviation:  15392[0m
+[0;32mI (248231) observer_task:  [0m
+[0;32mI (249241) observer_task: deviation:  15772[0m
+[0;32mI (249241) observer_task:  [0m
+[0;32mI (250471) observer_task: deviation:  15770[0m
+[0;32mI (250471) observer_task:  [0m
+[0;32mI (251481) observer_task: deviation:   4015[0m
+[0;32mI (251481) observer_task:  [0m
+[0;32mI (252691) observer_task: deviation:   3999[0m
+[0;32mI (252691) observer_task:  [0m
+[0;32mI (253701) observer_task: deviation:   6620[0m
+[0;32mI (253701) observer_task:  [0m
+[0;32mI (254961) observer_task: deviation:   6634[0m
+[0;32mI (254961) observer_task:  [0m
+[0;32mI (255961) observer_task: deviation:   7003[0m
+[0;32mI (255961) observer_task:  [0m
+[0;32mI (257161) observer_task: deviation:   6990[0m
+[0;32mI (257161) observer_task:  [0m
+[0;32mI (258171) observer_task: deviation:  27142[0m
+[0;32mI (258171) observer_task:  [0m
+[0;32mI (259381) observer_task: deviation:  27143[0m
+[0;32mI (259381) observer_task:  [0m
+[0;32mI (260381) observer_task: deviation:  27652[0m
+[0;32mI (260381) observer_task:  [0m
+[0;32mI (261601) observer_task: deviation:  27640[0m
+[0;32mI (261601) observer_task:  [0m
+[0;32mI (262611) observer_task: deviation:   7553[0m
+[0;32mI (262611) observer_task:  [0m
+[0;32mI (263821) observer_task: deviation:   7544[0m
+[0;32mI (263821) observer_task:  [0m
+[0;32mI (264831) observer_task: deviation:  17850[0m
+[0;32mI (264831) observer_task:  [0m
+[0;32mI (266051) observer_task: deviation:  17845[0m
+[0;32mI (266051) observer_task:  [0m
+[0;32mI (267061) observer_task: deviation:  18048[0m
+[0;32mI (267061) observer_task:  [0m
+[0;32mI (268261) observer_task: deviation:  18051[0m
+[0;32mI (268261) observer_task:  [0m
+[0;32mI (269271) observer_task: deviation:  18405[0m
+[0;32mI (269271) observer_task:  [0m
+[0;32mI (270471) observer_task: deviation:  18401[0m
+[0;32mI (270471) observer_task:  [0m
+[0;32mI (271481) observer_task: deviation:  28724[0m
+[0;32mI (271481) observer_task:  [0m
+[0;32mI (272691) observer_task: deviation:  28713[0m
+[0;32mI (272691) observer_task:  [0m
+[0;32mI (273701) observer_task: deviation:  18490[0m
+[0;32mI (273701) observer_task:  [0m
+[0;32mI (274901) observer_task: deviation:  18481[0m
+[0;32mI (274901) observer_task:  [0m
+[0;32mI (275901) observer_task: deviation:  28999[0m
+[0;32mI (275901) observer_task:  [0m
+[0;32mI (277111) observer_task: deviation:  28985[0m
+[0;32mI (277111) observer_task:  [0m
+[0;32mI (278121) observer_task: deviation:  19602[0m
+[0;32mI (278121) observer_task:  [0m
+[0;32mI (279361) observer_task: deviation:  19581[0m
+[0;32mI (279361) observer_task:  [0m
+[0;32mI (280361) observer_task: deviation:      0[0m
+[0;32mI (280361) observer_task:  [0m
+[0;32mI (280701) observer_task: deviation:      0[0m
+[0;32mI (280701) observer_task:  [0m
+[0;32mI (281701) observer_task: deviation:  14312[0m
+[0;32mI (281701) observer_task:  [0m
+[0;32mI (282911) observer_task: deviation:  14330[0m
+[0;32mI (282911) observer_task:  [0m
+[0;32mI (283921) observer_task: deviation:  14514[0m
+[0;32mI (283921) observer_task:  [0m
+[0;32mI (285131) observer_task: deviation:  14501[0m
+[0;32mI (285131) observer_task:  [0m
+[0;32mI (286131) observer_task: deviation:  24816[0m
+[0;32mI (286131) observer_task:  [0m
+[0;32mI (287381) observer_task: deviation:  24806[0m
+[0;32mI (287381) observer_task:  [0m
+[0;32mI (288391) observer_task: deviation:  15130[0m
+[0;32mI (288391) observer_task:  [0m
+[0;32mI (289591) observer_task: deviation:  15129[0m
+[0;32mI (289591) observer_task:  [0m
+[0;32mI (290601) observer_task: deviation:  15373[0m
+[0;32mI (290601) observer_task:  [0m
+[0;32mI (291811) observer_task: deviation:  15383[0m
+[0;32mI (291811) observer_task:  [0m
+[0;32mI (292821) observer_task: deviation:  15953[0m
+[0;32mI (292821) observer_task:  [0m
+[0;32mI (294031) observer_task: deviation:  15955[0m
+[0;32mI (294031) observer_task:  [0m
+[0;32mI (295041) observer_task: deviation:  25588[0m
+[0;32mI (295041) observer_task:  [0m
+[0;32mI (296251) observer_task: deviation:  25591[0m
+[0;32mI (296251) observer_task:  [0m
+[0;32mI (297251) observer_task: deviation:  26100[0m
+[0;32mI (297251) observer_task:  [0m
+[0;32mI (298471) observer_task: deviation:  26120[0m
+[0;32mI (298471) observer_task:  [0m
+[0;32mI (299481) observer_task: deviation:   6308[0m
+[0;32mI (299481) observer_task:  [0m
+[0;32mI (300691) observer_task: deviation:   6287[0m
+[0;32mI (300691) observer_task:  [0m
+[0;32mI (301691) observer_task: deviation:  16708[0m
+[0;32mI (301691) observer_task:  [0m
+[0;32mI (302931) observer_task: deviation:  16700[0m
+[0;32mI (302931) observer_task:  [0m
+[0;32mI (303941) observer_task: deviation:  26755[0m
+[0;32mI (303941) observer_task:  [0m
+[0;32mI (305161) observer_task: deviation:  26737[0m
+[0;32mI (305161) observer_task:  [0m
+[0;32mI (306161) observer_task: deviation:  27164[0m
+[0;32mI (306161) observer_task:  [0m
+[0;32mI (307361) observer_task: deviation:  27144[0m
+[0;32mI (307361) observer_task:  [0m
+[0;32mI (308371) observer_task: deviation:  27436[0m
+[0;32mI (308371) observer_task:  [0m
+[0;32mI (309631) observer_task: deviation:  27448[0m
+[0;32mI (309631) observer_task:  [0m
+[0;32mI (310631) observer_task: deviation:  17227[0m
+[0;32mI (310631) observer_task:  [0m
+[0;32mI (311851) observer_task: deviation:  17232[0m
+[0;32mI (311851) observer_task:  [0m
+[0;32mI (312861) observer_task: deviation:   7314[0m
+[0;32mI (312861) observer_task:  [0m
+[0;32mI (314071) observer_task: deviation:   7311[0m
+[0;32mI (314071) observer_task:  [0m
+[0;32mI (315081) observer_task: deviation:  17504[0m
+[0;32mI (315081) observer_task:  [0m
+[0;32mI (316281) observer_task: deviation:  17485[0m
+[0;32mI (316281) observer_task:  [0m
+[0;32mI (317291) observer_task: deviation:  27732[0m
+[0;32mI (317291) observer_task:  [0m
+[0;32mI (318501) observer_task: deviation:  27720[0m
+[0;32mI (318501) observer_task:  [0m
+[0;32mI (319511) observer_task: deviation:  28061[0m
+[0;32mI (319511) observer_task:  [0m
+[0;32mI (320751) observer_task: deviation:  28054[0m
+[0;32mI (320751) observer_task:  [0m
+[0;32mI (321761) observer_task: deviation:  28412[0m
+[0;32mI (321761) observer_task:  [0m
+[0;32mI (322971) observer_task: deviation:  28410[0m
+[0;32mI (322971) observer_task:  [0m
+[0;32mI (323981) observer_task: deviation:  28299[0m
+[0;32mI (323981) observer_task:  [0m
+[0;32mI (325201) observer_task: deviation:  28293[0m
+[0;32mI (325201) observer_task:  [0m
+[0;32mI (326201) observer_task: deviation:  28567[0m
+[0;32mI (326201) observer_task:  [0m
+[0;32mI (327411) observer_task: deviation:  28567[0m
+[0;32mI (327411) observer_task:  [0m
+[0;32mI (328421) observer_task: deviation:  18896[0m
+[0;32mI (328421) observer_task:  [0m
+[0;32mI (329631) observer_task: deviation:  18897[0m
+[0;32mI (329631) observer_task:  [0m
+[0;32mI (330631) observer_task: deviation:  28907[0m
+[0;32mI (330631) observer_task:  [0m
+[0;32mI (331861) observer_task: deviation:  28900[0m
+[0;32mI (331861) observer_task:  [0m
+[0;32mI (332871) observer_task: deviation:   9111[0m
+[0;32mI (332871) observer_task:  [0m
+[0;32mI (334081) observer_task: deviation:   9108[0m
+[0;32mI (334081) observer_task:  [0m
+[0;32mI (335081) observer_task: deviation:  19337[0m
+[0;32mI (335081) observer_task:  [0m
+[0;32mI (336291) observer_task: deviation:  19318[0m
+[0;32mI (336291) observer_task:  [0m
+[0;32mI (337301) observer_task: deviation:  29564[0m
+[0;32mI (337301) observer_task:  [0m
+[0;32mI (338561) observer_task: deviation:  29570[0m
+[0;32mI (338561) observer_task:  [0m
+[0;32mI (339571) observer_task: deviation:      0[0m
+[0;32mI (339571) observer_task:  [0m
+[0;32mI (339891) observer_task: deviation:      0[0m
+[0;32mI (339891) observer_task:  [0m
+[0;32mI (340901) observer_task: deviation:  14458[0m
+[0;32mI (340901) observer_task:  [0m
+[0;32mI (342121) observer_task: deviation:  14450[0m
+[0;32mI (342121) observer_task:  [0m
+[0;32mI (343131) observer_task: deviation:  14719[0m
+[0;32mI (343131) observer_task:  [0m
+[0;32mI (344341) observer_task: deviation:  14712[0m
+[0;32mI (344341) observer_task:  [0m
+[0;32mI (345351) observer_task: deviation:  14780[0m
+[0;32mI (345351) observer_task:  [0m
+[0;32mI (346561) observer_task: deviation:  14792[0m
+[0;32mI (346561) observer_task:  [0m
+[0;32mI (347561) observer_task: deviation:  25173[0m
+[0;32mI (347561) observer_task:  [0m
+[0;32mI (348771) observer_task: deviation:  25164[0m
+[0;32mI (348771) observer_task:  [0m
+[0;32mI (349781) observer_task: deviation:  15549[0m
+[0;32mI (349781) observer_task:  [0m
+[0;32mI (350991) observer_task: deviation:  15559[0m
+[0;32mI (350991) observer_task:  [0m
+[0;32mI (351991) observer_task: deviation:  25828[0m
+[0;32mI (351991) observer_task:  [0m
+[0;32mI (353201) observer_task: deviation:  25829[0m
+[0;32mI (353201) observer_task:  [0m
+[0;32mI (354211) observer_task: deviation:  16225[0m
+[0;32mI (354211) observer_task:  [0m
+[0;32mI (355421) observer_task: deviation:  16225[0m
+[0;32mI (355421) observer_task:  [0m
+[0;32mI (356421) observer_task: deviation:  26280[0m
+[0;32mI (356421) observer_task:  [0m
+[0;32mI (357631) observer_task: deviation:  26266[0m
+[0;32mI (357631) observer_task:  [0m
+[0;32mI (358641) observer_task: deviation:  26395[0m
+[0;32mI (358641) observer_task:  [0m
+[0;32mI (359851) observer_task: deviation:  26392[0m
+[0;32mI (359851) observer_task:  [0m
+[0;32mI (360851) observer_task: deviation:  16697[0m
+[0;32mI (360851) observer_task:  [0m
+[0;32mI (362071) observer_task: deviation:  16689[0m
+[0;32mI (362071) observer_task:  [0m
+[0;32mI (363081) observer_task: deviation:  26919[0m
+[0;32mI (363081) observer_task:  [0m
+[0;32mI (364291) observer_task: deviation:  26915[0m
+[0;32mI (364291) observer_task:  [0m
+[0;32mI (365301) observer_task: deviation:  17092[0m
+[0;32mI (365301) observer_task:  [0m
+[0;32mI (366511) observer_task: deviation:  17064[0m
+[0;32mI (366511) observer_task:  [0m
+[0;32mI (367521) observer_task: deviation:  17546[0m
+[0;32mI (367521) observer_task:  [0m
+[0;32mI (368731) observer_task: deviation:  17554[0m
+[0;32mI (368731) observer_task:  [0m
+[0;32mI (369741) observer_task: deviation:  27791[0m
+[0;32mI (369741) observer_task:  [0m
+[0;32mI (370941) observer_task: deviation:  27782[0m
+[0;32mI (370941) observer_task:  [0m
+[0;32mI (371951) observer_task: deviation:  28005[0m
+[0;32mI (371951) observer_task:  [0m
+[0;32mI (373171) observer_task: deviation:  28016[0m
+[0;32mI (373171) observer_task:  [0m

@@ -1,0 +1,345 @@
+�chip rev:  �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09e18h ( 40472) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019e40 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bfa0 vaddr=40080000 size=04078h ( 16504) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14e8ch ( 85644) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00034eb4 vaddr=40084078 size=083e8h ( 33768) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081114[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (240) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  eb59d93238a30535...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C460 len 00013BA0 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) display_task : avg moving offset: 0 us[0m
+[0;32mI (420) main_task: Returned from app_main()[0m
+[0;32mI (1420) display_task : avg moving offset: 0 us[0m
+[0;32mI (2420) display_task : avg moving offset: 0 us[0m
+[0;32mI (3420) display_task : avg moving offset: 0 us[0m
+[0;32mI (4030) observer_task: PIN18 | RISING EDGE  | 3796306 us[0m
+[0;32mI (4110) observer_task: PIN22 | RISING EDGE  | 3881804 us[0m
+[0;32mI (4130) observer_task: PIN19 | RISING EDGE  | 3900739 us[0m
+[0;32mI (4420) display_task : avg moving offset: 3859616 us[0m
+[0;32mI (5130) observer_task: PIN18 | FALLING EDGE | 4897262 us[0m
+[0;32mI (5210) observer_task: PIN22 | FALLING EDGE | 4982821 us[0m
+[0;32mI (5230) observer_task: PIN19 | FALLING EDGE | 5001738 us[0m
+[0;32mI (5420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (6420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (7420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (8420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (9420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (10420) display_task : avg moving offset: 1363591 us[0m
+[0;32mI (10820) observer_task: PIN18 | RISING EDGE  | 10585466 us[0m
+[0;32mI (10890) observer_task: PIN19 | RISING EDGE  | 10663308 us[0m
+[0;32mI (10910) observer_task: PIN22 | RISING EDGE  | 10684636 us[0m
+[0;32mI (11420) display_task : avg moving offset: 93829 us[0m
+[0;32mI (11920) observer_task: PIN18 | FALLING EDGE | 11686509 us[0m
+[0;32mI (11990) observer_task: PIN19 | FALLING EDGE | 11764377 us[0m
+[0;32mI (12020) observer_task: PIN22 | FALLING EDGE | 11785671 us[0m
+[0;32mI (12420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (13420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (14420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (15420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (16420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (17420) display_task : avg moving offset: 92066 us[0m
+[0;32mI (17580) observer_task: PIN18 | RISING EDGE  | 17354370 us[0m
+[0;32mI (17640) observer_task: PIN19 | RISING EDGE  | 17408561 us[0m
+[0;32mI (17660) observer_task: PIN22 | RISING EDGE  | 17429669 us[0m
+[0;32mI (18420) display_task : avg moving offset: 76217 us[0m
+[0;32mI (18690) observer_task: PIN18 | FALLING EDGE | 18455397 us[0m
+[0;32mI (18740) observer_task: PIN19 | FALLING EDGE | 18509617 us[0m
+[0;32mI (18760) observer_task: PIN22 | FALLING EDGE | 18530696 us[0m
+[0;32mI (19420) display_task : avg moving offset: 68272 us[0m
+[0;32mI (20420) display_task : avg moving offset: 68272 us[0m
+[0;32mI (21420) display_task : avg moving offset: 68272 us[0m
+[0;32mI (22420) display_task : avg moving offset: 68272 us[0m
+[0;32mI (23420) display_task : avg moving offset: 68272 us[0m
+[0;32mI (24330) observer_task: PIN18 | RISING EDGE  | 24103462 us[0m
+[0;32mI (24400) observer_task: PIN19 | RISING EDGE  | 24167168 us[0m
+[0;32mI (24420) observer_task: PIN22 | RISING EDGE  | 24187411 us[0m
+[0;32mI (24420) display_task : avg moving offset: 74318 us[0m
+[0;32mI (25420) display_task : avg moving offset: 74318 us[0m
+[0;32mI (25430) observer_task: PIN18 | FALLING EDGE | 25204503 us[0m
+[0;32mI (25500) observer_task: PIN19 | FALLING EDGE | 25268171 us[0m
+[0;32mI (25520) observer_task: PIN22 | FALLING EDGE | 25288446 us[0m
+[0;32mI (26420) display_task : avg moving offset: 77186 us[0m
+[0;32mI (27420) display_task : avg moving offset: 77186 us[0m
+[0;32mI (28420) display_task : avg moving offset: 77186 us[0m
+[0;32mI (29420) display_task : avg moving offset: 77186 us[0m
+[0;32mI (30420) display_task : avg moving offset: 77186 us[0m
+[0;32mI (31090) observer_task: PIN18 | RISING EDGE  | 30862047 us[0m
+[0;32mI (31150) observer_task: PIN19 | RISING EDGE  | 30915364 us[0m
+[0;32mI (31190) observer_task: PIN22 | RISING EDGE  | 30956695 us[0m
+[0;32mI (31420) display_task : avg moving offset: 77302 us[0m
+[0;32mI (32190) observer_task: PIN18 | FALLING EDGE | 31963043 us[0m
+[0;32mI (32250) observer_task: PIN19 | FALLING EDGE | 32016400 us[0m
+[0;32mI (32290) observer_task: PIN22 | FALLING EDGE | 32057701 us[0m
+[0;32mI (32420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (33420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (34420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (35420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (36420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (37420) display_task : avg moving offset: 80887 us[0m
+[0;32mI (37860) observer_task: PIN18 | RISING EDGE  | 37630774 us[0m
+[0;32mI (37910) observer_task: PIN19 | RISING EDGE  | 37675700 us[0m
+[0;32mI (37960) observer_task: PIN22 | RISING EDGE  | 37726647 us[0m
+[0;32mI (38420) display_task : avg moving offset: 78485 us[0m
+[0;32mI (38960) observer_task: PIN18 | FALLING EDGE | 38731826 us[0m
+[0;32mI (39010) observer_task: PIN19 | FALLING EDGE | 38776719 us[0m
+[0;32mI (39060) observer_task: PIN22 | FALLING EDGE | 38827674 us[0m
+[0;32mI (39420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (40420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (41420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (42420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (43420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (44420) display_task : avg moving offset: 78871 us[0m
+[0;32mI (44610) observer_task: PIN18 | RISING EDGE  | 44379891 us[0m
+[0;32mI (44670) observer_task: PIN19 | RISING EDGE  | 44444442 us[0m
+[0;32mI (44710) observer_task: PIN22 | RISING EDGE  | 44484008 us[0m
+[0;32mI (45420) display_task : avg moving offset: 88172 us[0m
+[0;32mI (45710) observer_task: PIN18 | FALLING EDGE | 45480911 us[0m
+[0;32mI (45780) observer_task: PIN19 | FALLING EDGE | 45545539 us[0m
+[0;32mI (45820) observer_task: PIN22 | FALLING EDGE | 45585074 us[0m
+[0;32mI (46420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (47420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (48420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (49420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (50420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (51370) observer_task: PIN18 | RISING EDGE  | 51138787 us[0m
+[0;32mI (51420) display_task : avg moving offset: 90969 us[0m
+[0;32mI (51420) observer_task: PIN19 | RISING EDGE  | 51192662 us[0m
+[0;32mI (51460) observer_task: PIN22 | RISING EDGE  | 51232883 us[0m
+[0;32mI (52420) display_task : avg moving offset: 84044 us[0m
+[0;32mI (52470) observer_task: PIN18 | FALLING EDGE | 52239843 us[0m
+[0;32mI (52520) observer_task: PIN19 | FALLING EDGE | 52293721 us[0m
+[0;32mI (52560) observer_task: PIN22 | FALLING EDGE | 52333932 us[0m
+[0;32mI (53420) display_task : avg moving offset: 80687 us[0m
+[0;32mI (54420) display_task : avg moving offset: 80687 us[0m
+[0;32mI (55420) display_task : avg moving offset: 80687 us[0m
+[0;32mI (56420) display_task : avg moving offset: 80687 us[0m
+[0;32mI (57420) display_task : avg moving offset: 80687 us[0m
+[0;32mI (58130) observer_task: PIN18 | RISING EDGE  | 57897680 us[0m
+[0;32mI (58170) observer_task: PIN19 | RISING EDGE  | 57942183 us[0m
+[0;32mI (58220) observer_task: PIN22 | RISING EDGE  | 57992630 us[0m
+[0;32mI (58420) display_task : avg moving offset: 77847 us[0m
+[0;32mI (59230) observer_task: PIN18 | FALLING EDGE | 58998730 us[0m
+[0;32mI (59270) observer_task: PIN19 | FALLING EDGE | 59043226 us[0m
+[0;32mI (59320) observer_task: PIN22 | FALLING EDGE | 59093656 us[0m
+[0;32mI (59420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (60420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (61420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (62420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (63420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (64420) display_task : avg moving offset: 78124 us[0m
+[0;32mI (64890) observer_task: PIN18 | RISING EDGE  | 64656608 us[0m
+[0;32mI (64920) observer_task: PIN19 | RISING EDGE  | 64690678 us[0m
+[0;32mI (64980) observer_task: PIN22 | RISING EDGE  | 64752093 us[0m
+[0;32mI (65420) display_task : avg moving offset: 74827 us[0m
+[0;32mI (65990) observer_task: PIN18 | FALLING EDGE | 65757606 us[0m
+[0;32mI (66020) observer_task: PIN19 | FALLING EDGE | 65791699 us[0m
+[0;32mI (66080) observer_task: PIN22 | FALLING EDGE | 65853138 us[0m
+[0;32mI (66420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (67420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (68420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (69420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (70420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (71420) display_task : avg moving offset: 75036 us[0m
+[0;32mI (71640) observer_task: PIN18 | RISING EDGE  | 71405602 us[0m
+[0;32mI (71670) observer_task: PIN19 | RISING EDGE  | 71439302 us[0m
+[0;32mI (71740) observer_task: PIN22 | RISING EDGE  | 71510657 us[0m
+[0;32mI (72420) display_task : avg moving offset: 78095 us[0m
+[0;32mI (72740) observer_task: PIN18 | FALLING EDGE | 72506630 us[0m
+[0;32mI (72770) observer_task: PIN19 | FALLING EDGE | 72540314 us[0m
+[0;32mI (72840) observer_task: PIN22 | FALLING EDGE | 72611723 us[0m
+[0;32mI (73420) display_task : avg moving offset: 81277 us[0m
+[0;32mI (74420) display_task : avg moving offset: 81277 us[0m
+[0;32mI (75420) display_task : avg moving offset: 81277 us[0m
+[0;32mI (76420) display_task : avg moving offset: 81277 us[0m
+[0;32mI (77420) display_task : avg moving offset: 81277 us[0m
+[0;32mI (78390) observer_task: PIN18 | RISING EDGE  | 78164529 us[0m
+[0;32mI (78420) observer_task: PIN19 | RISING EDGE  | 78188358 us[0m
+[0;32mI (78420) display_task : avg moving offset: 54202 us[0m
+[0;32mI (78490) observer_task: PIN22 | RISING EDGE  | 78258585 us[0m
+[0;32mI (79420) display_task : avg moving offset: 74326 us[0m
+[0;32mI (79500) observer_task: PIN18 | FALLING EDGE | 79265523 us[0m
+[0;32mI (79520) observer_task: PIN19 | FALLING EDGE | 79289414 us[0m
+[0;32mI (79590) observer_task: PIN22 | FALLING EDGE | 79359594 us[0m
+[0;32mI (80420) display_task : avg moving offset: 70672 us[0m
+[0;32mI (81420) display_task : avg moving offset: 70672 us[0m
+[0;32mI (82420) display_task : avg moving offset: 70672 us[0m
+[0;32mI (83420) display_task : avg moving offset: 70672 us[0m
+[0;32mI (84420) display_task : avg moving offset: 70672 us[0m
+[0;32mI (85160) observer_task: PIN18 | RISING EDGE  | 84933487 us[0m
+[0;32mI (85170) observer_task: PIN19 | RISING EDGE  | 84937718 us[0m
+[0;32mI (85260) observer_task: PIN22 | RISING EDGE  | 85029462 us[0m
+[0;32mI (85420) display_task : avg moving offset: 64759 us[0m
+[0;32mI (86260) observer_task: PIN18 | FALLING EDGE | 86034483 us[0m
+[0;32mI (86270) observer_task: PIN19 | FALLING EDGE | 86038762 us[0m
+[0;32mI (86360) observer_task: PIN22 | FALLING EDGE | 86130487 us[0m
+[0;32mI (86420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (87420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (88420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (89420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (90420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (91420) display_task : avg moving offset: 65419 us[0m
+[0;32mI (91910) observer_task: PIN18 | RISING EDGE  | 91682362 us[0m
+[0;32mI (91940) observer_task: PIN19 | RISING EDGE  | 91707780 us[0m
+[0;32mI (92020) observer_task: PIN22 | RISING EDGE  | 91787557 us[0m
+[0;32mI (92420) display_task : avg moving offset: 75539 us[0m
+[0;32mI (93010) observer_task: PIN18 | FALLING EDGE | 92783390 us[0m
+[0;32mI (93040) observer_task: PIN19 | FALLING EDGE | 92808811 us[0m
+[0;32mI (93120) observer_task: PIN22 | FALLING EDGE | 92888607 us[0m
+[0;32mI (93420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (94420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (95420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (96420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (97420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (98420) display_task : avg moving offset: 78611 us[0m
+[0;32mI (98670) observer_task: PIN18 | RISING EDGE  | 98441480 us[0m
+[0;32mI (98690) observer_task: PIN19 | RISING EDGE  | 98455075 us[0m
+[0;32mI (98770) observer_task: PIN22 | RISING EDGE  | 98535365 us[0m
+[0;32mI (99420) display_task : avg moving offset: 70899 us[0m
+[0;32mI (99770) observer_task: PIN18 | FALLING EDGE | 99542497 us[0m
+[0;32mI (99790) observer_task: PIN19 | FALLING EDGE | 99556120 us[0m
+[0;32mI (99870) observer_task: PIN22 | FALLING EDGE | 99636378 us[0m
+[0;32mI (100420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (101420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (102420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (103420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (104420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (105420) display_task : avg moving offset: 67129 us[0m
+[0;32mI (105420) observer_task: PIN18 | RISING EDGE  | 105190257 us[0m
+[0;32mI (105440) observer_task: PIN19 | RISING EDGE  | 105215052 us[0m
+[0;32mI (105510) observer_task: PIN22 | RISING EDGE  | 105284409 us[0m
+[0;32mI (106420) display_task : avg moving offset: 70942 us[0m
+[0;32mI (106520) observer_task: PIN18 | FALLING EDGE | 106291270 us[0m
+[0;32mI (106550) observer_task: PIN19 | FALLING EDGE | 106316080 us[0m
+[0;32mI (106620) observer_task: PIN22 | FALLING EDGE | 106385434 us[0m
+[0;32mI (107420) display_task : avg moving offset: 71042 us[0m
+[0;32mI (108420) display_task : avg moving offset: 71042 us[0m
+[0;32mI (109420) display_task : avg moving offset: 71042 us[0m
+[0;32mI (110420) display_task : avg moving offset: 71042 us[0m
+[0;32mI (111420) display_task : avg moving offset: 71042 us[0m
+[0;32mI (112170) observer_task: PIN18 | RISING EDGE  | 111939214 us[0m
+[0;32mI (112220) observer_task: PIN19 | RISING EDGE  | 111994160 us[0m
+[0;32mI (112260) observer_task: PIN22 | RISING EDGE  | 112033219 us[0m
+[0;32mI (112420) display_task : avg moving offset: 81038 us[0m
+[0;32mI (113270) observer_task: PIN18 | FALLING EDGE | 113040261 us[0m
+[0;32mI (113330) observer_task: PIN19 | FALLING EDGE | 113095192 us[0m
+[0;32mI (113360) observer_task: PIN22 | FALLING EDGE | 113134242 us[0m
+[0;32mI (113420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (114420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (115420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (116420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (117420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (118420) display_task : avg moving offset: 80972 us[0m
+[0;32mI (118930) observer_task: PIN18 | RISING EDGE  | 118698015 us[0m
+[0;32mI (118980) observer_task: PIN19 | RISING EDGE  | 118753656 us[0m
+[0;32mI (119030) observer_task: PIN22 | RISING EDGE  | 118803506 us[0m
+[0;32mI (119420) display_task : avg moving offset: 85037 us[0m
+[0;32mI (120030) observer_task: PIN18 | FALLING EDGE | 119799059 us[0m
+[0;32mI (120080) observer_task: PIN19 | FALLING EDGE | 119854721 us[0m
+[0;32mI (120130) observer_task: PIN22 | FALLING EDGE | 119904537 us[0m
+[0;32mI (120420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (121420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (122420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (123420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (124420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (125420) display_task : avg moving offset: 88877 us[0m
+[0;32mI (125680) observer_task: PIN18 | RISING EDGE  | 125447172 us[0m
+[0;32mI (125730) observer_task: PIN19 | RISING EDGE  | 125502491 us[0m
+[0;32mI (125780) observer_task: PIN22 | RISING EDGE  | 125552457 us[0m
+[0;32mI (126420) display_task : avg moving offset: 88694 us[0m
+[0;32mI (126780) observer_task: PIN18 | FALLING EDGE | 126548206 us[0m
+[0;32mI (126830) observer_task: PIN19 | FALLING EDGE | 126603533 us[0m
+[0;32mI (126880) observer_task: PIN22 | FALLING EDGE | 126653509 us[0m
+[0;32mI (127420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (128420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (129420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (130420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (131420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (132420) display_task : avg moving offset: 88638 us[0m
+[0;32mI (132440) observer_task: PIN18 | RISING EDGE  | 132206124 us[0m
+[0;32mI (132490) observer_task: PIN19 | RISING EDGE  | 132262091 us[0m
+[0;32mI (132530) observer_task: PIN22 | RISING EDGE  | 132301310 us[0m
+[0;32mI (133420) display_task : avg moving offset: 85485 us[0m
+[0;32mI (133540) observer_task: PIN18 | FALLING EDGE | 133307115 us[0m
+[0;32mI (133590) observer_task: PIN19 | FALLING EDGE | 133363114 us[0m
+[0;32mI (133630) observer_task: PIN22 | FALLING EDGE | 133402340 us[0m
+[0;32mI (134420) display_task : avg moving offset: 82136 us[0m
+[0;32mI (135420) display_task : avg moving offset: 82136 us[0m
+[0;32mI (136420) display_task : avg moving offset: 82136 us[0m
+[0;32mI (137420) display_task : avg moving offset: 82136 us[0m
+[0;32mI (138420) display_task : avg moving offset: 82136 us[0m
+[0;32mI (139190) observer_task: PIN18 | RISING EDGE  | 138955238 us[0m
+[0;32mI (139240) observer_task: PIN19 | RISING EDGE  | 139009019 us[0m
+[0;32mI (139290) observer_task: PIN22 | RISING EDGE  | 139058937 us[0m
+[0;32mI (139420) display_task : avg moving offset: 84235 us[0m
+[0;32mI (140290) observer_task: PIN18 | FALLING EDGE | 140056277 us[0m
+[0;32mI (140340) observer_task: PIN19 | FALLING EDGE | 140110036 us[0m
+[0;32mI (140390) observer_task: PIN22 | FALLING EDGE | 140159992 us[0m
+[0;32mI (140420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (141420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (142420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (143420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (144420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (145420) display_task : avg moving offset: 87057 us[0m
+[0;32mI (145940) observer_task: PIN18 | RISING EDGE  | 145714013 us[0m
+[0;32mI (146010) observer_task: PIN19 | RISING EDGE  | 145779239 us[0m
+[0;32mI (146050) observer_task: PIN22 | RISING EDGE  | 145818357 us[0m
+[0;32mI (146420) display_task : avg moving offset: 91095 us[0m

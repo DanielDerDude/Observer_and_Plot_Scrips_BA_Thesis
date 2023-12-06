@@ -1,0 +1,559 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM20 instead...[0m
+[0;33m--- esp-idf-monitor 1.3.2 on \\.\COM20 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081114: call_start_cpu1 at C:/Users/Daniel/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d565a: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:82
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d565a: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:82
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d565a: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:82
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x4008837b: vPortClearInterruptMaskFromISR at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:568
+ (inlined by) vPortExitCritical at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400864a3: uxQueueMessagesWaiting at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:2261
+[0m
+[0;33m0x400d5662: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:86
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400845ed: esp_crosscore_int_send_yield at C:/Users/Daniel/esp/esp-idf/components/esp_system/crosscore_int.c:157
+[0m
+[0;33m0x400875ee: vTaskDelay at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1677
+[0m
+[0;33m0x400d5762: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:104
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d83ab: task_wdt_timeout_handling at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8532: task_wdt_isr at C:/Users/Daniel/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400829ad: _xt_lowint1 at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d565a: display_task at C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/main/main.c:82
+[0m
+[0;33m0x40088095: vPortTaskWrapper at C:/Users/Daniel/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m

@@ -1,0 +1,104 @@
+[1/59] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj
+[2/59] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modem.c.obj
+[3/59] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.obj
+[4/59] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/system_time.c.obj
+[5/59] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer.c.obj
+[6/59] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/ets_timer_legacy.c.obj
+[7/59] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_lac.c.obj
+[8/59] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj
+[9/59] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_init.c.obj
+[10/59] Building C object esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir/esp32/esp_coex_adapter.c.obj
+[11/59] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
+[12/59] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/esp32/esp_adapter.c.obj
+[13/59] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+[14/59] Building C object esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_socks_proxy.c.obj
+[15/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj
+[16/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj
+[17/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj
+[18/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_ws.c.obj
+[19/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj
+[20/59] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj
+[21/59] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Daniel\Desktop\Bachelor_Arbeit\Testing\observer\build\bootloader\esp-idf\esptool_py && C:\Users\Daniel\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Daniel/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[22/57] Linking C static library esp-idf\esp_http_server\libesp_http_server.a
+[23/57] Linking C static library esp-idf\tcp_transport\libtcp_transport.a
+[24/57] Linking C static library esp-idf\esp_eth\libesp_eth.a
+[25/57] Linking C static library esp-idf\esp_wifi\libesp_wifi.a
+[26/57] Linking C static library esp-idf\esp_coex\libesp_coex.a
+[27/57] Linking C static library esp-idf\esp_phy\libesp_phy.a
+[28/57] Linking C static library esp-idf\esp_timer\libesp_timer.a
+[29/57] Linking C static library esp-idf\esp_hw_support\libesp_hw_support.a
+[30/57] Linking C static library esp-idf\esp_system\libesp_system.a
+[31/57] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/spi/sdspi/sdspi_host.c.obj
+[32/57] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/sdmmc/sdmmc_host.c.obj
+[33/57] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/sdmmc/sdmmc_transaction.c.obj
+[34/57] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj
+[35/57] Building C object esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_locks.c.obj
+[36/57] Building C object esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_impl.c.obj
+[37/57] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace_util.c.obj
+[38/57] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace.c.obj
+[39/57] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/host_file_io.c.obj
+[40/57] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/port/port_uart.c.obj
+[41/57] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[42/57] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+[43/57] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+[44/57] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[45/57] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+[46/57] Linking C static library esp-idf\esp_pm\libesp_pm.a
+[47/57] Linking C static library esp-idf\driver\libdriver.a
+[48/57] Linking C static library esp-idf\app_trace\libapp_trace.a
+[49/57] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[50/57] Linking C static library esp-idf\mqtt\libmqtt.a
+[51/57] Linking C static library esp-idf\sdmmc\libsdmmc.a
+[52/57] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[53/57] Generating ld/sections.ld
+[54/57] Linking CXX executable generic_gpio.elf
+[55/57] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/build/generic_gpio.bin
+[56/57] cmd.exe /C "cd /D C:\Users\Daniel\Desktop\Bachelor_Arbeit\Testing\observer\build\esp-idf\esptool_py && C:\Users\Daniel\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/Daniel/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/build/partition_table/partition-table.bin C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/build/generic_gpio.bin"
+generic_gpio.bin binary size 0x2d070 bytes. Smallest app partition is 0x100000 bytes. 0xd2f90 bytes (82%) free.
+[56/57] cmd.exe /C "cd /D C:\Users\Daniel\esp\esp-idf\components\esptool_py && C:\Users\Daniel\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Daniel/esp/esp-idf -D SERIAL_TOOL=C:/Users/Daniel/.espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Users/Daniel/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Daniel/Desktop/Bachelor_Arbeit/Testing/observer/build -P C:/Users/Daniel/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM26 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 generic_gpio.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port COM26
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: a8:42:e3:cd:3d:84
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0003dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16686...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768f... (100 %)
+Wrote 26640 bytes (16686 compressed) at 0x00001000 in 0.5 seconds (effective 396.6 kbit/s)...
+Hash of data verified.
+Compressed 184432 bytes to 102092...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001c832... (28 %)
+Writing at 0x00022118... (42 %)
+Writing at 0x00027dae... (57 %)
+Writing at 0x0002e090... (71 %)
+Writing at 0x00035dcc... (85 %)
+Writing at 0x0003b99d... (100 %)
+Wrote 184432 bytes (102092 compressed) at 0x00010000 in 2.5 seconds (effective 594.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 937.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

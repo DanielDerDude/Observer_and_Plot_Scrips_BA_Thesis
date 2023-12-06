@@ -1,0 +1,939 @@
+ time:     Nov�14 KiB): D/Iets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09da8h ( 40360) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00019dd0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf30 vaddr=40080000 size=040e8h ( 16616) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d8ch ( 85388) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00034db4 vaddr=400840e8 size=08344h ( 33604) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (240) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  43b8dda558b6e9be...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (271) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (276) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (289) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (308) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (316) spi_flash: detected chip: generic[0m
+[0;32mI (319) spi_flash: flash io: dio[0m
+[0;33mW (323) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (341) app_start: Starting scheduler on CPU1[0m
+[0;32mI (341) main_task: Started on CPU0[0m
+[0;32mI (351) main_task: Calling app_main()[0m
+[0;32mI (351) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (361) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (371) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (381) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (391) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (401) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (411) main_task: Returned from app_main()[0m
+[0;32mI (1301) observer_task: deviation:      0[0m
+[0;32mI (1301) observer_task:  [0m
+[0;32mI (2131) observer_task: deviation: 1081592[0m
+[0;32mI (2131) observer_task:  [0m
+[0;32mI (3131) observer_task: deviation: 1911233[0m
+[0;32mI (3131) observer_task:  [0m
+[0;32mI (3961) observer_task: deviation: 2918202[0m
+[0;32mI (3961) observer_task:  [0m
+[0;32mI (4971) observer_task: deviation: 3740648[0m
+[0;32mI (4971) observer_task:  [0m
+[0;32mI (5811) observer_task: deviation: 4747578[0m
+[0;32mI (5811) observer_task:  [0m
+[0;32mI (6821) observer_task: deviation: 5595789[0m
+[0;32mI (6821) observer_task:  [0m
+[0;32mI (7641) observer_task: deviation: 6602734[0m
+[0;32mI (7641) observer_task:  [0m
+[0;32mI (8651) observer_task: deviation: 7423024[0m
+[0;32mI (8651) observer_task:  [0m
+[0;32mI (9481) observer_task: deviation: 8429984[0m
+[0;32mI (9481) observer_task:  [0m
+[0;32mI (10491) observer_task: deviation: 9259727[0m
+[0;32mI (10491) observer_task:  [0m
+[0;32mI (11301) observer_task: deviation: 10266698[0m
+[0;32mI (11301) observer_task:  [0m
+[0;32mI (12311) observer_task: deviation: 11087092[0m
+[0;32mI (12311) observer_task:  [0m
+[0;32mI (13161) observer_task: deviation: 12094063[0m
+[0;32mI (13161) observer_task:  [0m
+[0;32mI (14171) observer_task: deviation: 12944440[0m
+[0;32mI (14171) observer_task:  [0m
+[0;32mI (15011) observer_task: deviation: 13951389[0m
+[0;32mI (15011) observer_task:  [0m
+[0;32mI (16021) observer_task: deviation: 14791587[0m
+[0;32mI (16021) observer_task:  [0m
+[0;32mI (16871) observer_task: deviation: 15798545[0m
+[0;32mI (16871) observer_task:  [0m
+[0;32mI (17881) observer_task: deviation: 16658208[0m
+[0;32mI (17881) observer_task:  [0m
+[0;32mI (18721) observer_task: deviation: 17665162[0m
+[0;32mI (18721) observer_task:  [0m
+[0;32mI (19731) observer_task: deviation: 18505541[0m
+[0;32mI (19731) observer_task:  [0m
+[0;32mI (20551) observer_task: deviation: 19512510[0m
+[0;32mI (20551) observer_task:  [0m
+[0;32mI (21561) observer_task: deviation: 20342208[0m
+[0;32mI (21561) observer_task:  [0m
+[0;32mI (22401) observer_task: deviation: 21349153[0m
+[0;32mI (22401) observer_task:  [0m
+[0;32mI (23411) observer_task: deviation: 22189415[0m
+[0;32mI (23411) observer_task:  [0m
+[0;32mI (24241) observer_task: deviation: 23196375[0m
+[0;32mI (24241) observer_task:  [0m
+[0;32mI (25251) observer_task: deviation: 24026156[0m
+[0;32mI (25251) observer_task:  [0m
+[0;32mI (26091) observer_task: deviation: 25033102[0m
+[0;32mI (26091) observer_task:  [0m
+[0;32mI (27101) observer_task: deviation: 25873160[0m
+[0;32mI (27101) observer_task:  [0m
+[0;32mI (27921) observer_task: deviation: 26880111[0m
+[0;32mI (27921) observer_task:  [0m
+[0;32mI (28931) observer_task: deviation: 27710313[0m
+[0;32mI (28931) observer_task:  [0m
+[0;32mI (29761) observer_task: deviation: 28717271[0m
+[0;32mI (29761) observer_task:  [0m
+[0;32mI (30771) observer_task: deviation: 29547892[0m
+[0;32mI (30771) observer_task:  [0m
+[0;32mI (31601) observer_task: deviation: 30554850[0m
+[0;32mI (31601) observer_task:  [0m
+[0;32mI (32611) observer_task: deviation: 31376806[0m
+[0;32mI (32611) observer_task:  [0m
+[0;33mW (33431) observer_task: No edges to compare![0m
+[0;32mI (34441) observer_task: deviation: 33212355[0m
+[0;32mI (34441) observer_task:  [0m
+[0;33mW (35281) observer_task: No edges to compare![0m
+[0;32mI (36291) observer_task: deviation: 35062145[0m
+[0;32mI (36291) observer_task:  [0m
+[0;32mI (37151) observer_task: deviation: 36069105[0m
+[0;32mI (37151) observer_task:  [0m
+[0;32mI (38151) observer_task: deviation: 36927124[0m
+[0;32mI (38151) observer_task:  [0m
+[0;32mI (38991) observer_task: deviation: 37934067[0m
+[0;32mI (38991) observer_task:  [0m
+[0;32mI (40001) observer_task: deviation: 38774669[0m
+[0;32mI (40001) observer_task:  [0m
+[0;33mW (40861) observer_task: No edges to compare![0m
+[0;32mI (41871) observer_task: deviation: 40650700[0m
+[0;32mI (41871) observer_task:  [0m
+[0;32mI (42731) observer_task: deviation: 41657653[0m
+[0;32mI (42731) observer_task:  [0m
+[0;32mI (43731) observer_task: deviation: 42507346[0m
+[0;32mI (43731) observer_task:  [0m
+[0;32mI (44561) observer_task: deviation: 43514313[0m
+[0;32mI (44561) observer_task:  [0m
+[0;32mI (45571) observer_task: deviation: 44343939[0m
+[0;32mI (45571) observer_task:  [0m
+[0;32mI (46401) observer_task: deviation: 45350896[0m
+[0;32mI (46401) observer_task:  [0m
+[0;32mI (47401) observer_task: deviation: 46180876[0m
+[0;32mI (47401) observer_task:  [0m
+[0;32mI (48271) observer_task: deviation: 47187826[0m
+[0;32mI (48271) observer_task:  [0m
+[0;32mI (49281) observer_task: deviation: 48057989[0m
+[0;32mI (49281) observer_task:  [0m
+[0;32mI (50141) observer_task: deviation: 49064933[0m
+[0;32mI (50141) observer_task:  [0m
+[0;32mI (51151) observer_task: deviation: 49924591[0m
+[0;32mI (51151) observer_task:  [0m
+[0;32mI (51971) observer_task: deviation: 50931539[0m
+[0;32mI (51971) observer_task:  [0m
+[0;32mI (52981) observer_task: deviation: 51752055[0m
+[0;32mI (52981) observer_task:  [0m
+[0;32mI (53821) observer_task: deviation: 52759018[0m
+[0;32mI (53821) observer_task:  [0m
+[0;32mI (54821) observer_task: deviation: 53598724[0m
+[0;32mI (54821) observer_task:  [0m
+[0;32mI (55651) observer_task: deviation: 54605673[0m
+[0;32mI (55651) observer_task:  [0m
+[0;32mI (56661) observer_task: deviation: 55435911[0m
+[0;32mI (56661) observer_task:  [0m
+[0;32mI (57531) observer_task: deviation: 56442859[0m
+[0;32mI (57531) observer_task:  [0m
+[0;32mI (58541) observer_task: deviation: 57313174[0m
+[0;32mI (58541) observer_task:  [0m
+[0;32mI (59361) observer_task: deviation: 58320118[0m
+[0;32mI (59361) observer_task:  [0m
+[0;32mI (60361) observer_task: deviation: 59140531[0m
+[0;32mI (60361) observer_task:  [0m
+[0;32mI (61181) observer_task: deviation: 60147497[0m
+[0;32mI (61181) observer_task:  [0m
+[0;32mI (62191) observer_task: deviation: 60967369[0m
+[0;32mI (62191) observer_task:  [0m
+[0;32mI (63031) observer_task: deviation: 61974334[0m
+[0;32mI (63031) observer_task:  [0m
+[0;32mI (64041) observer_task: deviation: 62814327[0m
+[0;32mI (64041) observer_task:  [0m
+[0;32mI (64881) observer_task: deviation: 63821271[0m
+[0;32mI (64881) observer_task:  [0m
+[0;32mI (65881) observer_task: deviation: 64661267[0m
+[0;32mI (65881) observer_task:  [0m
+[0;32mI (66711) observer_task: deviation: 65668237[0m
+[0;32mI (66711) observer_task:  [0m
+[0;32mI (67721) observer_task: deviation: 66498171[0m
+[0;32mI (67721) observer_task:  [0m
+[0;32mI (68541) observer_task: deviation: 67505133[0m
+[0;32mI (68541) observer_task:  [0m
+[0;32mI (69541) observer_task: deviation: 68324835[0m
+[0;32mI (69541) observer_task:  [0m
+[0;32mI (70371) observer_task: deviation: 69331794[0m
+[0;32mI (70371) observer_task:  [0m
+[0;32mI (71381) observer_task: deviation: 70161853[0m
+[0;32mI (71381) observer_task:  [0m
+[0;32mI (72231) observer_task: deviation: 71168816[0m
+[0;32mI (72231) observer_task:  [0m
+[0;32mI (73241) observer_task: deviation: 72019342[0m
+[0;32mI (73241) observer_task:  [0m
+[0;32mI (74081) observer_task: deviation: 73026294[0m
+[0;32mI (74081) observer_task:  [0m
+[0;32mI (75091) observer_task: deviation: 73866152[0m
+[0;32mI (75091) observer_task:  [0m
+[0;32mI (75911) observer_task: deviation: 74873120[0m
+[0;32mI (75911) observer_task:  [0m
+[0;32mI (76921) observer_task: deviation: 75693484[0m
+[0;32mI (76921) observer_task:  [0m
+[0;32mI (77751) observer_task: deviation: 76700436[0m
+[0;32mI (77751) observer_task:  [0m
+[0;32mI (78751) observer_task: deviation: 77530298[0m
+[0;32mI (78751) observer_task:  [0m
+[0;32mI (79591) observer_task: deviation: 78537249[0m
+[0;32mI (79591) observer_task:  [0m
+[0;32mI (80591) observer_task: deviation: 79371174[0m
+[0;32mI (80591) observer_task:  [0m
+[0;32mI (81421) observer_task: deviation: 80378135[0m
+[0;32mI (81421) observer_task:  [0m
+[0;32mI (82431) observer_task: deviation: 81208117[0m
+[0;32mI (82431) observer_task:  [0m
+[0;32mI (83251) observer_task: deviation: 82215077[0m
+[0;32mI (83251) observer_task:  [0m
+[0;32mI (84261) observer_task: deviation: 83035228[0m
+[0;32mI (84261) observer_task:  [0m
+[0;32mI (85131) observer_task: deviation: 84042182[0m
+[0;32mI (85131) observer_task:  [0m
+[0;32mI (86141) observer_task: deviation: 84917111[0m
+[0;32mI (86141) observer_task:  [0m
+[0;32mI (87011) observer_task: deviation: 85924066[0m
+[0;32mI (87011) observer_task:  [0m
+[0;32mI (88021) observer_task: deviation: 86793791[0m
+[0;32mI (88021) observer_task:  [0m
+[0;32mI (88841) observer_task: deviation: 87800724[0m
+[0;32mI (88841) observer_task:  [0m
+[0;32mI (89851) observer_task: deviation: 88621109[0m
+[0;32mI (89851) observer_task:  [0m
+[0;32mI (90671) observer_task: deviation: 89628083[0m
+[0;32mI (90671) observer_task:  [0m
+[0;32mI (91681) observer_task: deviation: 90458122[0m
+[0;32mI (91681) observer_task:  [0m
+[0;32mI (92521) observer_task: deviation: 91465090[0m
+[0;32mI (92521) observer_task:  [0m
+[0;32mI (93531) observer_task: deviation: 92304701[0m
+[0;32mI (93531) observer_task:  [0m
+[0;32mI (94351) observer_task: deviation: 93311650[0m
+[0;32mI (94351) observer_task:  [0m
+[0;32mI (95361) observer_task: deviation: 94131889[0m
+[0;32mI (95361) observer_task:  [0m
+[0;32mI (96171) observer_task: deviation: 95138857[0m
+[0;32mI (96171) observer_task:  [0m
+[0;32mI (97181) observer_task: deviation: 95958658[0m
+[0;32mI (97181) observer_task:  [0m
+[0;32mI (98041) observer_task: deviation: 96965603[0m
+[0;32mI (98041) observer_task:  [0m
+[0;32mI (99051) observer_task: deviation: 97823802[0m
+[0;32mI (99051) observer_task:  [0m
+[0;32mI (99871) observer_task: deviation: 98830743[0m
+[0;32mI (99871) observer_task:  [0m
+[0;32mI (100871) observer_task: deviation: 99652546[0m
+[0;32mI (100871) observer_task:  [0m
+[0;32mI (101701) observer_task: deviation: 100659503[0m
+[0;32mI (101701) observer_task:  [0m
+[0;32mI (102711) observer_task: deviation: 101489176[0m
+[0;32mI (102711) observer_task:  [0m
+[0;32mI (103541) observer_task: deviation: 102496144[0m
+[0;32mI (103541) observer_task:  [0m
+[0;32mI (104541) observer_task: deviation: 103326129[0m
+[0;32mI (104541) observer_task:  [0m
+[0;32mI (105431) observer_task: deviation: 104333082[0m
+[0;32mI (105431) observer_task:  [0m
+[0;32mI (106431) observer_task: deviation: 105213446[0m
+[0;32mI (106431) observer_task:  [0m
+[0;32mI (107261) observer_task: deviation: 106220408[0m
+[0;32mI (107261) observer_task:  [0m
+[0;32mI (108271) observer_task: deviation: 107050794[0m
+[0;32mI (108271) observer_task:  [0m
+[0;33mW (109121) observer_task: No edges to compare![0m
+[0;32mI (110121) observer_task: deviation: 108904891[0m
+[0;32mI (110121) observer_task:  [0m
+[0;32mI (110961) observer_task: deviation: 109911838[0m
+[0;32mI (110961) observer_task:  [0m
+[0;32mI (111971) observer_task: deviation: 110740758[0m
+[0;32mI (111971) observer_task:  [0m
+[0;32mI (112791) observer_task: deviation: 111747690[0m
+[0;32mI (112791) observer_task:  [0m
+[0;32mI (113801) observer_task: deviation: 112576417[0m
+[0;32mI (113801) observer_task:  [0m
+[0;32mI (114621) observer_task: deviation: 113583354[0m
+[0;32mI (114621) observer_task:  [0m
+[0;32mI (115631) observer_task: deviation: 114403045[0m
+[0;32mI (115631) observer_task:  [0m
+[0;32mI (116491) observer_task: deviation: 115409989[0m
+[0;32mI (116491) observer_task:  [0m
+[0;32mI (117491) observer_task: deviation: 116275647[0m
+[0;32mI (117491) observer_task:  [0m
+[0;32mI (118371) observer_task: deviation: 117282607[0m
+[0;32mI (118371) observer_task:  [0m
+[0;32mI (119381) observer_task: deviation: 118162991[0m
+[0;32mI (119381) observer_task:  [0m
+[0;32mI (120231) observer_task: deviation: 119169941[0m
+[0;32mI (120231) observer_task:  [0m
+[0;32mI (121241) observer_task: deviation: 120009980[0m
+[0;32mI (121241) observer_task:  [0m
+[0;32mI (122071) observer_task: deviation: 121016949[0m
+[0;32mI (122071) observer_task:  [0m
+[0;32mI (123071) observer_task: deviation: 121847377[0m
+[0;32mI (123071) observer_task:  [0m
+[0;32mI (123891) observer_task: deviation: 122854322[0m
+[0;32mI (123891) observer_task:  [0m
+[0;32mI (124901) observer_task: deviation: 123673997[0m
+[0;32mI (124901) observer_task:  [0m
+[0;32mI (125721) observer_task: deviation: 124680963[0m
+[0;32mI (125721) observer_task:  [0m
+[0;32mI (126721) observer_task: deviation: 125502247[0m
+[0;32mI (126721) observer_task:  [0m
+[0;32mI (127551) observer_task: deviation: 126509196[0m
+[0;32mI (127551) observer_task:  [0m
+[0;32mI (128561) observer_task: deviation: 127337763[0m
+[0;32mI (128561) observer_task:  [0m
+[0;32mI (129401) observer_task: deviation: 128344734[0m
+[0;32mI (129401) observer_task:  [0m
+[0;32mI (130411) observer_task: deviation: 129184575[0m
+[0;32mI (130411) observer_task:  [0m
+[0;32mI (131241) observer_task: deviation: 130191520[0m
+[0;32mI (131241) observer_task:  [0m
+[0;32mI (132251) observer_task: deviation: 131031451[0m
+[0;32mI (132251) observer_task:  [0m
+[0;32mI (133111) observer_task: deviation: 132038414[0m
+[0;32mI (133111) observer_task:  [0m
+[0;32mI (134121) observer_task: deviation: 132898188[0m
+[0;32mI (134121) observer_task:  [0m
+[0;32mI (134961) observer_task: deviation: 133905149[0m
+[0;32mI (134961) observer_task:  [0m
+[0;32mI (135961) observer_task: deviation: 134735461[0m
+[0;32mI (135961) observer_task:  [0m
+[0;32mI (136791) observer_task: deviation: 135742436[0m
+[0;32mI (136791) observer_task:  [0m
+[0;32mI (137801) observer_task: deviation: 136572039[0m
+[0;32mI (137801) observer_task:  [0m
+[0;32mI (138651) observer_task: deviation: 137578997[0m
+[0;32mI (138651) observer_task:  [0m
+[0;32mI (139651) observer_task: deviation: 138428809[0m
+[0;32mI (139651) observer_task:  [0m
+[0;32mI (140501) observer_task: deviation: 139435753[0m
+[0;32mI (140501) observer_task:  [0m
+[0;32mI (141511) observer_task: deviation: 140285470[0m
+[0;32mI (141511) observer_task:  [0m
+[0;32mI (142361) observer_task: deviation: 141292420[0m
+[0;32mI (142361) observer_task:  [0m
+[0;32mI (143371) observer_task: deviation: 142142840[0m
+[0;32mI (143371) observer_task:  [0m
+[0;32mI (144191) observer_task: deviation: 143149806[0m
+[0;32mI (144191) observer_task:  [0m
+[0;32mI (145191) observer_task: deviation: 143969794[0m
+[0;32mI (145191) observer_task:  [0m
+[0;32mI (146021) observer_task: deviation: 144976752[0m
+[0;32mI (146021) observer_task:  [0m
+[0;32mI (147031) observer_task: deviation: 145806957[0m
+[0;32mI (147031) observer_task:  [0m
+[0;32mI (147891) observer_task: deviation: 146813899[0m
+[0;32mI (147891) observer_task:  [0m
+[0;32mI (148891) observer_task: deviation: 147673880[0m
+[0;32mI (148891) observer_task:  [0m
+[0;32mI (149731) observer_task: deviation: 148680830[0m
+[0;32mI (149731) observer_task:  [0m
+[0;32mI (150741) observer_task: deviation: 149520427[0m
+[0;32mI (150741) observer_task:  [0m
+[0;32mI (151561) observer_task: deviation: 150527387[0m
+[0;32mI (151561) observer_task:  [0m
+[0;32mI (152571) observer_task: deviation: 151347015[0m
+[0;32mI (152571) observer_task:  [0m
+[0;32mI (153391) observer_task: deviation: 152353976[0m
+[0;32mI (153391) observer_task:  [0m
+[0;32mI (154401) observer_task: deviation: 153184107[0m
+[0;32mI (154401) observer_task:  [0m
+[0;32mI (155241) observer_task: deviation: 154191053[0m
+[0;32mI (155241) observer_task:  [0m
+[0;32mI (156251) observer_task: deviation: 155021361[0m
+[0;32mI (156251) observer_task:  [0m
+[0;32mI (157081) observer_task: deviation: 156028308[0m
+[0;32mI (157081) observer_task:  [0m
+[0;32mI (158081) observer_task: deviation: 156858468[0m
+[0;32mI (158081) observer_task:  [0m
+[0;32mI (158931) observer_task: deviation: 157865424[0m
+[0;32mI (158931) observer_task:  [0m
+[0;32mI (159941) observer_task: deviation: 158714986[0m
+[0;32mI (159941) observer_task:  [0m
+[0;32mI (160771) observer_task: deviation: 159721939[0m
+[0;32mI (160771) observer_task:  [0m
+[0;32mI (161781) observer_task: deviation: 160547115[0m
+[0;32mI (161781) observer_task:  [0m
+[0;32mI (162601) observer_task: deviation: 161554064[0m
+[0;32mI (162601) observer_task:  [0m
+[0;32mI (163601) observer_task: deviation: 162383781[0m
+[0;32mI (163601) observer_task:  [0m
+[0;32mI (164441) observer_task: deviation: 163390732[0m
+[0;32mI (164441) observer_task:  [0m
+[0;32mI (165451) observer_task: deviation: 164227228[0m
+[0;32mI (165451) observer_task:  [0m
+[0;32mI (166271) observer_task: deviation: 165234181[0m
+[0;32mI (166271) observer_task:  [0m
+[0;32mI (167271) observer_task: deviation: 166054405[0m
+[0;32mI (167271) observer_task:  [0m
+[0;32mI (168131) observer_task: deviation: 167061347[0m
+[0;32mI (168131) observer_task:  [0m
+[0;32mI (169131) observer_task: deviation: 167911047[0m
+[0;32mI (169131) observer_task:  [0m
+[0;32mI (169971) observer_task: deviation: 168917991[0m
+[0;32mI (169971) observer_task:  [0m
+[0;32mI (170981) observer_task: deviation: 169758312[0m
+[0;32mI (170981) observer_task:  [0m
+[0;32mI (171821) observer_task: deviation: 170765275[0m
+[0;32mI (171821) observer_task:  [0m
+[0;32mI (172831) observer_task: deviation: 171604877[0m
+[0;32mI (172831) observer_task:  [0m
+[0;32mI (173661) observer_task: deviation: 172611835[0m
+[0;32mI (173661) observer_task:  [0m
+[0;32mI (174661) observer_task: deviation: 173441977[0m
+[0;32mI (174661) observer_task:  [0m
+[0;32mI (175491) observer_task: deviation: 174448939[0m
+[0;32mI (175491) observer_task:  [0m
+[0;32mI (176501) observer_task: deviation: 175279123[0m
+[0;32mI (176501) observer_task:  [0m
+[0;32mI (177321) observer_task: deviation: 176286085[0m
+[0;32mI (177321) observer_task:  [0m
+[0;32mI (178331) observer_task: deviation: 177106564[0m
+[0;32mI (178331) observer_task:  [0m
+[0;32mI (179151) observer_task: deviation: 178113509[0m
+[0;32mI (179151) observer_task:  [0m
+[0;32mI (180151) observer_task: deviation: 178933320[0m
+[0;32mI (180151) observer_task:  [0m
+[0;32mI (181001) observer_task: deviation: 179940287[0m
+[0;32mI (181001) observer_task:  [0m
+[0;32mI (182011) observer_task: deviation: 180779938[0m
+[0;32mI (182011) observer_task:  [0m
+[0;32mI (182831) observer_task: deviation: 181786899[0m
+[0;32mI (182831) observer_task:  [0m
+[0;32mI (183841) observer_task: deviation: 182617327[0m
+[0;32mI (183841) observer_task:  [0m
+[0;32mI (184671) observer_task: deviation: 183624297[0m
+[0;32mI (184671) observer_task:  [0m
+[0;32mI (185681) observer_task: deviation: 184454710[0m
+[0;32mI (185681) observer_task:  [0m
+[0;32mI (186521) observer_task: deviation: 185461661[0m
+[0;32mI (186521) observer_task:  [0m
+[0;32mI (187531) observer_task: deviation: 186311643[0m
+[0;32mI (187531) observer_task:  [0m
+[0;32mI (188361) observer_task: deviation: 187318584[0m
+[0;32mI (188361) observer_task:  [0m
+[0;32mI (189371) observer_task: deviation: 188148325[0m
+[0;32mI (189371) observer_task:  [0m
+[0;32mI (190211) observer_task: deviation: 189155269[0m
+[0;32mI (190211) observer_task:  [0m
+[0;32mI (191211) observer_task: deviation: 189995206[0m
+[0;32mI (191211) observer_task:  [0m
+[0;32mI (192041) observer_task: deviation: 191002164[0m
+[0;32mI (192041) observer_task:  [0m
+[0;32mI (193051) observer_task: deviation: 191832406[0m
+[0;32mI (193051) observer_task:  [0m
+[0;32mI (193931) observer_task: deviation: 192839361[0m
+[0;32mI (193931) observer_task:  [0m
+[0;32mI (194941) observer_task: deviation: 193719502[0m
+[0;32mI (194941) observer_task:  [0m
+[0;32mI (195771) observer_task: deviation: 194726449[0m
+[0;32mI (195771) observer_task:  [0m
+[0;32mI (196771) observer_task: deviation: 195546144[0m
+[0;32mI (196771) observer_task:  [0m
+[0;32mI (197591) observer_task: deviation: 196553096[0m
+[0;32mI (197591) observer_task:  [0m
+[0;32mI (198601) observer_task: deviation: 197373339[0m
+[0;32mI (198601) observer_task:  [0m
+[0;32mI (199421) observer_task: deviation: 198380294[0m
+[0;32mI (199421) observer_task:  [0m
+[0;32mI (200431) observer_task: deviation: 199200021[0m
+[0;32mI (200431) observer_task:  [0m
+[0;32mI (201281) observer_task: deviation: 200206967[0m
+[0;32mI (201281) observer_task:  [0m
+[0;32mI (202281) observer_task: deviation: 201058003[0m
+[0;32mI (202281) observer_task:  [0m
+[0;32mI (203101) observer_task: deviation: 202064946[0m
+[0;32mI (203101) observer_task:  [0m
+[0;32mI (204111) observer_task: deviation: 202884282[0m
+[0;32mI (204111) observer_task:  [0m
+[0;32mI (204951) observer_task: deviation: 203891213[0m
+[0;32mI (204951) observer_task:  [0m
+[0;32mI (205961) observer_task: deviation: 204730683[0m
+[0;32mI (205961) observer_task:  [0m
+[0;32mI (206791) observer_task: deviation: 205737642[0m
+[0;32mI (206791) observer_task:  [0m
+[0;32mI (207801) observer_task: deviation: 206578196[0m
+[0;32mI (207801) observer_task:  [0m
+[0;32mI (208621) observer_task: deviation: 207585141[0m
+[0;32mI (208621) observer_task:  [0m
+[0;32mI (209631) observer_task: deviation: 208404741[0m
+[0;32mI (209631) observer_task:  [0m
+[0;32mI (210511) observer_task: deviation: 209411689[0m
+[0;32mI (210511) observer_task:  [0m
+[0;32mI (211521) observer_task: deviation: 210292034[0m
+[0;32mI (211521) observer_task:  [0m
+[0;32mI (212351) observer_task: deviation: 211298998[0m
+[0;32mI (212351) observer_task:  [0m
+[0;32mI (213351) observer_task: deviation: 212129270[0m
+[0;32mI (213351) observer_task:  [0m
+[0;32mI (214201) observer_task: deviation: 213136226[0m
+[0;32mI (214201) observer_task:  [0m
+[0;32mI (215211) observer_task: deviation: 213983401[0m
+[0;32mI (215211) observer_task:  [0m
+[0;32mI (216041) observer_task: deviation: 214990356[0m
+[0;32mI (216041) observer_task:  [0m
+[0;32mI (217051) observer_task: deviation: 215833643[0m
+[0;32mI (217051) observer_task:  [0m
+[0;32mI (217901) observer_task: deviation: 216840594[0m
+[0;32mI (217901) observer_task:  [0m
+[0;32mI (218901) observer_task: deviation: 217680813[0m
+[0;32mI (218901) observer_task:  [0m
+[0;32mI (219731) observer_task: deviation: 218687773[0m
+[0;32mI (219731) observer_task:  [0m
+[0;32mI (220741) observer_task: deviation: 219517316[0m
+[0;32mI (220741) observer_task:  [0m
+[0;32mI (221581) observer_task: deviation: 220524267[0m
+[0;32mI (221581) observer_task:  [0m
+[0;32mI (222591) observer_task: deviation: 221364547[0m
+[0;32mI (222591) observer_task:  [0m
+[0;32mI (223411) observer_task: deviation: 222371510[0m
+[0;32mI (223411) observer_task:  [0m
+[0;32mI (224411) observer_task: deviation: 223191096[0m
+[0;32mI (224411) observer_task:  [0m
+[0;32mI (225251) observer_task: deviation: 224198052[0m
+[0;32mI (225251) observer_task:  [0m
+[0;32mI (226261) observer_task: deviation: 225027823[0m
+[0;32mI (226261) observer_task:  [0m
+[0;32mI (227101) observer_task: deviation: 226034771[0m
+[0;32mI (227101) observer_task:  [0m
+[0;32mI (228111) observer_task: deviation: 226874703[0m
+[0;32mI (228111) observer_task:  [0m
+[0;32mI (228931) observer_task: deviation: 227881670[0m
+[0;32mI (228931) observer_task:  [0m
+[0;32mI (229931) observer_task: deviation: 228711782[0m
+[0;32mI (229931) observer_task:  [0m
+[0;32mI (230771) observer_task: deviation: 229718737[0m
+[0;32mI (230771) observer_task:  [0m
+[0;32mI (231781) observer_task: deviation: 230559203[0m
+[0;32mI (231781) observer_task:  [0m
+[0;32mI (232601) observer_task: deviation: 231566174[0m
+[0;32mI (232601) observer_task:  [0m
+[0;32mI (233611) observer_task: deviation: 232386382[0m
+[0;32mI (233611) observer_task:  [0m
+[0;32mI (234441) observer_task: deviation: 233393343[0m
+[0;32mI (234441) observer_task:  [0m
+[0;32mI (235441) observer_task: deviation: 234223159[0m
+[0;32mI (235441) observer_task:  [0m
+[0;32mI (236271) observer_task: deviation: 235230100[0m
+[0;32mI (236271) observer_task:  [0m
+[0;32mI (237281) observer_task: deviation: 236060666[0m
+[0;32mI (237281) observer_task:  [0m
+[0;32mI (238111) observer_task: deviation: 237067612[0m
+[0;32mI (238111) observer_task:  [0m
+[0;32mI (239121) observer_task: deviation: 237898107[0m
+[0;32mI (239121) observer_task:  [0m
+[0;32mI (239951) observer_task: deviation: 238905049[0m
+[0;32mI (239951) observer_task:  [0m
+[0;32mI (240951) observer_task: deviation: 239734692[0m
+[0;32mI (240951) observer_task:  [0m
+[0;32mI (241841) observer_task: deviation: 240741661[0m
+[0;32mI (241841) observer_task:  [0m
+[0;32mI (242851) observer_task: deviation: 241621161[0m
+[0;32mI (242851) observer_task:  [0m
+[0;32mI (243671) observer_task: deviation: 242628135[0m
+[0;32mI (243671) observer_task:  [0m
+[0;32mI (244671) observer_task: deviation: 243447874[0m
+[0;32mI (244671) observer_task:  [0m
+[0;32mI (245501) observer_task: deviation: 244454843[0m
+[0;32mI (245501) observer_task:  [0m
+[0;32mI (246511) observer_task: deviation: 245284603[0m
+[0;32mI (246511) observer_task:  [0m
+[0;32mI (247341) observer_task: deviation: 246291574[0m
+[0;32mI (247341) observer_task:  [0m
+[0;32mI (248351) observer_task: deviation: 247121632[0m
+[0;32mI (248351) observer_task:  [0m
+[0;32mI (249171) observer_task: deviation: 248128573[0m
+[0;32mI (249171) observer_task:  [0m
+[0;32mI (250171) observer_task: deviation: 248949116[0m
+[0;32mI (250171) observer_task:  [0m
+[0;32mI (250991) observer_task: deviation: 249956074[0m
+[0;32mI (250991) observer_task:  [0m
+[0;32mI (252001) observer_task: deviation: 250776216[0m
+[0;32mI (252001) observer_task:  [0m
+[0;32mI (252821) observer_task: deviation: 251783170[0m
+[0;32mI (252821) observer_task:  [0m
+[0;32mI (253831) observer_task: deviation: 252603921[0m
+[0;32mI (253831) observer_task:  [0m
+[0;32mI (254661) observer_task: deviation: 253610869[0m
+[0;32mI (254661) observer_task:  [0m
+[0;32mI (255661) observer_task: deviation: 254441229[0m
+[0;32mI (255661) observer_task:  [0m
+[0;32mI (256501) observer_task: deviation: 255448183[0m
+[0;32mI (256501) observer_task:  [0m
+[0;32mI (257511) observer_task: deviation: 256288310[0m
+[0;32mI (257511) observer_task:  [0m
+[0;32mI (258331) observer_task: deviation: 257295266[0m
+[0;32mI (258331) observer_task:  [0m
+[0;32mI (259331) observer_task: deviation: 258114872[0m
+[0;32mI (259331) observer_task:  [0m
+[0;32mI (260161) observer_task: deviation: 259121840[0m
+[0;32mI (260161) observer_task:  [0m
+[0;32mI (261161) observer_task: deviation: 259941616[0m
+[0;32mI (261161) observer_task:  [0m
+[0;32mI (262011) observer_task: deviation: 260948563[0m
+[0;32mI (262011) observer_task:  [0m
+[0;32mI (263011) observer_task: deviation: 261789072[0m
+[0;32mI (263011) observer_task:  [0m
+[0;32mI (263841) observer_task: deviation: 262796037[0m
+[0;32mI (263841) observer_task:  [0m
+[0;32mI (264841) observer_task: deviation: 263625989[0m
+[0;32mI (264841) observer_task:  [0m
+[0;32mI (265701) observer_task: deviation: 264632954[0m
+[0;32mI (265701) observer_task:  [0m
+[0;32mI (266711) observer_task: deviation: 265492617[0m
+[0;32mI (266711) observer_task:  [0m
+[0;32mI (267571) observer_task: deviation: 266499569[0m
+[0;32mI (267571) observer_task:  [0m
+[0;32mI (268571) observer_task: deviation: 267349325[0m
+[0;32mI (268571) observer_task:  [0m
+[0;32mI (269391) observer_task: deviation: 268356271[0m
+[0;32mI (269391) observer_task:  [0m
+[0;32mI (270401) observer_task: deviation: 269176867[0m
+[0;32mI (270401) observer_task:  [0m
+[0;32mI (271241) observer_task: deviation: 270183835[0m
+[0;32mI (271241) observer_task:  [0m
+[0;32mI (272251) observer_task: deviation: 271023933[0m
+[0;32mI (272251) observer_task:  [0m
+[0;32mI (273071) observer_task: deviation: 272030889[0m
+[0;32mI (273071) observer_task:  [0m
+[0;32mI (274081) observer_task: deviation: 272860493[0m
+[0;32mI (274081) observer_task:  [0m
+[0;32mI (274901) observer_task: deviation: 273867453[0m
+[0;32mI (274901) observer_task:  [0m
+[0;32mI (275911) observer_task: deviation: 274687088[0m
+[0;32mI (275911) observer_task:  [0m
+[0;32mI (276731) observer_task: deviation: 275694051[0m
+[0;32mI (276731) observer_task:  [0m
+[0;32mI (277741) observer_task: deviation: 276514357[0m
+[0;32mI (277741) observer_task:  [0m
+[0;32mI (278581) observer_task: deviation: 277521322[0m
+[0;32mI (278581) observer_task:  [0m
+[0;32mI (279581) observer_task: deviation: 278362113[0m
+[0;32mI (279581) observer_task:  [0m
+[0;33mW (280421) observer_task: No edges to compare![0m
+[0;32mI (281421) observer_task: deviation: 280198937[0m
+[0;32mI (281421) observer_task:  [0m
+[0;32mI (282251) observer_task: deviation: 281205901[0m
+[0;32mI (282251) observer_task:  [0m
+[0;32mI (283261) observer_task: deviation: 282036284[0m
+[0;32mI (283261) observer_task:  [0m
+[0;32mI (284091) observer_task: deviation: 283043230[0m
+[0;32mI (284091) observer_task:  [0m
+[0;32mI (285091) observer_task: deviation: 283873321[0m
+[0;32mI (285091) observer_task:  [0m
+[0;32mI (285921) observer_task: deviation: 284880282[0m
+[0;32mI (285921) observer_task:  [0m
+[0;32mI (286931) observer_task: deviation: 285709837[0m
+[0;32mI (286931) observer_task:  [0m
+[0;32mI (287761) observer_task: deviation: 286716800[0m
+[0;32mI (287761) observer_task:  [0m
+[0;32mI (288771) observer_task: deviation: 287546448[0m
+[0;32mI (288771) observer_task:  [0m
+[0;32mI (289621) observer_task: deviation: 288553404[0m
+[0;32mI (289621) observer_task:  [0m
+[0;32mI (290621) observer_task: deviation: 289393426[0m
+[0;32mI (290621) observer_task:  [0m
+[0;32mI (291471) observer_task: deviation: 290400386[0m
+[0;32mI (291471) observer_task:  [0m
+[0;32mI (292471) observer_task: deviation: 291250650[0m
+[0;32mI (292471) observer_task:  [0m
+[0;32mI (293321) observer_task: deviation: 292257594[0m
+[0;32mI (293321) observer_task:  [0m
+[0;32mI (294331) observer_task: deviation: 293108222[0m
+[0;32mI (294331) observer_task:  [0m
+[0;32mI (295331) observer_task: deviation: 294115180[0m
+[0;32mI (295331) observer_task:  [0m
+[0;32mI (296331) observer_task: deviation: 295115805[0m
+[0;32mI (296331) observer_task:  [0m
+[0;32mI (297221) observer_task: deviation: 296122764[0m
+[0;32mI (297221) observer_task:  [0m
+[0;32mI (298231) observer_task: deviation: 297002983[0m
+[0;32mI (298231) observer_task:  [0m
+[0;32mI (299051) observer_task: deviation: 298009954[0m
+[0;32mI (299051) observer_task:  [0m
+[0;32mI (300061) observer_task: deviation: 298829548[0m
+[0;32mI (300061) observer_task:  [0m
+[0;32mI (300891) observer_task: deviation: 299836511[0m
+[0;32mI (300891) observer_task:  [0m
+[0;32mI (301891) observer_task: deviation: 300666476[0m
+[0;32mI (301891) observer_task:  [0m
+[0;32mI (302741) observer_task: deviation: 301673431[0m
+[0;32mI (302741) observer_task:  [0m
+[0;32mI (303741) observer_task: deviation: 302523367[0m
+[0;32mI (303741) observer_task:  [0m
+[0;32mI (304601) observer_task: deviation: 303530312[0m
+[0;32mI (304601) observer_task:  [0m
+[0;32mI (305611) observer_task: deviation: 304390664[0m
+[0;32mI (305611) observer_task:  [0m
+[0;32mI (306531) observer_task: deviation: 305397617[0m
+[0;32mI (306531) observer_task:  [0m
+[0;32mI (307531) observer_task: deviation: 306307717[0m
+[0;32mI (307531) observer_task:  [0m
+[0;32mI (308351) observer_task: deviation: 307314666[0m
+[0;32mI (308351) observer_task:  [0m
+[0;32mI (309361) observer_task: deviation: 308134321[0m
+[0;32mI (309361) observer_task:  [0m
+[0;32mI (310181) observer_task: deviation: 309141263[0m
+[0;32mI (310181) observer_task:  [0m
+[0;32mI (311191) observer_task: deviation: 309961778[0m
+[0;32mI (311191) observer_task:  [0m
+[0;32mI (312021) observer_task: deviation: 310968741[0m
+[0;32mI (312021) observer_task:  [0m
+[0;32mI (313021) observer_task: deviation: 311799292[0m
+[0;32mI (313021) observer_task:  [0m
+[0;32mI (313841) observer_task: deviation: 312806238[0m
+[0;32mI (313841) observer_task:  [0m
+[0;32mI (314851) observer_task: deviation: 313626644[0m
+[0;32mI (314851) observer_task:  [0m
+[0;33mW (315691) observer_task: No edges to compare![0m
+[0;32mI (316701) observer_task: deviation: 315481119[0m
+[0;32mI (316701) observer_task:  [0m
+[0;32mI (317561) observer_task: deviation: 316488072[0m
+[0;32mI (317561) observer_task:  [0m
+[0;32mI (318561) observer_task: deviation: 317340800[0m
+[0;32mI (318561) observer_task:  [0m
+[0;32mI (319401) observer_task: deviation: 318347744[0m
+[0;32mI (319401) observer_task:  [0m
+[0;32mI (320411) observer_task: deviation: 319187975[0m
+[0;32mI (320411) observer_task:  [0m
+[0;32mI (321251) observer_task: deviation: 320194946[0m
+[0;32mI (321251) observer_task:  [0m
+[0;32mI (322251) observer_task: deviation: 321035201[0m
+[0;32mI (322251) observer_task:  [0m
+[0;32mI (323111) observer_task: deviation: 322042169[0m
+[0;32mI (323111) observer_task:  [0m
+[0;32mI (324111) observer_task: deviation: 322891901[0m
+[0;32mI (324111) observer_task:  [0m
+[0;32mI (324971) observer_task: deviation: 323898864[0m
+[0;32mI (324971) observer_task:  [0m
+[0;32mI (325981) observer_task: deviation: 324748637[0m
+[0;32mI (325981) observer_task:  [0m
+[0;32mI (326791) observer_task: deviation: 325755691[0m
+[0;32mI (326791) observer_task:  [0m
+[0;32mI (327801) observer_task: deviation: 326575677[0m
+[0;32mI (327801) observer_task:  [0m
+[0;32mI (328631) observer_task: deviation: 327582621[0m
+[0;32mI (328631) observer_task:  [0m
+[0;32mI (329631) observer_task: deviation: 328412898[0m
+[0;32mI (329631) observer_task:  [0m
+[0;32mI (330461) observer_task: deviation: 329419857[0m
+[0;32mI (330461) observer_task:  [0m
+[0;32mI (331471) observer_task: deviation: 330249953[0m
+[0;32mI (331471) observer_task:  [0m
+[0;32mI (332291) observer_task: deviation: 331256906[0m
+[0;32mI (332291) observer_task:  [0m
+[0;32mI (333301) observer_task: deviation: 332077342[0m
+[0;32mI (333301) observer_task:  [0m
+[0;32mI (334131) observer_task: deviation: 333084296[0m
+[0;32mI (334131) observer_task:  [0m
+[0;32mI (335141) observer_task: deviation: 333914034[0m
+[0;32mI (335141) observer_task:  [0m
+[0;32mI (335961) observer_task: deviation: 334920989[0m
+[0;32mI (335961) observer_task:  [0m
+[0;32mI (336971) observer_task: deviation: 335751326[0m
+[0;32mI (336971) observer_task:  [0m
+[0;32mI (337801) observer_task: deviation: 336758287[0m
+[0;32mI (337801) observer_task:  [0m
+[0;32mI (338811) observer_task: deviation: 337588181[0m
+[0;32mI (338811) observer_task:  [0m
+[0;32mI (339651) observer_task: deviation: 338595127[0m
+[0;32mI (339651) observer_task:  [0m
+[0;32mI (340661) observer_task: deviation: 339435526[0m
+[0;32mI (340661) observer_task:  [0m
+[0;32mI (341511) observer_task: deviation: 340442499[0m
+[0;32mI (341511) observer_task:  [0m
+[0;32mI (342521) observer_task: deviation: 341293085[0m
+[0;32mI (342521) observer_task:  [0m
+[0;32mI (343351) observer_task: deviation: 342300038[0m
+[0;32mI (343351) observer_task:  [0m
+[0;32mI (344351) observer_task: deviation: 343130079[0m
+[0;32mI (344351) observer_task:  [0m
+[0;32mI (345191) observer_task: deviation: 344137036[0m
+[0;32mI (345191) observer_task:  [0m
+[0;32mI (346201) observer_task: deviation: 344977372[0m
+[0;32mI (346201) observer_task:  [0m
+[0;32mI (347041) observer_task: deviation: 345984321[0m
+[0;32mI (347041) observer_task:  [0m
+[0;32mI (348051) observer_task: deviation: 346824447[0m
+[0;32mI (348051) observer_task:  [0m
+[0;32mI (348891) observer_task: deviation: 347831401[0m
+[0;32mI (348891) observer_task:  [0m
+[0;32mI (349901) observer_task: deviation: 348681098[0m
+[0;32mI (349901) observer_task:  [0m
+[0;32mI (350731) observer_task: deviation: 349688056[0m
+[0;32mI (350731) observer_task:  [0m
+[0;32mI (351741) observer_task: deviation: 350518371[0m
+[0;32mI (351741) observer_task:  [0m
+[0;32mI (352571) observer_task: deviation: 351525332[0m
+[0;32mI (352571) observer_task:  [0m
+[0;32mI (353571) observer_task: deviation: 352355280[0m
+[0;32mI (353571) observer_task:  [0m
+[0;32mI (354411) observer_task: deviation: 353362243[0m
+[0;32mI (354411) observer_task:  [0m
+[0;32mI (355411) observer_task: deviation: 354191969[0m
+[0;32mI (355411) observer_task:  [0m
+[0;32mI (356231) observer_task: deviation: 355198913[0m
+[0;32mI (356231) observer_task:  [0m
+[0;32mI (357241) observer_task: deviation: 356018690[0m
+[0;32mI (357241) observer_task:  [0m
+[0;32mI (358101) observer_task: deviation: 357025642[0m
+[0;32mI (358101) observer_task:  [0m
+[0;32mI (359101) observer_task: deviation: 357875550[0m
+[0;32mI (359101) observer_task:  [0m
+[0;33mW (359971) observer_task: No edges to compare![0m
+[0;32mI (360981) observer_task: deviation: 359760027[0m
+[0;32mI (360981) observer_task:  [0m
+[0;33mW (361831) observer_task: No edges to compare![0m
+[0;32mI (362831) observer_task: deviation: 361611674[0m
+[0;32mI (362831) observer_task:  [0m
+[0;32mI (363671) observer_task: deviation: 362618611[0m
+[0;32mI (363671) observer_task:  [0m
+[0;32mI (364671) observer_task: deviation: 363446583[0m
+[0;32mI (364671) observer_task:  [0m
+[0;32mI (365541) observer_task: deviation: 364453555[0m
+[0;32mI (365541) observer_task:  [0m
+[0;32mI (366541) observer_task: deviation: 365324003[0m
+[0;32mI (366541) observer_task:  [0m
+[0;32mI (367381) observer_task: deviation: 366330951[0m
+[0;32mI (367381) observer_task:  [0m
+[0;32mI (368391) observer_task: deviation: 367160878[0m
+[0;32mI (368391) observer_task:  [0m
+[0;32mI (369231) observer_task: deviation: 368167847[0m
+[0;32mI (369231) observer_task:  [0m
+[0;32mI (370231) observer_task: deviation: 369008056[0m
+[0;32mI (370231) observer_task:  [0m
+[0;32mI (371061) observer_task: deviation: 370015025[0m
+[0;32mI (371061) observer_task:  [0m
+[0;32mI (372071) observer_task: deviation: 370845085[0m
+[0;32mI (372071) observer_task:  [0m
+[0;32mI (372931) observer_task: deviation: 371852040[0m
+[0;32mI (372931) observer_task:  [0m
+[0;32mI (373941) observer_task: deviation: 372712006[0m
+[0;32mI (373941) observer_task:  [0m
+[0;32mI (374771) observer_task: deviation: 373718970[0m
+[0;32mI (374771) observer_task:  [0m
+[0;32mI (375771) observer_task: deviation: 374548759[0m
+[0;32mI (375771) observer_task:  [0m
+[0;32mI (376601) observer_task: deviation: 375555720[0m
+[0;32mI (376601) observer_task:  [0m
+[0;32mI (377611) observer_task: deviation: 376386208[0m
+[0;32mI (377611) observer_task:  [0m
+[0;32mI (378431) observer_task: deviation: 377393163[0m
+[0;32mI (378431) observer_task:  [0m
+[0;32mI (379441) observer_task: deviation: 378212832[0m
+[0;32mI (379441) observer_task:  [0m
+[0;32mI (380361) observer_task: deviation: 379219792[0m
+[0;32mI (380361) observer_task:  [0m
+[0;32mI (381371) observer_task: deviation: 380149431[0m
+[0;32mI (381371) observer_task:  [0m
+[0;32mI (382201) observer_task: deviation: 381156393[0m
+[0;32mI (382201) observer_task:  [0m
+[0;32mI (383211) observer_task: deviation: 381986291[0m
+[0;32mI (383211) observer_task:  [0m
+[0;32mI (384041) observer_task: deviation: 382993247[0m
+[0;32mI (384041) observer_task:  [0m
+[0;32mI (385051) observer_task: deviation: 383823831[0m
+[0;32mI (385051) observer_task:  [0m
+[0;32mI (385891) observer_task: deviation: 384830803[0m
+[0;32mI (385891) observer_task:  [0m
+[0;32mI (386891) observer_task: deviation: 385670940[0m
+[0;32mI (386891) observer_task:  [0m
+[0;32mI (387731) observer_task: deviation: 386677891[0m
+[0;32mI (387731) observer_task:  [0m
+[0;32mI (388741) observer_task: deviation: 387518302[0m
+[0;32mI (388741) observer_task:  [0m
+[0;32mI (389561) observer_task: deviation: 388525253[0m
+[0;32mI (389561) observer_task:  [0m
+[0;32mI (390561) observer_task: deviation: 389345395[0m
+[0;32mI (390561) observer_task:  [0m
+[0;32mI (391391) observer_task: deviation: 390352355[0m
+[0;32mI (391391) observer_task:  [0m
+[0;32mI (392391) observer_task: deviation: 391172862[0m
+[0;32mI (392391) observer_task:  [0m
+[0;32mI (393241) observer_task: deviation: 392179813[0m
+[0;32mI (393241) observer_task:  [0m
+[0;32mI (394251) observer_task: deviation: 393020308[0m
+[0;32mI (394251) observer_task:  [0m
+[0;32mI (395121) observer_task: deviation: 394027278[0m
+[0;32mI (395121) observer_task:  [0m
+[0;32mI (396131) observer_task: deviation: 394907048[0m
+[0;32mI (396131) observer_task:  [0m
+[0;32mI (396941) observer_task: deviation: 395913998[0m
+[0;32mI (396941) observer_task:  [0m
+[0;32mI (397951) observer_task: deviation: 396733556[0m
+[0;32mI (397951) observer_task:  [0m
+[0;32mI (398841) observer_task: deviation: 397740510[0m
+[0;32mI (398841) observer_task:  [0m
+[0;32mI (399851) observer_task: deviation: 398630614[0m
+[0;32mI (399851) observer_task:  [0m
+[0;32mI (400701) observer_task: deviation: 399637557[0m
+[0;32mI (400701) observer_task:  [0m
+[0;32mI (401711) observer_task: deviation: 400477420[0m
+[0;32mI (401711) observer_task:  [0m
+[0;32mI (402531) observer_task: deviation: 401484378[0m
+[0;32mI (402531) observer_task:  [0m
+[0;32mI (403541) observer_task: deviation: 402314226[0m
+[0;32mI (403541) observer_task:  [0m
+[0;32mI (404371) observer_task: deviation: 403321181[0m
+[0;32mI (404371) observer_task:  [0m
+[0;32mI (405381) observer_task: deviation: 404151619[0m
+[0;32mI (405381) observer_task:  [0m

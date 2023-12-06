@@ -1,0 +1,232 @@
+,.�����rev:   ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2023 18:20:22[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09dc0h ( 40384) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019de8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bf48 vaddr=40080000 size=040d0h ( 16592) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d34h ( 85300) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034d5c vaddr=400840d0 size=0835ch ( 33628) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Starting app cpu, entry point is 0x40081108[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (231) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (234) cpu_start: Project name:     generic_gpio[0m
+[0;32mI (239) cpu_start: App version:      1[0m
+[0;32mI (244) cpu_start: Compile time:     Nov 29 2023 18:20:14[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  0318cdd0e2e63817...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 4008C42C len 00013BD4 (78 KiB): IRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (336) app_start: Starting scheduler on CPU0[0m
+[0;32mI (340) app_start: Starting scheduler on CPU1[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (360) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (370) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (380) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (390) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (400) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (410) main_task: Returned from app_main()[0m
+[0;32mI (1740) observer_task: PIN0 - PIN22 | deviation = 1505934 us (falling)[0m
+[0;32mI (1750) observer_task: PIN0 - PIN32 | deviation = 1523564 us (falling)[0m
+[0;32mI (1760) observer_task: PIN0 - PIN18 | deviation = 1531541 us (falling)[0m
+[0;32mI (1760) observer_task: PIN0 - PIN19 | deviation = 1531787 us (falling)[0m
+[0;32mI (2760) observer_task: PIN22 - PIN32 | deviation =  17722 us (rising)[0m
+[0;32mI (2770) observer_task: PIN22 - PIN18 | deviation =  25725 us (rising)[0m
+[0;32mI (2770) observer_task: PIN22 - PIN19 | deviation =  25951 us (rising)[0m
+[0;32mI (4050) observer_task: PIN22 - PIN32 | deviation =  19242 us (falling)[0m
+[0;32mI (4060) observer_task: PIN22 - PIN18 | deviation =  20561 us (falling)[0m
+[0;32mI (4060) observer_task: PIN22 - PIN19 | deviation =  22474 us (falling)[0m
+[0;32mI (5060) observer_task: PIN22 - PIN32 | deviation =  19243 us (rising)[0m
+[0;32mI (5060) observer_task: PIN22 - PIN18 | deviation =  20572 us (rising)[0m
+[0;32mI (5060) observer_task: PIN22 - PIN19 | deviation =  22461 us (rising)[0m
+[0;32mI (6570) observer_task: PIN19 - PIN18 | deviation =   2614 us (falling)[0m
+[0;32mI (6570) observer_task: PIN19 - PIN32 | deviation =   5458 us (falling)[0m
+[0;32mI (6640) observer_task: PIN19 - PIN22 | deviation =  72350 us (falling)[0m
+[0;32mI (7570) observer_task: PIN19 - PIN18 | deviation =   2642 us (rising)[0m
+[0;32mI (7580) observer_task: PIN19 - PIN32 | deviation =   5466 us (rising)[0m
+[0;32mI (7640) observer_task: PIN19 - PIN22 | deviation =  72349 us (rising)[0m
+[0;32mI (9170) observer_task: PIN22 - PIN32 | deviation =  32535 us (falling)[0m
+[0;32mI (9170) observer_task: PIN22 - PIN19 | deviation =  33011 us (falling)[0m
+[0;32mI (9170) observer_task: PIN22 - PIN18 | deviation =  34471 us (falling)[0m
+[0;32mI (10170) observer_task: PIN22 - PIN32 | deviation =  32554 us (rising)[0m
+[0;32mI (10170) observer_task: PIN22 - PIN19 | deviation =  33019 us (rising)[0m
+[0;32mI (10170) observer_task: PIN22 - PIN18 | deviation =  34502 us (rising)[0m
+[0;32mI (11350) observer_task: PIN32 - PIN19 | deviation =   2319 us (falling)[0m
+[0;32mI (11440) observer_task: PIN32 - PIN22 | deviation =  88703 us (falling)[0m
+[0;32mI (11450) observer_task: PIN32 - PIN18 | deviation = 102461 us (falling)[0m
+[0;32mI (12360) observer_task: PIN32 - PIN19 | deviation =   2306 us (rising)[0m
+[0;32mI (12440) observer_task: PIN32 - PIN22 | deviation =  88656 us (rising)[0m
+[0;32mI (12460) observer_task: PIN32 - PIN18 | deviation = 102466 us (rising)[0m
+[0;32mI (13750) observer_task: PIN32 - PIN19 | deviation =    682 us (falling)[0m
+[0;32mI (13830) observer_task: PIN32 - PIN22 | deviation =  81069 us (falling)[0m
+[0;32mI (13850) observer_task: PIN32 - PIN18 | deviation =  99200 us (falling)[0m
+[0;32mI (14760) observer_task: PIN32 - PIN19 | deviation =    688 us (rising)[0m
+[0;32mI (14840) observer_task: PIN32 - PIN22 | deviation =  81058 us (rising)[0m
+[0;32mI (14860) observer_task: PIN32 - PIN18 | deviation =  99210 us (rising)[0m
+[0;32mI (16250) observer_task: PIN22 - PIN18 | deviation =  19414 us (falling)[0m
+[0;32mI (16260) observer_task: PIN22 - PIN32 | deviation =  21723 us (falling)[0m
+[0;32mI (16270) observer_task: PIN22 - PIN19 | deviation =  33939 us (falling)[0m
+[0;32mI (17260) observer_task: PIN22 - PIN18 | deviation =  19414 us (rising)[0m
+[0;32mI (17260) observer_task: PIN22 - PIN32 | deviation =  21713 us (rising)[0m
+[0;32mI (17280) observer_task: PIN22 - PIN19 | deviation =  33953 us (rising)[0m
+[0;32mI (18980) observer_task: PIN18 - PIN19 | deviation =   4505 us (falling)[0m
+[0;32mI (19030) observer_task: PIN18 - PIN22 | deviation =  61468 us (falling)[0m
+[0;32mI (19070) observer_task: PIN18 - PIN32 | deviation = 100808 us (falling)[0m
+[0;32mI (19980) observer_task: PIN18 - PIN19 | deviation =   4489 us (rising)[0m
+[0;32mI (20040) observer_task: PIN18 - PIN22 | deviation =  61449 us (rising)[0m
+[0;32mI (20080) observer_task: PIN18 - PIN32 | deviation = 100798 us (rising)[0m
+[0;32mI (21360) observer_task: PIN22 - PIN32 | deviation =  23265 us (falling)[0m
+[0;32mI (21360) observer_task: PIN22 - PIN19 | deviation =  24548 us (falling)[0m
+[0;32mI (21360) observer_task: PIN22 - PIN18 | deviation =  26356 us (falling)[0m
+[0;32mI (22360) observer_task: PIN22 - PIN32 | deviation =  23267 us (rising)[0m
+[0;32mI (22370) observer_task: PIN22 - PIN19 | deviation =  24531 us (rising)[0m
+[0;32mI (22370) observer_task: PIN22 - PIN18 | deviation =  26366 us (rising)[0m
+[0;32mI (23750) observer_task: PIN22 - PIN19 | deviation =  20036 us (falling)[0m
+[0;32mI (23760) observer_task: PIN22 - PIN32 | deviation =  25000 us (falling)[0m
+[0;32mI (23760) observer_task: PIN22 - PIN18 | deviation =  25988 us (falling)[0m
+[0;32mI (24760) observer_task: PIN22 - PIN19 | deviation =  20034 us (rising)[0m
+[0;32mI (24770) observer_task: PIN22 - PIN32 | deviation =  25019 us (rising)[0m
+[0;32mI (24770) observer_task: PIN22 - PIN18 | deviation =  26003 us (rising)[0m
+[0;32mI (25950) observer_task: PIN22 - PIN32 | deviation =  15326 us (falling)[0m
+[0;32mI (25950) observer_task: PIN22 - PIN18 | deviation =  15423 us (falling)[0m
+[0;32mI (25950) observer_task: PIN22 - PIN19 | deviation =  16451 us (falling)[0m
+[0;32mI (26960) observer_task: PIN22 - PIN32 | deviation =  15337 us (rising)[0m
+[0;32mI (26960) observer_task: PIN22 - PIN18 | deviation =  15451 us (rising)[0m
+[0;32mI (26960) observer_task: PIN22 - PIN19 | deviation =  16465 us (rising)[0m
+[0;32mI (28150) observer_task: PIN22 - PIN18 | deviation =  16104 us (falling)[0m
+[0;32mI (28150) observer_task: PIN22 - PIN32 | deviation =  16514 us (falling)[0m
+[0;32mI (28150) observer_task: PIN22 - PIN19 | deviation =  20469 us (falling)[0m
+[0;32mI (29160) observer_task: PIN22 - PIN18 | deviation =  16131 us (rising)[0m
+[0;32mI (29160) observer_task: PIN22 - PIN32 | deviation =  16536 us (rising)[0m
+[0;32mI (29160) observer_task: PIN22 - PIN19 | deviation =  20475 us (rising)[0m
+[0;32mI (30870) observer_task: PIN32 - PIN18 | deviation =    322 us (falling)[0m
+[0;32mI (30880) observer_task: PIN32 - PIN19 | deviation =   6492 us (falling)[0m
+[0;32mI (30930) observer_task: PIN32 - PIN22 | deviation =  64027 us (falling)[0m
+[0;32mI (31880) observer_task: PIN32 - PIN18 | deviation =    334 us (rising)[0m
+[0;32mI (31880) observer_task: PIN32 - PIN19 | deviation =   6486 us (rising)[0m
+[0;32mI (31940) observer_task: PIN32 - PIN22 | deviation =  64032 us (rising)[0m
+[0;32mI (33160) observer_task: PIN22 - PIN19 | deviation =  25556 us (falling)[0m
+[0;32mI (33160) observer_task: PIN22 - PIN18 | deviation =  25599 us (falling)[0m
+[0;32mI (33160) observer_task: PIN22 - PIN32 | deviation =  26815 us (falling)[0m
+[0;32mI (34170) observer_task: PIN22 - PIN19 | deviation =  25504 us (rising)[0m
+[0;32mI (34170) observer_task: PIN22 - PIN18 | deviation =  25552 us (rising)[0m
+[0;32mI (34170) observer_task: PIN22 - PIN32 | deviation =  26779 us (rising)[0m
+[0;32mI (35780) observer_task: PIN19 - PIN18 | deviation =    519 us (falling)[0m
+[0;32mI (35830) observer_task: PIN19 - PIN22 | deviation =  56387 us (falling)[0m
+[0;32mI (35880) observer_task: PIN19 - PIN32 | deviation = 100113 us (falling)[0m
+[0;32mI (36780) observer_task: PIN19 - PIN18 | deviation =    524 us (rising)[0m
+[0;32mI (36840) observer_task: PIN19 - PIN22 | deviation =  56398 us (rising)[0m
+[0;32mI (36880) observer_task: PIN19 - PIN32 | deviation = 100119 us (rising)[0m
+[0;32mI (38430) observer_task: PIN19 - PIN22 | deviation =  66651 us (falling)[0m
+[0;32mI (38460) observer_task: PIN19 - PIN32 | deviation =  90439 us (falling)[0m
+[0;32mI (38460) observer_task: PIN19 - PIN18 | deviation =  90497 us (falling)[0m
+[0;32mI (39440) observer_task: PIN19 - PIN22 | deviation =  66647 us (rising)[0m
+[0;32mI (39460) observer_task: PIN19 - PIN32 | deviation =  90447 us (rising)[0m
+[0;32mI (39460) observer_task: PIN19 - PIN18 | deviation =  90521 us (rising)[0m
+[0;32mI (40750) observer_task: PIN22 - PIN19 | deviation =  18259 us (falling)[0m
+[0;32mI (40760) observer_task: PIN22 - PIN18 | deviation =  24682 us (falling)[0m
+[0;32mI (40760) observer_task: PIN22 - PIN32 | deviation =  25470 us (falling)[0m
+[0;32mI (41760) observer_task: PIN22 - PIN19 | deviation =  18262 us (rising)[0m
+[0;32mI (41760) observer_task: PIN22 - PIN18 | deviation =  24714 us (rising)[0m
+[0;32mI (41760) observer_task: PIN22 - PIN32 | deviation =  25486 us (rising)[0m
+[0;32mI (43150) observer_task: PIN22 - PIN18 | deviation =  22239 us (falling)[0m
+[0;32mI (43160) observer_task: PIN22 - PIN32 | deviation =  24107 us (falling)[0m
+[0;32mI (43160) observer_task: PIN22 - PIN19 | deviation =  25973 us (falling)[0m
+[0;32mI (44160) observer_task: PIN22 - PIN18 | deviation =  22217 us (rising)[0m
+[0;32mI (44160) observer_task: PIN22 - PIN32 | deviation =  24121 us (rising)[0m
+[0;32mI (44160) observer_task: PIN22 - PIN19 | deviation =  25983 us (rising)[0m
+[0;32mI (45650) observer_task: PIN22 - PIN18 | deviation =  19013 us (falling)[0m
+[0;32mI (45650) observer_task: PIN22 - PIN32 | deviation =  22099 us (falling)[0m
+[0;32mI (45650) observer_task: PIN22 - PIN19 | deviation =  25539 us (falling)[0m
+[0;32mI (46660) observer_task: PIN22 - PIN18 | deviation =  19003 us (rising)[0m
+[0;32mI (46660) observer_task: PIN22 - PIN32 | deviation =  22085 us (rising)[0m
+[0;32mI (46660) observer_task: PIN22 - PIN19 | deviation =  25514 us (rising)[0m
+[0;32mI (48170) observer_task: PIN19 - PIN18 | deviation =    751 us (falling)[0m
+[0;32mI (48230) observer_task: PIN19 - PIN22 | deviation =  67720 us (falling)[0m
+[0;32mI (48270) observer_task: PIN19 - PIN32 | deviation = 102122 us (falling)[0m
+[0;32mI (49170) observer_task: PIN19 - PIN18 | deviation =    783 us (rising)[0m
+[0;32mI (49240) observer_task: PIN19 - PIN22 | deviation =  67715 us (rising)[0m
+[0;32mI (49270) observer_task: PIN19 - PIN32 | deviation = 102121 us (rising)[0m
+[0;32mI (50750) observer_task: PIN22 - PIN32 | deviation =  21875 us (falling)[0m
+[0;32mI (50760) observer_task: PIN22 - PIN19 | deviation =  28809 us (falling)[0m
+[0;32mI (50760) observer_task: PIN22 - PIN18 | deviation =  30097 us (falling)[0m
+[0;32mI (51760) observer_task: PIN22 - PIN32 | deviation =  21909 us (rising)[0m
+[0;32mI (51770) observer_task: PIN22 - PIN19 | deviation =  28809 us (rising)[0m
+[0;32mI (51770) observer_task: PIN22 - PIN18 | deviation =  30136 us (rising)[0m
+[0;32mI (53360) observer_task: PIN18 - PIN32 | deviation =    439 us (falling)[0m
+[0;32mI (53370) observer_task: PIN18 - PIN19 | deviation =   9174 us (falling)[0m
+[0;32mI (53430) observer_task: PIN18 - PIN22 | deviation =  75948 us (falling)[0m
+[0;32mI (54360) observer_task: PIN18 - PIN32 | deviation =    396 us (rising)[0m
+[0;32mI (54370) observer_task: PIN18 - PIN19 | deviation =   9121 us (rising)[0m
+[0;32mI (54440) observer_task: PIN18 - PIN22 | deviation =  75896 us (rising)[0m
+[0;32mI (55750) observer_task: PIN22 - PIN18 | deviation =  18802 us (falling)[0m
+[0;32mI (55750) observer_task: PIN22 - PIN32 | deviation =  21579 us (falling)[0m
+[0;32mI (55750) observer_task: PIN22 - PIN19 | deviation =  25677 us (falling)[0m
+[0;32mI (56760) observer_task: PIN22 - PIN18 | deviation =  18796 us (rising)[0m
+[0;32mI (56760) observer_task: PIN22 - PIN32 | deviation =  21574 us (rising)[0m
+[0;32mI (56760) observer_task: PIN22 - PIN19 | deviation =  25667 us (rising)[0m
+[0;32mI (58370) observer_task: PIN18 - PIN32 | deviation =   6789 us (falling)[0m
+[0;32mI (58370) observer_task: PIN18 - PIN19 | deviation =  11502 us (falling)[0m
+[0;32mI (58430) observer_task: PIN18 - PIN22 | deviation =  73044 us (falling)[0m
+[0;32mI (59370) observer_task: PIN18 - PIN32 | deviation =   6783 us (rising)[0m
+[0;32mI (59380) observer_task: PIN18 - PIN19 | deviation =  11487 us (rising)[0m
+[0;32mI (59440) observer_task: PIN18 - PIN22 | deviation =  73006 us (rising)[0m
+[0;32mI (60760) observer_task: PIN22 - PIN18 | deviation =  30406 us (falling)[0m
+[0;32mI (60760) observer_task: PIN22 - PIN32 | deviation =  30486 us (falling)[0m
+[0;32mI (60760) observer_task: PIN22 - PIN19 | deviation =  32258 us (falling)[0m
+[0;32mI (61770) observer_task: PIN22 - PIN18 | deviation =  30436 us (rising)[0m
+[0;32mI (61770) observer_task: PIN22 - PIN32 | deviation =  30502 us (rising)[0m
+[0;32mI (61770) observer_task: PIN22 - PIN19 | deviation =  32258 us (rising)[0m
+[0;32mI (62950) observer_task: PIN22 - PIN32 | deviation =  15820 us (falling)[0m
+[0;32mI (62950) observer_task: PIN22 - PIN18 | deviation =  16002 us (falling)[0m
+[0;32mI (62950) observer_task: PIN22 - PIN19 | deviation =  18656 us (falling)[0m
+[0;32mI (63950) observer_task: PIN22 - PIN32 | deviation =  15804 us (rising)[0m
+[0;32mI (63950) observer_task: PIN22 - PIN18 | deviation =  15984 us (rising)[0m
+[0;32mI (63950) observer_task: PIN22 - PIN19 | deviation =  18631 us (rising)[0m
+[0;32mI (65140) observer_task: PIN22 - PIN32 | deviation =  11876 us (falling)[0m
+[0;32mI (65140) observer_task: PIN22 - PIN18 | deviation =  13332 us (falling)[0m
+[0;32mI (65140) observer_task: PIN22 - PIN19 | deviation =  15475 us (falling)[0m
+[0;32mI (66150) observer_task: PIN22 - PIN32 | deviation =  11864 us (rising)[0m
+[0;32mI (66150) observer_task: PIN22 - PIN18 | deviation =  13311 us (rising)[0m
+[0;32mI (66150) observer_task: PIN22 - PIN19 | deviation =  15447 us (rising)[0m
