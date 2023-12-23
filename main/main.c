@@ -4,7 +4,7 @@
 #include "../_components/timing_functions.h"
 #endif
 
-static const char* TAG1 = "observer_task";
+static const char* TAG1 = "EDGE_DETECT";
 
 typedef enum {
     RISING_EDGE,
@@ -41,28 +41,25 @@ static void IRAM_ATTR gpio_isr_handler(void* arg)
     xQueueSendFromISR(gpio_evt_queue, &evt, NULL);  // send event to queue
 }
 
-// task computes time deviation between first and last falling/rising edge
-// assumption: first rising edge appears after the last falling edge 
+// task prints events on console
 static void observer_task(void* arg)
 {
-    int64_t t_min = 0;          // smallest timestamp of a cycle
-    int64_t t_max = 0;          // highest timestamp of a cycle
-
-    event_id_t last_id = RISING_EDGE;   // id of last event
+    uint64_t ris_edge_cnt = 0;
+    uint64_t fal_edge_cnt = 0; 
 
     gpio_event_t evt;
     while (xQueueReceive(gpio_evt_queue, &evt, portMAX_DELAY) == pdTRUE) {     // get event from queue        
 
-        if ((last_id != evt.id) ){       // phase changed
-            ESP_LOGI(TAG1, "deviation: %6lld", t_max - t_min);
-            ESP_LOGI(TAG1, " ");
-            t_min = evt.timestamp;
-            t_max = evt.timestamp;
+        if(evt.id == RISING_EDGE){
+            ris_edge_cnt++;
+            printf("%llu-th EDGE RISING  %lld \n", ris_edge_cnt, evt.timestamp);
+            fflush(stdout);  
+        } 
+        else{
+            fal_edge_cnt++;
+            printf("%llu-th EDGE FALLING %lld \n", fal_edge_cnt, evt.timestamp);   
+            fflush(stdout);
         }
-        t_min = (evt.timestamp < t_min) ? evt.timestamp : t_min;
-        t_max = (evt.timestamp > t_max) ? evt.timestamp : t_max;
-        
-        last_id  = evt.id;
     }
 }
 
