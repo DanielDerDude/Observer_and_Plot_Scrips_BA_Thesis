@@ -44,20 +44,15 @@ static void IRAM_ATTR gpio_isr_handler(void* arg)
 // task prints events on console
 static void observer_task(void* arg)
 {
-    uint64_t ris_edge_cnt = 0;
-    uint64_t fal_edge_cnt = 0; 
-
     gpio_event_t evt;
     while (xQueueReceive(gpio_evt_queue, &evt, portMAX_DELAY) == pdTRUE) {     // get event from queue        
-
+        
         if(evt.id == RISING_EDGE){
-            ris_edge_cnt++;
-            printf("%llu-th EDGE RISING  %lld \n", ris_edge_cnt, evt.timestamp);
+            printf("GPIO%d EDGE RISING  %lld \n", evt.gpio_num, evt.timestamp);
             fflush(stdout);  
         } 
         else{
-            fal_edge_cnt++;
-            printf("%llu-th EDGE FALLING %lld \n", fal_edge_cnt, evt.timestamp);   
+            printf("GPIO%d EDGE FALLING %lld \n", evt.gpio_num, evt.timestamp);   
             fflush(stdout);
         }
     }

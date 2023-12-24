@@ -12,35 +12,3 @@ def readline():
         except:
             pass  # might not be a utf-8 string!
 
-
-def process_until_first_csi_line(should_print):
-    """
-    Processes initial serial output lines (i.e. flash/debug information) until the first CSI line is found.
-
-    If should_print: then we print this initial serial lines.
-    Otherwise: then the initial serial lines are simply flushed.
-    """
-    if should_print:
-        print("Printing Flash information")
-    while True:
-        line = readline()
-
-        if "EDGE_DETECT" not in line:
-            if line != "" and should_print:
-                print(line)
-        else:
-            break
-
-
-def ignore_until_first_csi_line():
-    """
-    Ignores initial serial output lines (i.e. flash/debug information) until the first CSI line is found.
-    """
-    process_until_first_csi_line(should_print=False)
-
-
-def print_until_first_csi_line():
-    """
-    Prints initial serial output lines (i.e. flash/debug information) until the first CSI line is found.
-    """
-    process_until_first_csi_line(should_print=True)
