@@ -1,4 +1,4 @@
-import sys
+from serial import Serial
 
 
 def readline():

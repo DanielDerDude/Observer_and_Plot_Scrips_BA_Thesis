@@ -5,9 +5,7 @@ import collections
 from wait_timer import WaitTimer
 from read_stdin import readline
 
-
-# Wait Timers. Change these values to increase or decrease the rate of `print_stats` and `render_plot`.
-print_stats_wait_timer = WaitTimer(1.0)
+# Wait Timer
 render_plot_wait_timer = WaitTimer(0.2)
 
 # Deque definition
@@ -60,6 +58,6 @@ while True:
         #if print_stats_wait_timer.check():
         #    print_stats_wait_timer.update()
 
-        #if render_plot_wait_timer.check() and len(offsets) > 2:
-        #    render_plot_wait_timer.update()
-        #    carrier_plot(offsets)
+        if render_plot_wait_timer.check() and len(offsets) > 2:
+            render_plot_wait_timer.update()
+            carrier_plot(offsets)
