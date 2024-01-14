@@ -5,6 +5,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
+#include "esp_wifi.h"
 #include "driver/gpio.h"
 #include "sys/time.h"
 #include "esp_log.h"

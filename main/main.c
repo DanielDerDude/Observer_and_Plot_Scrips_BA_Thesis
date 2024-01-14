@@ -65,7 +65,7 @@ static void init(){
         bit_mask |= (1ULL << (uint64_t)gpio_list[i]);
     }
     // configure gpio setup
-    gpio_config_t io_conf = {0};                // zero init struct
+    gpio_config_t io_conf = {};                // zero init struct
     io_conf.intr_type = GPIO_INTR_ANYEDGE;      // interrupt of any edge
     io_conf.pin_bit_mask = bit_mask;            // bit mask of the pins
     io_conf.mode = GPIO_MODE_INPUT;             // set as input mode
@@ -80,6 +80,9 @@ static void init(){
     for (uint8_t i = 0; i < PIN_AMOUNT; i++){
         ESP_ERROR_CHECK( gpio_isr_handler_add(gpio_list[i], gpio_isr_handler, (void*)gpio_list[i]) );
     }
+
+
+
 
     // create a queue to handle gpio event from isrs
     gpio_evt_queue = xQueueCreate(PIN_AMOUNT*3, sizeof(gpio_event_t));
