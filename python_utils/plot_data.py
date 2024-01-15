@@ -168,7 +168,7 @@ def main():
     plt.ion()
     fig_obsv, (obsv_line_ax, obsv_pd_ax)   = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
     fig_peer, (peer_line_ax, peer_diff_ax) = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
-    fig_Send_recv, (send_ax, recv_ax)      = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
+    fig_send_recv, (send_ax, recv_ax)      = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
 
     measured_delta = collections.deque(maxlen=measure_cnt)
     measure_index = 0
@@ -202,7 +202,7 @@ def main():
                     refresh_peer_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_real_offsets)
                     systime1 = systime2 = 0 """
                 refresh_peer_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_real_offsets)
-                refresh_send_recv_plot(fig_Send_recv, send_ax, recv_ax, peer1_send_offsets, peer2_send_offsets, peer1_recv_offsets, peer2_recv_offsets)
+                refresh_send_recv_plot(fig_send_recv, send_ax, recv_ax, peer1_send_offsets, peer2_send_offsets, peer1_recv_offsets, peer2_recv_offsets)
                 
             peer1_line = ser_peer1.readline(-1).decode().strip()
             if 'Offset to master with' in peer1_line:
@@ -238,10 +238,13 @@ def main():
 
     fig_obsv.savefig('./python_utils/export/figure_measure.png')
     fig_peer.savefig('./python_utils/export/figure_peer.png')
+    fig_send_recv.savefig('./python_utils/export/send_receive_delays.png')
     plt.close(fig_obsv)
     plt.close(fig_peer)
+    plt.close(fig_send_recv)
     ser_obsv.close()
     ser_peer1.close()
+    ser_peer2.close()
 
 if __name__ == "__main__":
     main()
