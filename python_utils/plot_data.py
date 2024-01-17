@@ -1,5 +1,6 @@
 import sys
 import serial
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 import collections
@@ -86,35 +87,35 @@ def refresh_peer_plot(fig, sysoffs_ax, diff_ax,peer_comp_offsets, peer_real_offs
     sysoffs_ax.clear()
     diff_ax.clear()
 
-    comp_offset = np.asarray(peer_comp_offsets, dtype=np.int64)[2:]  # exclude the first element, it's garbage
-    #real_offset = np.asarray(peer_real_offsets, dtype=np.int64)[1:]
+    comp_offset = np.asarray(peer_comp_offsets, dtype=np.int64)[1:]  # exclude the first element, it's garbage
+    real_offset = np.asarray(peer_real_offsets, dtype=np.int64)[1:]
 
     comp_offset_range = range(1, len(comp_offset) + 1)
-    #real_offset_range = range(1, len(real_offset) + 1)
+    real_offset_range = range(1, len(real_offset) + 1)
 
-    #diff_len = min([len(comp_offset), len(real_offset)])
-    #diff = np.subtract(comp_offset[:diff_len], real_offset[:diff_len])
-    #diff_range = range(1, diff_len + 1)
+    diff_len = min([len(comp_offset), len(real_offset)])
+    diff = np.subtract(comp_offset[:diff_len], real_offset[:diff_len])
+    diff_range = range(1, diff_len + 1)
     
     #avg_deviation = sum(diff) / len(diff) if len(diff) != 0 else 0
 
     # line plot in the first subplot (line_ax)
     sysoffs_ax.set_title("Computed Systime-Offsets to oldest Peer")
     sysoffs_ax.plot(comp_offset_range, comp_offset, color='r', label='computed offset')
-    #sysoffs_ax.plot(real_offset_range, real_offset, color='b', label='measured offset')
+    sysoffs_ax.plot(real_offset_range, real_offset, color='b', label='measured offset')
     #line_ax.axhline(avg, color='r', linestyle='--', label=f'avg: {int(avg)} us')
     sysoffs_ax.set_ylabel("\u0394t")
     sysoffs_ax.set_xlabel("Offset Index")
     sysoffs_ax.legend(loc = 'center right')
     sysoffs_ax.grid(True)
     
-    """ diff_ax.set_title("Deviation of computed and measured Systime-Offset")
+    diff_ax.set_title("Deviation of computed and measured Systime-Offset")
     diff_ax.plot(diff_range, diff, color='g', label='deviation')
-    diff_ax.axhline(avg_deviation, color='g', linestyle='--', label=f'avg: {int(avg_deviation)} us')
+    #diff_ax.axhline(avg_deviation, color='g', linestyle='--', label=f'avg: {int(avg_deviation)} us')
     diff_ax.set_ylabel("\u0394t")
     diff_ax.set_xlabel("Offset Index")
     diff_ax.legend(loc = 'center right')
-    diff_ax.grid(True) """
+    diff_ax.grid(True)
 
     fig.tight_layout()
     fig.canvas.flush_events()
@@ -188,6 +189,9 @@ def main():
     peer1_recv_offsets = collections.deque(maxlen=measure_cnt)
     peer2_recv_offsets = collections.deque(maxlen=measure_cnt)
 
+    once = True
+    subdir = ''
+
     while True:
         try:
             obsv_line = ser_obsv.readline(-1).decode().strip()
@@ -197,19 +201,19 @@ def main():
             if 'FALLING' in obsv_line:
                 refresh_measure_plot(fig_obsv, obsv_line_ax, obsv_pd_ax, measured_delta)
                 new_cycle = True
-                """ if systime1 != 0 and systime2 != 0:
+                if systime1 != 0 and systime2 != 0:
                     peer_real_offsets.append(abs(systime1 - systime2))
                     refresh_peer_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_real_offsets)
-                    systime1 = systime2 = 0 """
+                    systime1 = systime2 = 0
                 refresh_peer_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_real_offsets)
                 refresh_send_recv_plot(fig_send_recv, send_ax, recv_ax, peer1_send_offsets, peer2_send_offsets, peer1_recv_offsets, peer2_recv_offsets)
                 
             peer1_line = ser_peer1.readline(-1).decode().strip()
             if 'Offset to master with' in peer1_line:
                 process_peer(peer1_line, peer_comp_offsets)
-            """ if 'Current systime' in peer1_line:
+            if 'Systime at' in peer1_line:
                 parts = peer1_line.split()
-                systime1 = correlate_timestamp(int(parts[parts.index('systime')+1])) """
+                systime1 = correlate_timestamp(int(parts[parts.index('at')+1]))
             if 'avg_send_offset = ' in peer1_line:
                 parts = peer1_line.split()
                 peer1_send_offsets.append(int(parts[parts.index('=')+1]) )
@@ -220,9 +224,9 @@ def main():
             peer2_line = ser_peer2.readline(-1).decode().strip()
             if 'Offset to master with' in peer2_line:
                 process_peer(peer2_line, peer_comp_offsets)
-            """ if 'Current systime' in peer2_line:
+            if 'Systime at' in peer2_line:
                 parts = peer2_line.split()
-                systime2 = correlate_timestamp(int(parts[parts.index('systime')+1])) """
+                systime2 = correlate_timestamp(int(parts[parts.index('at')+1]))
             if 'avg_send_offset = ' in peer2_line:
                 parts = peer2_line.split()
                 peer2_send_offsets.append(int(parts[parts.index('=')+1]) )
@@ -230,15 +234,23 @@ def main():
                 parts = peer2_line.split()
                 peer2_recv_offsets.append(int(parts[parts.index('=')+1]) )
 
+            if 'CONFIG: ' in peer1_line and once:
+                parts = peer1_line.split()
+                subdir = parts[parts.index('CONFIG:')+1]
+                print(subdir)
         except KeyboardInterrupt:
             break
         except Exception as ex:
             print(ex)
             pass
 
-    fig_obsv.savefig('./python_utils/export/figure_measure.png')
-    fig_peer.savefig('./python_utils/export/figure_peer.png')
-    fig_send_recv.savefig('./python_utils/export/send_receive_delays.png')
+    parentdir = '.\\python_utils\\export'
+    subdir = os.path.join(parentdir, subdir)
+    if not os.path.exists(subdir):
+        os.makedirs(subdir)
+    fig_obsv.savefig(os.path.join(subdir, 'figure_measure.png'))
+    fig_peer.savefig(os.path.join(subdir, 'figure_peer.png'))
+    fig_send_recv.savefig(os.path.join(subdir, 'send_receive_delays.png'))
     plt.close(fig_obsv)
     plt.close(fig_peer)
     plt.close(fig_send_recv)
