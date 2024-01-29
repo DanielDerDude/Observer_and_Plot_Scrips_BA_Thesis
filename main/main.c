@@ -81,9 +81,6 @@ static void init(){
         ESP_ERROR_CHECK( gpio_isr_handler_add(gpio_list[i], gpio_isr_handler, (void*)gpio_list[i]) );
     }
 
-
-
-
     // create a queue to handle gpio event from isrs
     gpio_evt_queue = xQueueCreate(PIN_AMOUNT*3, sizeof(gpio_event_t));
 
