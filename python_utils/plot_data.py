@@ -12,8 +12,8 @@ from datetime import datetime
 # `python ../python_utils/plot_data.py -obsv COMX -peer COMY` with COMX and COMY being the port of the observer and slave peer
 #
 
-def correlate_timestamp(timestamp):
-    return timestamp, int(time.perf_counter_ns()/1e3)
+def append_time(timestamp):
+    return timestamp, int(time.time_ns()/1e3)
 
 def configure_serial(port):
     ser = serial.Serial()
@@ -69,7 +69,7 @@ def process_peer_comp_offset(line, peer_offsets, peer_comp_offsets_time):
     parts = line.split()
     offset = abs(int(parts[parts.index('with')+1]))
     peer_offsets.append(offset)
-    peer_comp_offsets_time.append(int(time.perf_counter_ns()/1e3))
+    peer_comp_offsets_time.append(int(int(time.time_ns()/1e3)))
     print('computed offset to master: '+str(offset))
 
 def refresh_deviation_plot(fig, line_ax, pd_ax, measured_delta):
@@ -94,7 +94,7 @@ def refresh_deviation_plot(fig, line_ax, pd_ax, measured_delta):
     line_ax.axhline(y_max, color='g', linestyle='--', label=f'max: {int(y_max)} [\u00b5s]')
     line_ax.set_ylabel("\u0394t [\u00b5s]")
     line_ax.set_xlabel("cycle index")
-    line_ax.legend()
+    line_ax.legend(loc='upper right')
     line_ax.grid(True)
 
     # histogram in the second subplot (ax2)
@@ -114,7 +114,7 @@ def refresh_offset_drift_plot(fig_offset, peer_systime_ax, diff_ax, peer_comp_of
     
     if len(peer_comp_offsets) <= 1 or len(peer_comp_offsets_time) <= 1 or len(peer1_systime) <= 1 or len(peer2_systime) <= 1: return
 
-    time_reference_point = peer1_systime[0][1] if peer1_systime[0][1] <= peer2_systime[0][1] else peer2_systime[0][1]
+    time_reference_point = min([peer1_systime[0][1], peer2_systime[0][1]])
 
     p1_systime = np.asarray([x[0] for x in peer1_systime], dtype=np.int64)
     p2_systime = np.asarray([x[0] for x in peer2_systime], dtype=np.int64)
@@ -137,10 +137,10 @@ def refresh_offset_drift_plot(fig_offset, peer_systime_ax, diff_ax, peer_comp_of
     avg_cycle_duration= int(sum(cycle_durations)/len(cycle_durations))
     print('average cycle duration '+str(avg_cycle_duration))
 
-    peer_systime_ax.set_title("Systime-Offsets to oldest Peer")
+    peer_systime_ax.set_title("per-cycle average systime-offsets to oldest Peer")
     peer_systime_ax.plot(comp_offset_range/1e6, comp_offset/1e3, 'r-', label='computed offset')
-    #peer_systime_ax.plot(comp_offset_range, comp_lin_reg(comp_offset_range), 'r--', label='linear regression')
-    peer_systime_ax.plot(comp_offset_range/1e6, estim_offset_lin_reg(comp_offset_range)/1e3, 'g--', label='estimiated offset')
+    #peer_systime_ax.plot(comp_offset_range/1e6, comp_lin_reg(comp_offset_range), 'r--', label='linear regression')
+    peer_systime_ax.plot(comp_offset_range/1e6, estim_offset_lin_reg(comp_offset_range)/1e3, 'g--', label='estimated offset')
     """ peer_systime_ax.plot(p1_range, p1_systime, 'or-', label='peer1 systime')
     peer_systime_ax.plot(p2_range, p2_systime, 'ob-', label='peer2 systime')
     peer_systime_ax.plot(p1_lin_reg, 'r--' , label='linear regression')
@@ -153,24 +153,24 @@ def refresh_offset_drift_plot(fig_offset, peer_systime_ax, diff_ax, peer_comp_of
     
     estim_comp_difference = (comp_offset-estim_offset_lin_reg(comp_offset_range))/1e3
 
-    diff_ax.set_title("Deviation Distribustion")
+    diff_ax.set_title("distribution of per-cycle systime-offsets")
     #diff_ax.plot(comp_offset_range/1e6, abs(estim_offset_lin_reg(comp_offset_range)-comp_offset), color='g', label='time drift')
     diff_ax.hist(estim_comp_difference, bins=50, color='blue', cumulative=False, density=True, alpha=0.7)
     diff_ax.set_ylabel("probability density")
     diff_ax.set_xlabel("\u0394t [ms]")
     #diff_ax.legend()
-    
-    peer1_drift = (p1_systime_lin_reg[1]/p1_systime_lin_reg[0])*1e6
-    peer2_drift = (p2_systime_lin_reg[1]/p2_systime_lin_reg[0])*1e6
+
+    peer1_drift = abs(p1_systime_lin_reg[1]-1)*1e6
+    peer2_drift = abs(p2_systime_lin_reg[1]-1)*1e6
     added_drift = peer1_drift + peer2_drift
-    estim_drift = estim_offset_lin_reg[1]
-    comp_drift  = comp_lin_reg[1]
+    estim_drift = abs(estim_offset_lin_reg[1])*1e6
+    comp_drift  = abs(comp_lin_reg[1])*1e6
     
     origin     = ['peer1', 'peer2', 'added', 'estimated', 'computed']
     drift_values  = [peer1_drift, peer2_drift, added_drift, estim_drift, comp_drift]
     
-    for i in drift_values:
-        print(str(i))
+    """ for i in range(len(drift_values)):
+        print(origin[i]+': '+str(drift_values[i])) """
 
     drift_ax.set_title('clock drift comparison')
     drift_ax.bar(origin, drift_values)
@@ -179,6 +179,47 @@ def refresh_offset_drift_plot(fig_offset, peer_systime_ax, diff_ax, peer_comp_of
     fig_offset.tight_layout()
     fig_offset.canvas.flush_events()
     fig_drift.canvas.flush_events()
+
+""" def refresh_systime_plot(fig_systime, sys_ax, peer1_systime, peer2_systime):
+    sys_ax.clear()
+    
+    if len(peer1_systime) <= 1 or len(peer1_systime) <= 1: return
+
+    first_time_measured_peer1 = peer1_systime[0][1]
+    first_time_measured_peer2 = peer2_systime[0][1]
+
+    start_time_peer1 = first_time_measured_peer1 if first_time_measured_peer1 <= first_time_measured_peer2 else first_time_measured_peer2 - (first_time_measured_peer1 - first_time_measured_peer2)
+    start_time_peer2 = first_time_measured_peer2 if first_time_measured_peer2 <= first_time_measured_peer1 else first_time_measured_peer1 - (first_time_measured_peer2 - first_time_measured_peer1)
+
+    print('start_time_peer1 ' + str(start_time_peer1))
+    print('start_time_peer2 ' + str(start_time_peer2))
+
+    p1_systime = np.asarray([x[0] for x in peer1_systime], dtype=np.int64)
+    p2_systime = np.asarray([x[0] for x in peer2_systime], dtype=np.int64)
+    p1_range   = np.asarray([y[1] for y in peer1_systime], dtype=np.int64) - start_time_peer1
+    p2_range   = np.asarray([y[1] for y in peer2_systime], dtype=np.int64) - start_time_peer2
+
+    p1_systime_lin_reg = np.poly1d(np.polyfit(p1_range, p1_systime, 1))
+    p2_systime_lin_reg = np.poly1d(np.polyfit(p2_range, p2_systime, 1))
+    ideal_clock_time   = np.poly1d(np.poly1d([1, 0]))
+
+    if p1_systime_lin_reg[0] >= p2_systime_lin_reg[0]:                  # basically abs
+        estim_offset_lin_reg = p1_systime_lin_reg - p2_systime_lin_reg 
+    else:
+        estim_offset_lin_reg = p2_systime_lin_reg - p1_systime_lin_reg 
+
+
+    sys_ax.set_title("systime progression of peers")
+    sys_ax.plot(p1_range/1e6, p1_systime/1e6, 'r-', label='peer1 systime')
+    #sys_ax.plot(p1_range, p1_systime_lin_reg(p1_range), 'r--', label='linear regression')
+    sys_ax.plot(p2_range/1e6, p2_systime/1e6, 'b-', label='peer2 systime')
+    #sys_ax.plot(p2_range, p2_systime_lin_reg(p1_range), 'b--', label='linear regression')
+    sys_ax.plot(p1_range, ideal_clock_time(p1_range), 'b--', label='ideal clock')
+    sys_ax.set_ylabel("systime [s]")
+    sys_ax.set_xlabel("reference time [s]")
+
+    fig_systime.tight_layout()
+    fig_systime.canvas.flush_events() """
 
 def refresh_api_plot(fig, send_ax, recv_ax, peer1_send_offsets, peer2_send_offsets, peer1_recv_offsets, peer2_recv_offsets):
     send_ax.clear()
@@ -274,6 +315,7 @@ def main():
     fig_obsv, (obsv_line_ax, obsv_pd_ax)   = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
     fig_peer, (peer_line_ax, peer_diff_ax) = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
     fig_send_recv, (send_ax, recv_ax)      = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
+    #fig_systime, sys_ax                    = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
     fig_drift, drift_ax                    = plt.subplots(1, 1, figsize=(10, 6))
 
     measured_delta = collections.deque(maxlen=measure_cnt)
@@ -310,9 +352,12 @@ def main():
                 measured_delta, first_timestamp_rising, last_timestamp_rising, first_timestamp_rising_last_cycle, last_timestamp_rising_last_cycle, new_cycle, measure_index = process_obsv_deviation(obsv_line, measured_delta, first_timestamp_rising, last_timestamp_rising, first_timestamp_rising_last_cycle, last_timestamp_rising_last_cycle, new_cycle, measure_index)
                 print(obsv_line)
             if 'FALLING' in obsv_line:
+                
                 refresh_deviation_plot(fig_obsv, obsv_line_ax, obsv_pd_ax, measured_delta)                
                 
-                if not new_cycle: refresh_offset_drift_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_comp_offsets_time, peer1_systime, peer2_systime, fig_drift, drift_ax)
+                if not new_cycle: 
+                    #refresh_systime_plot(fig_systime, sys_ax, peer1_systime, peer2_systime)
+                    refresh_offset_drift_plot(fig_peer, peer_line_ax, peer_diff_ax, peer_comp_offsets, peer_comp_offsets_time, peer1_systime, peer2_systime, fig_drift, drift_ax)
                 
                 new_cycle = True
                 refresh_api_plot(fig_send_recv, send_ax, recv_ax, peer1_send_offsets, peer2_send_offsets, peer1_recv_offsets, peer2_recv_offsets)
@@ -335,7 +380,7 @@ def main():
                 process_peer_comp_offset(peer1_line, peer_comp_offsets, peer_comp_offsets_time)
             if 'Systime at' in peer1_line:
                 parts = peer1_line.split()
-                peer1_systime.append(correlate_timestamp(int(parts[parts.index('at')+1])))
+                peer1_systime.append(append_time(int(parts[parts.index('at')+1])))
             if 'avg_send_offset = ' in peer1_line:
                 parts = peer1_line.split()
                 peer1_send_offsets.append(int(parts[parts.index('=')+1]) )
@@ -348,7 +393,7 @@ def main():
                 process_peer_comp_offset(peer2_line, peer_comp_offsets, peer_comp_offsets_time)
             if 'Systime at' in peer2_line:
                 parts = peer2_line.split()
-                peer2_systime.append(correlate_timestamp(int(parts[parts.index('at')+1])))
+                peer2_systime.append(append_time(int(parts[parts.index('at')+1])))
             if 'avg_send_offset = ' in peer2_line:
                 parts = peer2_line.split()
                 peer2_send_offsets.append(int(parts[parts.index('=')+1]) )
