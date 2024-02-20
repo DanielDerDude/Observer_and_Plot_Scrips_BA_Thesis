@@ -1,0 +1,7 @@
+To run the script:
+
+python C:\Users\Daniel\Desktop\Bachelor_Arbeit\Testing\observer\python_utils\plot_data.py -obsv COM6 -peer1 COM5 -peer2 COM7 -measure 10000
+
+to save the plots run:
+
+python C:\Users\Daniel\Desktop\Bachelor_Arbeit\Testing\observer\python_utils\plot_data.py -obsv COM6 -peer1 COM5 -peer2 COM7 -measure 10000 -save
