@@ -9,7 +9,7 @@ from datetime import datetime
 
 #
 # Run:
-# `python ../python_utils/plot_data.py -obsv COMX -peer COMY` with COMX and COMY being the port of the observer and slave peer
+# `python ../python_utils/plot_sync_data.py -obsv COMX -peer COMY` with COMX and COMY being the port of the observer and slave peer
 #
 
 def append_time(timestamp):
