@@ -1,18 +1,19 @@
 import sys
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.colors as mcolors
 import numpy as np
 import collections
 import os
 
 relay_file = '.\\export\\coding_plot\\relay_values_final.txt'
 
-def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, data):
-    RelTransAx.clear()
+def update_relay_coding_plot(fig_relay_coding_gain, RelCodGainvAx, data):
+    #RelTransAx.clear()
     RelCodGainvAx.clear()
 
-    colors = ['y', 'b', 'g']
-
+    colors = ['tab:green', 'tab:blue', 'tab:purple' , 'tab:orange']
+    
     max_len = 0
     packet_range = 150
     patches = []
@@ -25,7 +26,7 @@ def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, d
         x_cod_gain = np.arange(1, len(cod_gain)+1, 1, dtype=np.int64)
         #cod_gain_ideal = data[node_cnt]['cod_gain_ideal']
 
-        RelTransAx.plot(x_transm, transm, linestyle='-', color=colors[i])
+        #RelTransAx.plot(x_transm, transm, linestyle='-', color=colors[i])
         #RelTransAx.plot(x_transm, x_transm/cod_gain_ideal, linestyle='--', color=colors[i])
         
         RelCodGainvAx.plot(x_cod_gain, cod_gain, linestyle='-', color=colors[i], label='measured')
@@ -37,12 +38,12 @@ def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, d
         if max_len < len(cod_gain): max_len = len(cod_gain)
 
     nocoding = np.arange(1, max_len+1, 1, dtype=np.int64)
-    RelTransAx.plot(nocoding, nocoding, 'r--', label='nomal broadcasting')
-    RelCodGainvAx.axhline(1, linestyle='--', color='r')
+    #RelTransAx.plot(nocoding, nocoding, linestyle='--', color='tab:red', label='nomal broadcasting')
+    RelCodGainvAx.axhline(1, linestyle='--', color='tab:red')
 
-    RelTransAx.set_title('transmissions at the relay node')
-    RelTransAx.set_ylabel('broadcast transmissions')
-    RelTransAx.set_xlabel('number of encoded native packets')
+    #RelTransAx.set_title('transmissions at the relay node')
+    #RelTransAx.set_ylabel('broadcast transmissions')
+    #RelTransAx.set_xlabel('number of encoded native packets')
     
 
     RelCodGainvAx.set_title('course of coding gain at relay node')
@@ -52,10 +53,10 @@ def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, d
     patches.append(mpatches.Patch(color='r', label='no encoding'))
 
     RelCodGainvAx.legend(handles=patches, loc='upper right')
-    RelTransAx.legend(handles=patches, loc='lower right')
+    #RelTransAx.legend(handles=patches, loc='lower right')
 
     RelCodGainvAx.grid(True)
-    RelTransAx.grid(True)
+    #RelTransAx.grid(True)
 
     fig_relay_coding_gain.tight_layout()
     fig_relay_coding_gain.canvas.flush_events()
@@ -83,9 +84,9 @@ def main():
 
     data = parse_values_from_file(relay_file)
 
-    fig_relay_coding_gain , (RelTransAx, RelCodGainvAx) = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
+    fig_relay_coding_gain, RelCodGainvAx = plt.subplots(figsize=(10, 6))
 
-    update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, data)
+    update_relay_coding_plot(fig_relay_coding_gain, RelCodGainvAx, data)
 
     try:
         plt.show()

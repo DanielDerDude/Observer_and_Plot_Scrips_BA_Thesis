@@ -31,15 +31,19 @@ class native_node:
         self.shutdown        = 0                                           # flag indicating if peer has shutdown
     
     def parse_values(self):
-        """ if self.process.stderr:
-            error = self.process.stderr.readline()
-            print(error) """
+        try:
+            
+            line = self.process.stdout.readline().decode().strip()
+            if line:
+                #print(self.port + ': ' + line)
+                return update_relay(self, line)
+            
+            error = self.process.stderr.readline().decode().strip()
+            if error:    
+                print('ERROR ' + self.port + ': ' + error)
         
-        line = self.process.stdout.readline().decode().strip()
-        if line:
-            #print(line)
-            return update_native(self, line)
-        return False
+        except Exception as e:
+            return False
 
 class relay_node:
     
@@ -51,23 +55,27 @@ class relay_node:
         self.recv_natPckt       = collections.deque(maxlen=dequeue_len)
         self.encCnt             = 0                                         # number of encoded packets
         self.encCntPerBrd       = collections.deque(maxlen=dequeue_len)
-        self.nonCodUniCastCnt   = 0                                         # hypothetical number of individal unicast transmissions of native packets to each naitve peer
-        self.nonCodMultiCastCnt = 0                                         # hypothetical number of individal broadcast transmission of native packets to all naitve peers
         self.retransCnt         = 0                                         # retransmission counter
         self.EncMissing         = collections.deque(maxlen=dequeue_len)
-        self.ReportSavings      = collections.deque(maxlen=dequeue_len)     # bytes saved with bloom filter reception reports in comparison to cumulative acknowledgements 
+        self.BloomSize          = collections.deque(maxlen=dequeue_len)
+        self.CumulSize          = collections.deque(maxlen=dequeue_len)
+        self.ReportSavings      = 0
         self.shutdown           = 0                                         # flag indicating if peer has shutdown
 
     def parse_values(self):
-        """ if self.process.stderr:
-            error = self.process.stderr.readline()
-            print(error) """
+        try:
+            
+            line = self.process.stdout.readline().decode().strip()
+            if line:
+                #print(self.port + ': ' + line)
+                return update_relay(self, line)
+            
+            error = self.process.stderr.readline().decode().strip()
+            if error:    
+                print('ERROR ' + self.port + ': ' + error)
         
-        line = self.process.stdout.readline().decode().strip()
-        if line:
-            #print(line)
-            return update_relay(self, line)
-
+        except Exception as e:
+            return False
 
 def update_relay(self, line):
     if not isinstance(self, relay_node):
@@ -107,6 +115,16 @@ def update_relay(self, line):
         parts = line.split()
         cnt = abs(int(parts[parts.index('retransmissions:')+1]))
         self.retransCnt += cnt
+        return True
+    
+    if 'Received reception report -' in line:
+        parts = line.split()
+        bytes_bloom  = abs(int(parts[parts.index('data_lenght')+1]))
+        packet_count = abs(int(parts[parts.index('packet_count')+1]))
+        bytes_normal_report = 1 + packet_count*2 + 2
+        self.BloomSize.append(bytes_bloom)
+        self.CumulSize.append(bytes_normal_report)
+        self.ReportSavings += (bytes_normal_report - bytes_bloom)
         return True
 
     if 'initiating shutdown task' in line:
@@ -156,7 +174,6 @@ def update_native(self, line):
 
     return False
 
-
 def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, relay, native_cnt):
     RelTransAx.clear()
     RelCodGainvAx.clear()
@@ -191,6 +208,28 @@ def update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, r
     fig_relay_coding_gain.tight_layout()
     fig_relay_coding_gain.canvas.flush_events()
 
+def update_relay_report_plot(fig_relay_recep_rep , RecepTransAx, relay, native_cnt):
+    RecepTransAx.clear()
+    RecepTransAx.set_title('reception report savings over one cycle with ' + str(native_cnt) + ' native nodes')
+
+    descr = ['average bloom filter\nreception report size', 'average cumulative\nreception report size', 'total savings\nover one cycle']
+    bar_color = ['tab:blue', 'tab:red', 'tab:green']
+
+    avg_size_bloom = round( sum(relay.BloomSize) / len(relay.BloomSize), 2)
+    avg_size_cumul = round( sum(relay.CumulSize) / len(relay.CumulSize), 2)
+
+    data = (avg_size_bloom, avg_size_cumul, relay.ReportSavings)
+
+    rects = RecepTransAx.bar(descr, data, width=0.5, color=bar_color)
+    RecepTransAx.bar_label(rects)
+    #saving = relay.ReportData[1]-relay.ReportData[0]
+
+    #RecepTransAx.bar(descr[0], saving, width=0.5, color='tab:orange', label='savings', bottom =relay.ReportData[0])
+    RecepTransAx.set_ylabel('size [bytes]')
+
+    fig_relay_recep_rep.tight_layout()
+    fig_relay_recep_rep.canvas.flush_events()
+
 def update_native_bar_plot(fig_native_bar_plot, NatBarAx, native_nodes):
     NatBarAx.clear()
 
@@ -200,19 +239,19 @@ def update_native_bar_plot(fig_native_bar_plot, NatBarAx, native_nodes):
     width = 0.2
 
     attributes       = ['encRcvCnt', 'decInstCnt', 'decCashCnt', 'decRedunCnt', 'PcktCntInCash']
-    attribute_labels = ['Received encoded packets', 'instant decoding', 'cashed decoding', 'redundant decoding', 'encoding in cash']
+    attribute_labels = ['received broadcasts', 'decoded instantly', 'decoded from cash', 'decoding redundant', 'decoding pending']
+    colors           = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red','tab:purple']
 
     for i, attribute in enumerate(attributes):
-        measurement = [getattr(node, attribute) for node in native_nodes]
-        offset = width * i
-        rects = NatBarAx.bar(x + offset, measurement, width, label=attribute_labels[i])
-        NatBarAx.bar_label(rects, padding=3)
+            data = [getattr(node, attribute) for node in native_nodes]
+            offset = width * i
+            rects = NatBarAx.bar(x + offset, data, width, label=attribute_labels[i], color=colors[i])
+            NatBarAx.bar_label(rects, padding=3)
 
-    NatBarAx.set_ylabel('Count')
+    NatBarAx.set_ylabel('count')
     NatBarAx.set_xticks(x + width * (len(attributes) - 1) / 2)
-    NatBarAx.set_xticklabels([f'Node {i+1}' for i in range(len(native_nodes))])
+    NatBarAx.set_xticklabels([f'node {i+1}' for i in range(len(native_nodes))])
     NatBarAx.legend(loc='upper right')
-    #NatBarAx.set_ylim(0, max(getattr(node, attribute) for node in native_nodes for attribute in attributes) * 1.2)
 
     fig_native_bar_plot.tight_layout()
     fig_native_bar_plot.canvas.flush_events()
@@ -274,38 +313,46 @@ def main():
             native = native_node(port)
             native_nodes.append(native)
 
-    print('\n Press the reset button on one of the ESP32 boards...')
+    print('\nPress the reset button on one of the ESP32 boards...')
 
     # plots
     plt.ion()
     fig_relay_coding_gain , (RelTransAx, RelCodGainvAx) = plt.subplots(2, 1, figsize=(10, 6), sharex=False)
+    fig_relay_recep_rep , RecepTransAx = plt.subplots(figsize=(10, 6))
     fig_native_coding_gain, NatBarAx  = plt.subplots(figsize=(10, 6))
 
     start = False       
+    last = 0
 
     while True:
         try:
-
             if relay.parse_values():
                 update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, relay, len(native_nodes))
+                if not start:
+                    print('\nStarting to collect data')
+                    start = True
+                
+                if last < relay.ReportSavings:
+                    update_relay_report_plot(fig_relay_recep_rep, RecepTransAx, relay, len(native_nodes))
+                    last = relay.ReportSavings
                 if relay.shutdown:
                     break
             
-            shutdown_cnt = 1#relay.shutdown
+            shutdown_cnt = relay.shutdown
 
             """ native_parse_hit = True
             for native in native_nodes:
                 hit = native.parse_values()
                 native_parse_hit = native_parse_hit and hit
-                shutdown_cnt += native.shutdown """
+                shutdown_cnt += native.shutdown
 
-            """ if native_parse_hit:
+            if native_parse_hit:
                 update_native_bar_plot(fig_native_coding_gain, NatBarAx, native_nodes) """
 
-            """ if shutdown_cnt == node_cnt-1:            # every node has shut down
-                update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, relay, , len(native_nodes))
-                update_native_bar_plot(fig_native_coding_gain, NatBarAx, native_nodes)
-                break  """          
+            if shutdown_cnt == node_cnt-1:            # every node has shut down
+                #update_relay_coding_plot(fig_relay_coding_gain, RelTransAx, RelCodGainvAx, relay, , len(native_nodes))
+                #update_native_bar_plot(fig_native_coding_gain, NatBarAx, native_nodes)
+                break
 
         except KeyboardInterrupt:
             print('Aborted data collection')
